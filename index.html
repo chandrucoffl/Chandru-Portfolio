@@ -13,7 +13,7 @@
     <style>
         :root {
             --bg-titanium: #02040a;
-            --bg-glass-panel: rgba(11, 16, 35, 0.82);
+            --bg-glass-panel: rgba(11, 16, 35, 0.84);
             --bg-glass-hover: rgba(20, 28, 58, 0.94);
             
             /* VIBRANT NEO-CYBERNETIC PALETTE */
@@ -22,7 +22,6 @@
             --neon-gold: #ffd700;
             --neon-emerald: #00ff88;
             --neon-purple: #9d4edd;
-            --neon-orange: #ff6b00;
             
             --text-pure: #ffffff;
             --text-slate: #94a3b8;
@@ -89,46 +88,40 @@
             100% { background-position: 60px 60px; }
         }
 
-        /* 2. REVOLUTIONARY VIPER-RADIAL COMMAND NAVBAR */
-        .viper-navbar {
+        /* 2. EXECUTIVE RESUME NAVBAR */
+        .exec-navbar {
             position: fixed;
-            top: 18px;
+            top: 16px;
             left: 50%;
             transform: translateX(-50%);
             width: 94%;
-            max-width: 1400px;
+            max-width: 1380px;
             z-index: 1000;
-            background: rgba(6, 10, 24, 0.9);
+            background: rgba(6, 10, 24, 0.92);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border: 1px solid rgba(0, 240, 255, 0.35);
-            border-radius: 20px;
-            padding: 0.8rem 2.6rem;
+            border-radius: 50px;
+            padding: 0.75rem 2.4rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.95), 0 0 30px rgba(0, 240, 255, 0.18);
-            transition: all 0.3s ease;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.95), inset 0 0 25px rgba(0, 240, 255, 0.15);
         }
 
-        .viper-navbar:hover {
-            border-color: var(--neon-cyan);
-            box-shadow: 0 15px 55px rgba(0, 0, 0, 0.95), 0 0 45px rgba(0, 240, 255, 0.35);
-        }
-
-        .viper-brand {
+        .exec-brand {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.42rem;
+            font-size: 1.38rem;
             font-weight: 900;
             color: #fff;
             text-decoration: none;
             letter-spacing: 1.5px;
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 12px;
         }
 
-        .viper-brand i { color: var(--neon-cyan); filter: drop-shadow(0 0 12px var(--neon-cyan)); }
+        .exec-brand i { color: var(--neon-cyan); filter: drop-shadow(0 0 12px var(--neon-cyan)); }
         
         .brand-text {
             background: linear-gradient(135deg, var(--neon-cyan), var(--neon-gold), var(--neon-pink));
@@ -164,47 +157,33 @@
             100% { transform: scale(1.35); opacity: 1; box-shadow: 0 0 25px var(--neon-emerald); }
         }
 
-        .viper-nav-links {
+        .exec-nav-links {
             display: flex;
-            gap: 2.4rem;
+            gap: 2rem;
             align-items: center;
         }
 
-        .viper-nav-links a {
+        .exec-nav-links a {
             color: var(--text-slate);
             text-decoration: none;
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.84rem;
+            font-size: 0.82rem;
             font-weight: 700;
             letter-spacing: 1.2px;
             text-transform: uppercase;
             transition: all 0.25s ease;
-            position: relative;
         }
 
-        .viper-nav-links a:hover, .viper-nav-links a.active {
+        .exec-nav-links a:hover, .exec-nav-links a.active {
             color: #fff;
             text-shadow: 0 0 16px var(--neon-cyan);
         }
 
-        .viper-nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -6px; left: 0;
-            width: 0%; height: 2px;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
-            transition: width 0.3s ease;
-        }
-
-        .viper-nav-links a:hover::after, .viper-nav-links a.active::after {
-            width: 100%;
-        }
-
-        .btn-viper-connect {
+        .btn-exec-connect {
             background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
             color: #02040a !important;
-            padding: 0.6rem 1.6rem;
-            border-radius: 12px;
+            padding: 0.58rem 1.6rem;
+            border-radius: 50px;
             font-family: 'Orbitron', sans-serif;
             font-weight: 800 !important;
             font-size: 0.8rem !important;
@@ -213,14 +192,14 @@
             transition: all 0.3s ease !important;
         }
 
-        .btn-viper-connect:hover {
+        .btn-exec-connect:hover {
             transform: scale(1.05) translateY(-2px);
             box-shadow: 0 0 45px rgba(0, 240, 255, 0.9), 0 0 60px rgba(255, 0, 85, 0.7);
             color: #02040a !important;
         }
 
-        /* 3. REVOLUTIONARY HERO SECTION: ASYMMETRIC SPLIT-SCREEN RADAR & 4-QUADRANT MATRIX */
-        .radar-hero {
+        /* 3. EXECUTIVE HERO & ABOUT ME PORTRAIT MATRIX */
+        .exec-hero-profile {
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -229,228 +208,266 @@
             position: relative;
         }
 
-        .split-hero-container {
-            max-width: 1400px;
+        .exec-profile-container {
+            max-width: 1380px;
             width: 100%;
             display: grid;
-            grid-template-columns: 1.15fr 1.1fr;
-            gap: 3.5rem;
+            grid-template-columns: 420px 1fr;
+            gap: 3.8rem;
             align-items: center;
         }
 
-        .hero-identity-slab {
-            background: rgba(11, 16, 35, 0.75);
-            border: 1px solid rgba(0, 240, 255, 0.3);
-            border-left: 6px solid var(--neon-cyan);
-            border-radius: 32px;
-            padding: 3.4rem;
-            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.95), 0 0 45px rgba(0, 240, 255, 0.18);
+        /* Left Portrait Card */
+        .profile-photo-pod {
+            background: rgba(10, 15, 34, 0.88);
+            border: 2px solid var(--neon-cyan);
+            border-radius: 36px;
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             position: relative;
+            box-shadow: 0 25px 75px rgba(0, 0, 0, 0.95), 0 0 55px rgba(0, 240, 255, 0.32);
             overflow: hidden;
         }
 
-        .scanner-line {
+        .portrait-frame {
+            width: 100%;
+            aspect-ratio: 4 / 4.6;
+            border-radius: 26px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: inset 0 0 35px rgba(0, 240, 255, 0.25);
+            margin-bottom: 1.6rem;
+            background: #0b1126;
+        }
+
+        .portrait-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            transition: transform 0.4s ease;
+        }
+
+        .profile-photo-pod:hover .portrait-frame img {
+            transform: scale(1.05);
+        }
+
+        .portrait-frame::after {
+            content: '';
             position: absolute;
-            top: 0; left: 0; width: 4px; height: 100%;
-            background: linear-gradient(180deg, transparent, var(--neon-cyan), transparent);
-            animation: scanEdge 4s linear infinite;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 65%, rgba(2, 4, 10, 0.88) 100%);
+            pointer-events: none;
         }
 
-        @keyframes scanEdge {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
+        .profile-badge-pill {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 240, 255, 0.18);
+            border: 1px solid var(--neon-cyan);
+            backdrop-filter: blur(12px);
+            padding: 0.4rem 1.4rem;
+            border-radius: 50px;
+            font-family: 'Chakra Petch', monospace;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1.5px;
+            z-index: 2;
+            width: max-content;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
         }
 
-        .status-pill-cyber {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(255, 0, 85, 0.14);
-            border: 1px solid rgba(255, 0, 85, 0.55);
-            padding: 0.5rem 1.4rem;
-            border-radius: 12px;
-            margin-bottom: 1.8rem;
+        .photo-card-info {
+            text-align: center;
+            width: 100%;
+        }
+
+        .pci-name {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.78rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        .pci-role {
+            font-family: 'Chakra Petch', monospace;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--neon-gold);
+            letter-spacing: 2px;
+            margin-bottom: 1.4rem;
+            display: block;
+        }
+
+        .pci-links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+            width: 100%;
+        }
+
+        .pci-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #fff;
+            padding: 0.6rem;
+            border-radius: 14px;
             font-family: 'Chakra Petch', monospace;
             font-size: 0.82rem;
             font-weight: 700;
-            color: var(--neon-pink);
-            letter-spacing: 2px;
-            box-shadow: 0 0 25px rgba(255, 0, 85, 0.3);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.25s ease;
         }
 
-        .hero-title-main {
-            font-family: 'Orbitron', 'Syne', sans-serif;
-            font-size: clamp(2.3rem, 4vw, 3.5rem);
-            font-weight: 900;
-            line-height: 1.2;
-            margin-bottom: 1.4rem;
-            color: #fff;
-            letter-spacing: 1.2px;
+        .pci-btn:hover {
+            background: var(--neon-cyan);
+            color: #02040a;
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+        }
+
+        /* Right Summary & About Me Pod */
+        .profile-summary-pod {
+            background: rgba(11, 16, 35, 0.8);
+            border: 1px solid rgba(0, 240, 255, 0.28);
+            border-radius: 36px;
+            padding: 3.4rem;
+            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.95);
+            position: relative;
+        }
+
+        .resume-header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.8rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.18);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .rh-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 800;
+            color: var(--neon-pink);
+            letter-spacing: 2px;
             text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rh-contact-row {
+            display: flex;
+            gap: 1.2rem;
+            font-family: 'Chakra Petch', monospace;
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            flex-wrap: wrap;
+        }
+
+        .rh-contact-row span { display: flex; align-items: center; gap: 8px; }
+        .rh-contact-row i { color: var(--neon-cyan); }
+
+        .about-heading {
+            font-family: 'Orbitron', 'Syne', sans-serif;
+            font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+            font-weight: 900;
+            line-height: 1.18;
+            margin-bottom: 1.6rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .title-hologram {
-            background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-gold) 50%, var(--neon-pink) 100%);
+            background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-gold) 45%, var(--neon-pink) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.45));
         }
 
-        .hero-body-text {
+        .resume-summary-text {
             font-family: 'Rajdhani', sans-serif;
-            font-size: 1.12rem;
-            color: var(--text-slate);
-            margin-bottom: 2.6rem;
-            line-height: 1.76;
+            font-size: 1.16rem;
+            color: #e2e8f0;
+            line-height: 1.82;
             font-weight: 600;
+            margin-bottom: 2.4rem;
+            background: rgba(4, 7, 18, 0.6);
+            border-left: 4px solid var(--neon-cyan);
+            padding: 1.6rem 2rem;
+            border-radius: 0 18px 18px 0;
         }
 
-        .hero-body-text b {
-            color: #fff;
-            font-weight: 700;
-            border-bottom: 2px solid var(--neon-cyan);
-        }
+        .resume-summary-text b { color: #fff; font-weight: 700; color: var(--neon-gold); }
 
-        .hero-action-row {
+        .about-action-buttons {
             display: flex;
             gap: 1.4rem;
             flex-wrap: wrap;
         }
 
-        .btn-split {
+        .btn-exec {
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            padding: 1rem 2.4rem;
-            border-radius: 14px;
+            padding: 1rem 2.6rem;
+            border-radius: 50px;
             font-family: 'Orbitron', sans-serif;
             font-size: 0.88rem;
             font-weight: 800;
             letter-spacing: 1.2px;
             text-transform: uppercase;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
         }
 
-        .btn-primary-split {
+        .btn-exec-primary {
             background: linear-gradient(135deg, var(--neon-cyan), var(--neon-emerald));
             color: #02040a;
-            box-shadow: 0 0 35px rgba(0, 240, 255, 0.6);
+            box-shadow: 0 0 35px rgba(0, 240, 255, 0.65);
         }
 
-        .btn-primary-split:hover {
-            transform: translateY(-5px) scale(1.04);
+        .btn-exec-primary:hover {
+            transform: translateY(-4px) scale(1.04);
             box-shadow: 0 0 55px rgba(0, 240, 255, 0.95), 0 0 70px rgba(0, 255, 136, 0.7);
             color: #02040a;
         }
 
-        .btn-outline-split {
+        .btn-exec-outline {
             background: rgba(14, 19, 40, 0.85);
             color: var(--neon-gold);
             border: 2px solid var(--neon-gold);
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
         }
 
-        .btn-outline-split:hover {
+        .btn-exec-outline:hover {
             background: var(--neon-gold);
             color: #02040a;
-            transform: translateY(-5px) scale(1.04);
+            transform: translateY(-4px) scale(1.04);
             box-shadow: 0 0 50px rgba(255, 215, 0, 0.95);
-        }
-
-        /* Hero Right: Interactive 4-Quadrant Neural Telemetry Matrix */
-        .quadrant-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.8rem;
-        }
-
-        .quadrant-box {
-            background: rgba(10, 16, 36, 0.88);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            border-radius: 26px;
-            padding: 2.2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: all 0.35s ease;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .quadrant-box:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.95);
-        }
-
-        .quad-cyan { border-top: 4px solid var(--neon-cyan); }
-        .quad-cyan:hover { border-color: var(--neon-cyan); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(0, 240, 255, 0.38); }
-        
-        .quad-pink { border-top: 4px solid var(--neon-pink); }
-        .quad-pink:hover { border-color: var(--neon-pink); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 0, 85, 0.38); }
-        
-        .quad-gold { border-top: 4px solid var(--neon-gold); }
-        .quad-gold:hover { border-color: var(--neon-gold); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 215, 0, 0.38); }
-        
-        .quad-emerald { border-top: 4px solid var(--neon-emerald); }
-        .quad-emerald:hover { border-color: var(--neon-emerald); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(0, 255, 136, 0.38); }
-
-        .quad-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.2rem;
-            font-family: 'Chakra Petch', monospace;
-            font-size: 0.76rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-        }
-
-        .quad-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.32rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 0.6rem;
-            text-transform: uppercase;
-        }
-
-        .quad-desc {
-            font-family: 'Rajdhani', sans-serif;
-            font-size: 0.94rem;
-            color: var(--text-slate);
-            font-weight: 600;
-            margin-bottom: 1.6rem;
-            line-height: 1.6;
-        }
-
-        .quad-stats {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .qs-val {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.35rem;
-            font-weight: 800;
-        }
-
-        .qs-lbl {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.68rem;
-            font-weight: 700;
-            color: var(--text-slate);
-            text-transform: uppercase;
         }
 
         /* 4. LIVE TELEMETRY MARQUEE BAR */
         .marquee-container {
             width: 100%;
-            background: rgba(10, 16, 36, 0.85);
+            background: rgba(10, 16, 36, 0.88);
             border-top: 1px solid rgba(0, 240, 255, 0.28);
             border-bottom: 1px solid rgba(0, 240, 255, 0.28);
             padding: 0.95rem 0;
@@ -486,7 +503,7 @@
 
         /* 5. COMMON SECTION ARCHITECTURE */
         .section-wrap {
-            max-width: 1400px;
+            max-width: 1380px;
             margin: 0 auto;
             padding: 6.5rem 2rem;
             position: relative;
@@ -494,7 +511,7 @@
 
         .section-header {
             text-align: center;
-            max-width: 850px;
+            max-width: 860px;
             margin: 0 auto 4.8rem;
         }
 
@@ -511,7 +528,7 @@
 
         .section-heading {
             font-family: 'Orbitron', sans-serif;
-            font-size: clamp(2rem, 3.4vw, 2.8rem);
+            font-size: clamp(2.1rem, 3.5vw, 2.9rem);
             font-weight: 800;
             margin-bottom: 1.1rem;
             color: #fff;
@@ -527,262 +544,271 @@
             line-height: 1.76;
         }
 
-        /* 6. REVOLUTIONARY PROJECTS: FULL-SPAN ASYMMETRIC CYBER-SLABS (`different` Layout!) */
-        .cyber-slabs-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2.8rem;
+        /* 6. TECHNICAL SKILLS & COMPETENCIES (EXACT RESUME STRUCTURE) */
+        .skills-taxonomy-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.6rem;
         }
 
-        .cyber-slab {
+        .skill-taxonomy-card {
             background: var(--bg-glass-panel);
             border: 1px solid rgba(255, 255, 255, 0.16);
-            border-radius: 28px;
-            padding: 3rem 3.4rem;
-            display: grid;
-            grid-template-columns: 1.2fr 1.3fr auto;
-            gap: 3rem;
-            align-items: center;
+            border-radius: 32px;
+            padding: 3rem;
+            transition: all 0.35s ease;
             position: relative;
             overflow: hidden;
-            transition: all 0.35s ease;
         }
 
-        .slab-pink { border-left: 8px solid var(--neon-pink); }
-        .slab-pink:hover { border-color: var(--neon-pink); transform: translateX(12px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(255, 0, 85, 0.45); }
-        .slab-pink .slab-code { color: var(--neon-pink); }
+        .stc-cyan { border-top: 5px solid var(--neon-cyan); }
+        .stc-cyan:hover { border-color: var(--neon-cyan); transform: translateY(-8px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(0, 240, 255, 0.45); }
+        
+        .stc-pink { border-top: 5px solid var(--neon-pink); }
+        .stc-pink:hover { border-color: var(--neon-pink); transform: translateY(-8px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(255, 0, 85, 0.45); }
+        
+        .stc-gold { border-top: 5px solid var(--neon-gold); }
+        .stc-gold:hover { border-color: var(--neon-gold); transform: translateY(-8px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(255, 215, 0, 0.45); }
+        
+        .stc-emerald { border-top: 5px solid var(--neon-emerald); }
+        .stc-emerald:hover { border-color: var(--neon-emerald); transform: translateY(-8px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(0, 255, 136, 0.45); }
 
-        .slab-gold { border-left: 8px solid var(--neon-gold); }
-        .slab-gold:hover { border-color: var(--neon-gold); transform: translateX(12px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(255, 215, 0, 0.45); }
-        .slab-gold .slab-code { color: var(--neon-gold); }
-
-        .slab-cyan { border-left: 8px solid var(--neon-cyan); }
-        .slab-cyan:hover { border-color: var(--neon-cyan); transform: translateX(12px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(0, 240, 255, 0.45); }
-        .slab-cyan .slab-code { color: var(--neon-cyan); }
-
-        .slab-emerald { border-left: 8px solid var(--neon-emerald); }
-        .slab-emerald:hover { border-color: var(--neon-emerald); transform: translateX(12px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(0, 255, 136, 0.45); }
-        .slab-emerald .slab-code { color: var(--neon-emerald); }
-
-        .slab-info { display: flex; flex-direction: column; }
-
-        .slab-code {
-            font-family: 'Chakra Petch', monospace;
-            font-size: 0.82rem;
-            font-weight: 700;
-            letter-spacing: 2.5px;
-            margin-bottom: 0.8rem;
+        .stc-header {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 18px;
+            margin-bottom: 1.8rem;
         }
 
-        .slab-title {
+        .stc-header i { font-size: 2.4rem; }
+        .stc-cyan i { color: var(--neon-cyan); }
+        .stc-pink i { color: var(--neon-pink); }
+        .stc-gold i { color: var(--neon-gold); }
+        .stc-emerald i { color: var(--neon-emerald); }
+
+        .stc-header h3 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.75rem;
+            font-size: 1.38rem;
             font-weight: 800;
-            margin-bottom: 1.1rem;
             color: #fff;
+            text-transform: uppercase;
             letter-spacing: 1px;
-            text-transform: uppercase;
         }
 
-        .slab-desc {
-            font-family: 'Rajdhani', sans-serif;
-            color: var(--text-slate);
-            font-size: 1.04rem;
-            font-weight: 600;
-            line-height: 1.76;
-        }
-
-        .slab-metrics-area {
-            display: flex;
-            flex-direction: column;
-            gap: 1.6rem;
-        }
-
-        .slab-stat-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(4, 6, 14, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 18px;
-            padding: 1.1rem 1.6rem;
-        }
-
-        .ssr-lbl {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--text-slate);
-            text-transform: uppercase;
-        }
-
-        .ssr-val {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.28rem;
-            font-weight: 800;
-        }
-
-        .slab-tech-pills {
+        .stc-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.65rem;
+            gap: 0.75rem;
         }
 
-        .slab-tech-pills span {
+        .stc-pills span {
             font-family: 'Chakra Petch', monospace;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 0.42rem 1.05rem;
-            border-radius: 10px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #e2e8f0;
-        }
-
-        .slab-action {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 65px; height: 65px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.22);
-            color: #fff;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .slab-pink:hover .slab-action { background: var(--neon-pink); color: #02040a; border-color: var(--neon-pink); box-shadow: 0 0 25px var(--neon-pink); }
-        .slab-gold:hover .slab-action { background: var(--neon-gold); color: #02040a; border-color: var(--neon-gold); box-shadow: 0 0 25px var(--neon-gold); }
-        .slab-cyan:hover .slab-action { background: var(--neon-cyan); color: #02040a; border-color: var(--neon-cyan); box-shadow: 0 0 25px var(--neon-cyan); }
-        .slab-emerald:hover .slab-action { background: var(--neon-emerald); color: #02040a; border-color: var(--neon-emerald); box-shadow: 0 0 25px var(--neon-emerald); }
-
-        /* 7. REVOLUTIONARY SKILLS: RADIAL SYNAPSE BANNER NODES (`different` Layout!) */
-        .radial-synapses-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2.2rem;
-        }
-
-        .synapse-banner-node {
-            background: var(--bg-glass-panel);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            border-radius: 28px;
-            padding: 2.6rem 3.4rem;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 3rem;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .node-cyan-banner { border-top: 4px solid var(--neon-cyan); }
-        .node-cyan-banner:hover { border-color: var(--neon-cyan); transform: translateY(-6px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(0, 240, 255, 0.38); }
-        .node-cyan-banner i { color: var(--neon-cyan); }
-        .node-cyan-banner .banner-chips span { background: rgba(0, 240, 255, 0.12); border-color: rgba(0, 240, 255, 0.45); color: #67e8f9; }
-
-        .node-pink-banner { border-top: 4px solid var(--neon-pink); }
-        .node-pink-banner:hover { border-color: var(--neon-pink); transform: translateY(-6px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 0, 85, 0.38); }
-        .node-pink-banner i { color: var(--neon-pink); }
-        .node-pink-banner .banner-chips span { background: rgba(255, 0, 85, 0.12); border-color: rgba(255, 0, 85, 0.45); color: #fda4af; }
-
-        .node-gold-banner { border-top: 4px solid var(--neon-gold); }
-        .node-gold-banner:hover { border-color: var(--neon-gold); transform: translateY(-6px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 215, 0, 0.38); }
-        .node-gold-banner i { color: var(--neon-gold); }
-        .node-gold-banner .banner-chips span { background: rgba(255, 215, 0, 0.12); border-color: rgba(255, 215, 0, 0.45); color: #fde047; }
-
-        .banner-left {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .banner-left i { font-size: 2.8rem; }
-
-        .banner-left h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.45rem;
-            font-weight: 800;
-            color: #fff;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .banner-right {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-
-        .banner-desc {
-            font-family: 'Rajdhani', sans-serif;
-            color: var(--text-slate);
-            font-size: 1.04rem;
-            font-weight: 600;
-            line-height: 1.72;
-        }
-
-        .banner-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.7rem;
-        }
-
-        .banner-chips span {
-            font-family: 'Chakra Petch', monospace;
-            padding: 0.45rem 1.15rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 50px;
             border: 1px solid;
-            font-size: 0.84rem;
+            font-size: 0.86rem;
             font-weight: 700;
+            transition: all 0.25s ease;
         }
 
-        /* 8. CAREER TIMELINE SPLIT LOGS (`different` Layout!) */
-        .split-roadmap-grid {
+        .stc-cyan .stc-pills span { background: rgba(0, 240, 255, 0.12); border-color: rgba(0, 240, 255, 0.45); color: #67e8f9; }
+        .stc-pink .stc-pills span { background: rgba(255, 0, 85, 0.12); border-color: rgba(255, 0, 85, 0.45); color: #fda4af; }
+        .stc-gold .stc-pills span { background: rgba(255, 215, 0, 0.12); border-color: rgba(255, 215, 0, 0.45); color: #fde047; }
+        .stc-emerald .stc-pills span { background: rgba(0, 255, 136, 0.12); border-color: rgba(0, 255, 136, 0.45); color: #6ee7b7; }
+
+        /* 7. EXECUTIVE 4-PROJECT SHOWCASE (`All 4 Projects from Resume + Flagship Core`) */
+        .exec-projects-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 2.8rem;
         }
 
-        .roadmap-log-card {
+        .exec-project-pod {
+            background: var(--bg-glass-panel);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 36px;
+            padding: 3.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.35s ease;
+            position: relative;
+        }
+
+        .epp-gold { border-top: 6px solid var(--neon-gold); }
+        .epp-gold:hover { border-color: var(--neon-gold); transform: translateY(-10px); box-shadow: 0 30px 80px rgba(0,0,0,0.95), 0 0 65px rgba(255, 215, 0, 0.5); }
+        
+        .epp-cyan { border-top: 6px solid var(--neon-cyan); }
+        .epp-cyan:hover { border-color: var(--neon-cyan); transform: translateY(-10px); box-shadow: 0 30px 80px rgba(0,0,0,0.95), 0 0 65px rgba(0, 240, 255, 0.5); }
+        
+        .epp-pink { border-top: 6px solid var(--neon-pink); }
+        .epp-pink:hover { border-color: var(--neon-pink); transform: translateY(-10px); box-shadow: 0 30px 80px rgba(0,0,0,0.95), 0 0 65px rgba(255, 0, 85, 0.5); }
+        
+        .epp-emerald { border-top: 6px solid var(--neon-emerald); }
+        .epp-emerald:hover { border-color: var(--neon-emerald); transform: translateY(-10px); box-shadow: 0 30px 80px rgba(0,0,0,0.95), 0 0 65px rgba(0, 255, 136, 0.5); }
+
+        .epp-badge-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.6rem;
+        }
+
+        .epp-badge {
+            font-family: 'Chakra Petch', monospace;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.45rem 1.3rem;
+            border-radius: 50px;
+            border: 1px solid;
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .epp-gold .epp-badge { color: var(--neon-gold); border-color: var(--neon-gold); background: rgba(255, 215, 0, 0.14); }
+        .epp-cyan .epp-badge { color: var(--neon-cyan); border-color: var(--neon-cyan); background: rgba(0, 240, 255, 0.14); }
+        .epp-pink .epp-badge { color: var(--neon-pink); border-color: var(--neon-pink); background: rgba(255, 0, 85, 0.14); }
+        .epp-emerald .epp-badge { color: var(--neon-emerald); border-color: var(--neon-emerald); background: rgba(0, 255, 136, 0.14); }
+
+        .epp-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.68rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .epp-desc {
+            font-family: 'Rajdhani', sans-serif;
+            color: var(--text-slate);
+            font-size: 1.06rem;
+            font-weight: 600;
+            line-height: 1.78;
+            margin-bottom: 2.2rem;
+        }
+
+        .epp-metrics-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            background: rgba(4, 6, 14, 0.78);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            padding: 1.2rem;
+            margin-bottom: 2.2rem;
+            text-align: center;
+        }
+
+        .emb-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.25rem;
+            font-weight: 800;
+            display: block;
+        }
+
+        .emb-lbl {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--text-slate);
+            text-transform: uppercase;
+        }
+
+        .epp-techs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.68rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .epp-techs span {
+            font-family: 'Chakra Petch', monospace;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.42rem 1.08rem;
+            border-radius: 12px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #e2e8f0;
+        }
+
+        .epp-footer-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            transition: transform 0.25s ease;
+            width: max-content;
+        }
+
+        .epp-footer-btn:hover { color: #fff !important; transform: translateX(8px); }
+
+        /* 8. INTERNSHIP & WORKSHOP EXPERIENCE TIMELINE (EXACT RESUME DATA) */
+        .exec-timeline-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.2rem;
+        }
+
+        .timeline-section-block h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: var(--neon-cyan);
+            margin-bottom: 2.2rem;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline-card {
             background: var(--bg-glass-panel);
             border: 1px solid rgba(255, 255, 255, 0.16);
             border-radius: 30px;
-            padding: 3rem;
+            padding: 2.8rem;
+            margin-bottom: 2.4rem;
             position: relative;
             transition: all 0.3s ease;
         }
 
-        .roadmap-log-card:hover {
+        .timeline-card:last-child { margin-bottom: 0; }
+
+        .timeline-card:hover {
             border-color: var(--neon-gold);
+            transform: translateY(-6px);
             box-shadow: 0 20px 55px rgba(0, 0, 0, 0.95), 0 0 45px rgba(255, 215, 0, 0.38);
-            transform: translateY(-8px);
         }
 
-        .log-date {
+        .tc-date {
             font-family: 'Chakra Petch', monospace;
-            font-size: 0.88rem;
+            font-size: 0.86rem;
             font-weight: 700;
             color: var(--neon-gold);
             letter-spacing: 2px;
             display: block;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.5rem;
         }
 
-        .log-role {
+        .tc-role {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.55rem;
+            font-size: 1.48rem;
             font-weight: 800;
             color: #fff;
             margin-bottom: 0.4rem;
             text-transform: uppercase;
         }
 
-        .log-org {
+        .tc-org {
             font-family: 'Rajdhani', sans-serif;
             font-size: 1.14rem;
             color: var(--text-slate);
@@ -790,24 +816,102 @@
             margin-bottom: 1.6rem;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
-        .log-org i { color: var(--neon-pink); }
+        .tc-org i { color: var(--neon-pink); }
 
-        .log-list {
+        .tc-list {
             font-family: 'Rajdhani', sans-serif;
             list-style-position: inside;
             color: #cbd5e1;
             font-size: 1.05rem;
             font-weight: 600;
-            line-height: 1.8;
+            line-height: 1.78;
         }
 
-        .log-list li { margin-bottom: 0.7rem; }
+        .tc-list li { margin-bottom: 0.65rem; }
 
-        /* 9. COMMAND LAUNCHPAD PORTAL */
-        .cyber-launch-portal {
+        /* 9. EDUCATION, CERTIFICATIONS & ADDITIONAL SKILLS (EXACT RESUME DATA) */
+        .exec-credentials-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 2.8rem;
+        }
+
+        .cred-card {
+            background: var(--bg-glass-panel);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 32px;
+            padding: 3rem;
+            transition: all 0.3s ease;
+        }
+
+        .cred-card:hover {
+            border-color: var(--neon-cyan);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.95), 0 0 45px rgba(0, 240, 255, 0.38);
+        }
+
+        .cred-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--neon-cyan);
+            margin-bottom: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-transform: uppercase;
+        }
+
+        .edu-item {
+            padding-bottom: 1.4rem;
+            margin-bottom: 1.4rem;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+        }
+
+        .edu-item:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: none; }
+
+        .edu-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.3rem;
+        }
+
+        .edu-sub {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.06rem;
+            color: var(--neon-gold);
+            font-weight: 700;
+        }
+
+        .soft-skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .soft-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.12rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 0.9rem 1.4rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .soft-item i { color: var(--neon-pink); font-size: 1.2rem; }
+
+        /* 10. COMMAND LAUNCHPAD PORTAL */
+        .exec-launchpad {
             background: linear-gradient(135deg, rgba(13, 19, 42, 0.96) 0%, rgba(6, 8, 18, 0.99) 100%);
             border: 2px solid var(--neon-cyan);
             border-radius: 40px;
@@ -884,13 +988,13 @@
         }
 
         @media (max-width: 1024px) {
-            .split-hero-container { grid-template-columns: 1fr; }
-            .quadrant-grid { grid-template-columns: 1fr; }
-            .cyber-slab { grid-template-columns: 1fr; }
-            .synapse-banner-node { grid-template-columns: 1fr; }
-            .split-roadmap-grid { grid-template-columns: 1fr; }
-            .viper-navbar { width: 95%; padding: 0.75rem 1.4rem; }
-            .viper-nav-links { display: none; }
+            .exec-profile-container { grid-template-columns: 1fr; }
+            .skills-taxonomy-grid { grid-template-columns: 1fr; }
+            .exec-projects-grid { grid-template-columns: 1fr; }
+            .exec-timeline-grid { grid-template-columns: 1fr; }
+            .exec-credentials-grid { grid-template-columns: 1fr; }
+            .exec-navbar { width: 95%; padding: 0.75rem 1.4rem; }
+            .exec-nav-links { display: none; }
         }
     </style>
 </head>
@@ -900,317 +1004,382 @@
     <canvas id="ambient-canvas"></canvas>
     <div class="cyber-grid-floor"></div>
 
-    <!-- Revolutionary Viper-Radial Command Navbar -->
-    <header class="viper-navbar">
-        <a href="#" class="viper-brand"><i class="fa-solid fa-microchip"></i> CHANDRU<span class="brand-text">.AI</span></a>
+    <!-- Executive Resume Navbar -->
+    <header class="exec-navbar">
+        <a href="#" class="exec-brand"><i class="fa-solid fa-microchip"></i> CHANDRU<span class="brand-text">.AI</span></a>
         
         <div class="radar-pill">
             <span class="beacon-pulse"></span>
-            <span>SYSTEM ACTIVE // VIPER V10.0</span>
+            <span>EXECUTIVE RESUME MATRIX // V11.0</span>
         </div>
 
-        <nav class="viper-nav-links">
-            <a href="#radar-hub" class="active">Radar Hub</a>
-            <a href="#cyber-slabs">AI Slabs</a>
-            <a href="#synapse-nodes">Synapse Grid</a>
-            <a href="#roadmap">Roadmap</a>
-            <a href="#launchpad" class="btn-viper-connect">Initiate Connect</a>
+        <nav class="exec-nav-links">
+            <a href="#about-profile" class="active">About Me</a>
+            <a href="#skills-section">Skills Matrix</a>
+            <a href="#projects-showcase">4 Projects</a>
+            <a href="#experience-timeline">Internships</a>
+            <a href="#credentials-section">Education</a>
+            <a href="#launchpad" class="btn-exec-connect">Contact Me</a>
         </nav>
     </header>
 
-    <!-- Revolutionary Hero Section: Asymmetric Split-Screen Radar & 4-Quadrant Matrix -->
-    <section class="radar-hero" id="radar-hub">
-        <div class="split-hero-container">
-            <!-- Left: Hero Identity Slab -->
-            <div class="hero-identity-slab">
-                <div class="scanner-line"></div>
-                
-                <div class="status-pill-cyber">
-                    <i class="fa-solid fa-circle-nodes"></i>
-                    <span>PREDICTIVE AI ARCHITECT & DATA SCIENTIST // V10.0</span>
+    <!-- Executive Hero & About Me Portrait Matrix -->
+    <section class="exec-hero-profile" id="about-profile">
+        <div class="exec-profile-container">
+            
+            <!-- Left Portrait Photo Pod (Embedded Exact Executive Image!) -->
+            <div class="profile-photo-pod">
+                <div class="portrait-frame">
+                    <img src="profile.png" alt="Chandru C - Data Scientist">
+                    <span class="profile-badge-pill"><i class="fa-solid fa-circle-check" style="color:var(--neon-emerald)"></i> AI ARCHITECT</span>
                 </div>
                 
-                <h1 class="hero-title-main">
+                <div class="photo-card-info">
+                    <h2 class="pci-name">CHANDRU C</h2>
+                    <span class="pci-role">DATA SCIENTIST // AI ARCHITECT</span>
+                    
+                    <div class="pci-links-grid">
+                        <a href="tel:+918056835870" class="pci-btn"><i class="fa-solid fa-phone" style="color:var(--neon-gold)"></i> Call Direct</a>
+                        <a href="mailto:chandrucoffl@gmail.com" class="pci-btn"><i class="fa-solid fa-envelope" style="color:var(--neon-pink)"></i> Send Email</a>
+                        <a href="https://linkedin.com/in/chandruc-offl-7378863a4" target="_blank" class="pci-btn"><i class="fa-brands fa-linkedin" style="color:var(--neon-cyan)"></i> LinkedIn</a>
+                        <a href="https://github.com/chandrucoffl" target="_blank" class="pci-btn"><i class="fa-brands fa-github" style="color:var(--neon-emerald)"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Professional Summary & About Me Pod -->
+            <div class="profile-summary-pod">
+                <div class="resume-header-bar">
+                    <span class="rh-title"><i class="fa-solid fa-file-shield"></i> PROFESSIONAL RESUME SUMMARY</span>
+                    <div class="rh-contact-row">
+                        <span><i class="fa-solid fa-phone"></i> +91 8056835870</span>
+                        <span><i class="fa-solid fa-envelope"></i> chandrucoffl@gmail.com</span>
+                    </div>
+                </div>
+
+                <h1 class="about-heading">
                     Architecting <br>
-                    <span class="title-hologram">Radial Neural Cores</span>
+                    <span class="title-hologram">Predictive AI Systems</span>
                 </h1>
-                
-                <p class="hero-body-text">
-                    Transforming high-velocity operational data streams into sub-second neural expert inference platforms, autonomous medical crowdfunding fraud engines (`MediTrust AI`), and high-precision clinical diagnostic classifiers (`MediSense`).
+
+                <p class="resume-summary-text">
+                    <b>Aspiring Data Scientist with a strong technical foundation in Artificial Intelligence, Machine Learning, and advanced data analytics.</b> Certified in Google Cloud Data Analytics and trained in Oracle database technologies and modern AI skillsets under the Naan Mudhalvan initiative. Demonstrated technical expertise through structured industry internships and hands-on laboratory workshops. Adept at transforming complex datasets into clear business intelligence and scalable automated architectures.
                 </p>
 
-                <div class="hero-action-row">
-                    <a href="#cyber-slabs" class="btn-split btn-primary-split">
-                        <span>EXPLORE AI SLABS</span>
+                <div class="about-action-buttons">
+                    <a href="#projects-showcase" class="btn-exec btn-exec-primary">
+                        <span>EXPLORE 4 PROJECTS</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="#launchpad" class="btn-split btn-outline-split">
+                    <a href="#launchpad" class="btn-exec btn-exec-outline">
                         <i class="fa-solid fa-file-arrow-down"></i>
-                        <span>DOWNLOAD RESUME</span>
+                        <span>DOWNLOAD ATS RESUME</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Right: Interactive 4-Quadrant Neural Telemetry Matrix (`different` Hero HUD!) -->
-            <div class="quadrant-grid">
-                <div class="quadrant-box quad-cyan" onclick="location.href='#slab-nexus'">
-                    <div>
-                        <div class="quad-top"><span>// 01_CORE</span><i class="fa-solid fa-bolt" style="color:var(--neon-cyan)"></i></div>
-                        <h3 class="quad-title">NEXUS AI</h3>
-                        <p class="quad-desc">Deep expert reasoning modules & sub-second multi-threaded operational inference.</p>
-                    </div>
-                    <div class="quad-stats">
-                        <span class="qs-val" style="color:var(--neon-cyan)">&lt; 14 ms</span>
-                        <span class="qs-lbl">Latency Speed</span>
-                    </div>
-                </div>
-
-                <div class="quadrant-box quad-gold" onclick="location.href='#slab-meditrust'">
-                    <div>
-                        <div class="quad-top"><span>// 02_ENGINE</span><i class="fa-solid fa-shield-halved" style="color:var(--neon-gold)"></i></div>
-                        <h3 class="quad-title">MediTrust OCR</h3>
-                        <p class="quad-desc">Autonomous multi-engine Tesseract extraction & live Aiven MySQL endpoint verify.</p>
-                    </div>
-                    <div class="quad-stats">
-                        <span class="qs-val" style="color:var(--neon-gold)">96.2%</span>
-                        <span class="qs-lbl">OCR Extraction</span>
-                    </div>
-                </div>
-
-                <div class="quadrant-box quad-pink" onclick="location.href='#slab-medisense'">
-                    <div>
-                        <div class="quad-top"><span>// 03_CLINICAL</span><i class="fa-solid fa-dna" style="color:var(--neon-pink)"></i></div>
-                        <h3 class="quad-title">MediSense ML</h3>
-                        <p class="quad-desc">30+ tumor characteristics evaluated for benign vs. malignant real-time specificity.</p>
-                    </div>
-                    <div class="quad-stats">
-                        <span class="qs-val" style="color:var(--neon-pink)">98.9%</span>
-                        <span class="qs-lbl">Diagnosis Spec</span>
-                    </div>
-                </div>
-
-                <div class="quadrant-box quad-emerald" onclick="location.href='#slab-mmp'">
-                    <div>
-                        <div class="quad-top"><span>// 04_ENSEMBLE</span><i class="fa-solid fa-layer-group" style="color:var(--neon-emerald)"></i></div>
-                        <h3 class="quad-title">MMP Suite</h3>
-                        <p class="quad-desc">Concurrent multi-domain ensemble pipeline with bulk CSV ingestion & REST API.</p>
-                    </div>
-                    <div class="quad-stats">
-                        <span class="qs-val" style="color:var(--neon-emerald)">96.8%</span>
-                        <span class="qs-lbl">Ensemble Acc</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Live Telemetry Marquee Bar -->
     <div class="marquee-container">
         <div class="marquee-track">
-            <div class="m-item"><i class="fa-solid fa-bolt" style="color:var(--neon-cyan)"></i> <span style="color:var(--neon-cyan)">NEXUS AI CORE:</span> &lt;14MS INFERENCE LATENCY</div>
-            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:var(--neon-gold)"></i> <span style="color:var(--neon-gold)">MEDITRUST OCR:</span> &gt;95% MULTI-ENGINE PRECISION</div>
-            <div class="m-item"><i class="fa-solid fa-dna" style="color:var(--neon-pink)"></i> <span style="color:var(--neon-pink)">MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED</div>
-            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:var(--neon-emerald)"></i> <span style="color:var(--neon-emerald)">MMP ENSEMBLE SUITE:</span> BATCH CSV PREDICTION PIPELINE</div>
-            <div class="m-item"><i class="fa-solid fa-cloud" style="color:var(--neon-cyan)"></i> <span style="color:var(--neon-cyan)">CLOUD INFRASTRUCTURE:</span> RENDER / AIVEN MYSQL ACTIVE</div>
+            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:var(--neon-gold)"></i> <span style="color:var(--neon-gold)">MEDITRUST AI:</span> &gt;95% PREDICTION ACCURACY FOR HEALTHCARE CROWDFUNDING</div>
+            <div class="m-item"><i class="fa-solid fa-bolt" style="color:var(--neon-cyan)"></i> <span style="color:var(--neon-cyan)">NEXUS AI CORE:</span> &lt;14MS MULTI-DOMAIN REAL-TIME INFERENCE</div>
+            <div class="m-item"><i class="fa-solid fa-dna" style="color:var(--neon-pink)"></i> <span style="color:var(--neon-pink)">MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED WITH 98.9% SPECIFICITY</div>
+            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:var(--neon-emerald)"></i> <span style="color:var(--neon-emerald)">MMP ENSEMBLE SUITE:</span> BULK CSV BATCH INGESTION PIPELINE</div>
             <!-- Duplicate for loop -->
-            <div class="m-item"><i class="fa-solid fa-bolt" style="color:var(--neon-cyan)"></i> <span style="color:var(--neon-cyan)">NEXUS AI CORE:</span> &lt;14MS INFERENCE LATENCY</div>
-            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:var(--neon-gold)"></i> <span style="color:var(--neon-gold)">MEDITRUST OCR:</span> &gt;95% MULTI-ENGINE PRECISION</div>
-            <div class="m-item"><i class="fa-solid fa-dna" style="color:var(--neon-pink)"></i> <span style="color:var(--neon-pink)">MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED</div>
-            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:var(--neon-emerald)"></i> <span style="color:var(--neon-emerald)">MMP ENSEMBLE SUITE:</span> BATCH CSV PREDICTION PIPELINE</div>
-            <div class="m-item"><i class="fa-solid fa-cloud" style="color:var(--neon-cyan)"></i> <span style="color:var(--neon-cyan)">CLOUD INFRASTRUCTURE:</span> RENDER / AIVEN MYSQL ACTIVE</div>
+            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:var(--neon-gold)"></i> <span style="color:var(--neon-gold)">MEDITRUST AI:</span> &gt;95% PREDICTION ACCURACY FOR HEALTHCARE CROWDFUNDING</div>
+            <div class="m-item"><i class="fa-solid fa-bolt" style="color:var(--neon-cyan)"></i> <span style="color:var(--neon-cyan)">NEXUS AI CORE:</span> &lt;14MS MULTI-DOMAIN REAL-TIME INFERENCE</div>
+            <div class="m-item"><i class="fa-solid fa-dna" style="color:var(--neon-pink)"></i> <span style="color:var(--neon-pink)">MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED WITH 98.9% SPECIFICITY</div>
+            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:var(--neon-emerald)"></i> <span style="color:var(--neon-emerald)">MMP ENSEMBLE SUITE:</span> BULK CSV BATCH INGESTION PIPELINE</div>
         </div>
     </div>
 
-    <!-- Revolutionary Projects: Full-Span Asymmetric Cyber-Slabs (`different` Layout!) -->
-    <section class="section-wrap" id="cyber-slabs">
+    <!-- Technical Skills & Competencies (Structured Exactly by Resume Categories) -->
+    <section class="section-wrap" id="skills-section">
         <div class="section-header">
-            <span class="section-code">// 01. PREDICTIVE ARCHITECTURES</span>
-            <h2 class="section-heading">Asymmetric <span class="title-hologram">Cyber-Slabs</span></h2>
-            <p class="section-subtext">Production-grade enterprise machine learning platforms, autonomous verification pipelines, and high-precision clinical diagnostic suites.</p>
+            <span class="section-code">// 01. EXECUTIVE TAXONOMY</span>
+            <h2 class="section-heading">Technical <span class="title-hologram">Skills Matrix</span></h2>
+            <p class="section-subtext">Structured technical competencies formatted exactly according to official executive resume taxonomy.</p>
         </div>
 
-        <div class="cyber-slabs-list">
+        <div class="skills-taxonomy-grid">
+            <div class="skill-taxonomy-card stc-cyan">
+                <div class="stc-header">
+                    <i class="fa-solid fa-terminal"></i>
+                    <h3>Programming & Databases</h3>
+                </div>
+                <div class="stc-pills">
+                    <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>NumPy</span><span>SQL</span><span>Oracle DB</span><span>Relational Schemas</span>
+                </div>
+            </div>
+
+            <div class="skill-taxonomy-card stc-pink">
+                <div class="stc-header">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3>Data Science & AI</h3>
+                </div>
+                <div class="stc-pills">
+                    <span>Machine Learning (ML)</span><span>Statistical Analysis</span><span>Anomaly Detection</span><span>Deep Learning (DL)</span><span>Computer Vision</span><span>Predictive Modeling</span>
+                </div>
+            </div>
+
+            <div class="skill-taxonomy-card stc-gold">
+                <div class="stc-header">
+                    <i class="fa-solid fa-toolbox"></i>
+                    <h3>Tools & Platforms</h3>
+                </div>
+                <div class="stc-pills">
+                    <span>Google Cloud Platform (GCP)</span><span>Looker Studio</span><span>MS Excel</span><span>MS Word</span><span>GitHub</span><span>Basic Power BI</span><span>LinkedIn</span>
+                </div>
+            </div>
+
+            <div class="skill-taxonomy-card stc-emerald">
+                <div class="stc-header">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Core Analytics</h3>
+                </div>
+                <div class="stc-pills">
+                    <span>Data Cleaning</span><span>ETL Automation</span><span>Exploratory Data Analysis (EDA)</span><span>KPI Visualization</span><span>Data Mapping</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive 4-Project Showcase (`All 4 Projects Included with Exact Resume Specs`) -->
+    <section class="section-wrap" id="projects-showcase">
+        <div class="section-header">
+            <span class="section-code">// 02. ARCHITECTURAL ACHIEVEMENTS</span>
+            <h2 class="section-heading">All 4 Projects <span class="title-hologram">Showcase</span></h2>
+            <p class="section-subtext">Comprehensive presentation of all 4 flagship artificial intelligence models and clinical diagnostic suites.</p>
+        </div>
+
+        <div class="exec-projects-grid">
             
-            <!-- Slab 1: NEXUS AI Core -->
-            <div class="cyber-slab slab-cyan" id="slab-nexus">
-                <div class="slab-info">
-                    <span class="slab-code"><i class="fa-solid fa-bolt"></i> // 01_SYS_FLAGSHIP</span>
-                    <h3 class="slab-title">NEXUS AI: Multi-Domain Core</h3>
-                    <p class="slab-desc">
+            <!-- Project 1: MediTrust AI (`Academic Project from Resume`) -->
+            <div class="exec-project-pod epp-gold" id="project-meditrust">
+                <div>
+                    <div class="epp-badge-row">
+                        <span class="epp-badge"><i class="fa-solid fa-shield-halved"></i> RESUME ACADEMIC PROJECT</span>
+                        <span style="font-family:'Chakra Petch',monospace; color:var(--text-slate); font-weight:700;">// OCR & AI ENGINE</span>
+                    </div>
+                    
+                    <h3 class="epp-title">MediTrust: Secure Verification Model for Medical Crowdfunding</h3>
+                    
+                    <p class="epp-desc">
+                        Designed an Artificial Intelligence model using Scikit-learn to automate the authentication of medical crowdfunding applications and flag suspicious financial anomalies with prediction accuracy &gt;95%. Processed complex financial logs and healthcare records, reducing manual validation overhead while maximizing accuracy thresholds.
+                    </p>
+
+                    <div class="epp-metrics-box">
+                        <div><span class="emb-val" style="color:var(--neon-gold)">&gt; 95%</span><span class="emb-lbl">Prediction Accuracy</span></div>
+                        <div><span class="emb-val" style="color:var(--neon-gold)">Scikit-learn</span><span class="emb-lbl">Core AI Engine</span></div>
+                    </div>
+
+                    <div class="epp-techs">
+                        <span>Python</span><span>Scikit-learn</span><span>Tesseract OCR</span><span>Flask</span><span>Aiven MySQL</span><span>Render Cloud</span>
+                    </div>
+                </div>
+
+                <a href="https://meditrust-ai-fraud-detection-2.onrender.com" target="_blank" class="epp-footer-btn" style="color:var(--neon-gold)"><span>LAUNCH LIVE PORTAL</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <!-- Project 2: NEXUS AI Core (`Flagship Multi-Domain Intelligence`) -->
+            <div class="exec-project-pod epp-cyan" id="project-nexus">
+                <div>
+                    <div class="epp-badge-row">
+                        <span class="epp-badge"><i class="fa-solid fa-bolt"></i> FLAGSHIP AI SYSTEM</span>
+                        <span style="font-family:'Chakra Petch',monospace; color:var(--text-slate); font-weight:700;">// V2.4 CORE</span>
+                    </div>
+                    
+                    <h3 class="epp-title">NEXUS AI: Multi-Domain Core Architecture</h3>
+                    
+                    <p class="epp-desc">
                         Synthesizing high-velocity operational data streams across cloud ecosystems. Employs deep neural expert reasoning modules for instantaneous multi-threaded inference, automated decision support, and self-healing anomaly isolation with sub-second latency.
                     </p>
+
+                    <div class="epp-metrics-box">
+                        <div><span class="emb-val" style="color:var(--neon-cyan)">&lt; 14 ms</span><span class="emb-lbl">Inference Latency</span></div>
+                        <div><span class="emb-val" style="color:var(--neon-cyan)">99.8%</span><span class="emb-lbl">Decision Precision</span></div>
+                    </div>
+
+                    <div class="epp-techs">
+                        <span>Python</span><span>Deep Learning</span><span>Neural Systems</span><span>Multi-Agent AI</span><span>Real-Time Processing</span>
+                    </div>
                 </div>
 
-                <div class="slab-metrics-area">
-                    <div class="slab-stat-row">
-                        <span class="ssr-lbl">Inference Latency</span>
-                        <span class="ssr-val" style="color:var(--neon-cyan)">&lt; 14 ms Speed</span>
-                    </div>
-                    <div class="slab-tech-pills">
-                        <span>Deep Learning</span><span>Neural Systems</span><span>Multi-Agent AI</span><span>Python</span>
-                    </div>
-                </div>
-
-                <a href="#launchpad" class="slab-action" title="Explore Architecture Specs"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#launchpad" class="epp-footer-btn" style="color:var(--neon-cyan)"><span>EXPLORE SPECIFICATIONS</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <!-- Slab 2: MediTrust AI Engine -->
-            <div class="cyber-slab slab-gold" id="slab-meditrust">
-                <div class="slab-info">
-                    <span class="slab-code"><i class="fa-solid fa-shield-halved"></i> // 02_OCR_ENGINE</span>
-                    <h3 class="slab-title">MediTrust AI Verification Engine</h3>
-                    <p class="slab-desc">
-                        Automating authentication of medical crowdfunding applications. Integrates multi-engine OCR extraction (`Tesseract`) and algorithmic image hashing (`diff_match_patch`) to cross-verify demographics against live hospital endpoints (`Aiven MySQL`) with &gt;95% accuracy.
-                    </p>
-                </div>
-
-                <div class="slab-metrics-area">
-                    <div class="slab-stat-row">
-                        <span class="ssr-lbl">OCR Extraction Accuracy</span>
-                        <span class="ssr-val" style="color:var(--neon-gold)">96.2% Precision</span>
+            <!-- Project 3: MediSense Diagnostic Suite (`Oncology Classifier`) -->
+            <div class="exec-project-pod epp-pink" id="project-medisense">
+                <div>
+                    <div class="epp-badge-row">
+                        <span class="epp-badge"><i class="fa-solid fa-dna"></i> CLINICAL AI SUITE</span>
+                        <span style="font-family:'Chakra Petch',monospace; color:var(--text-slate); font-weight:700;">// ONCOLOGY CORE</span>
                     </div>
-                    <div class="slab-tech-pills">
-                        <span>Scikit-Learn</span><span>Tesseract OCR</span><span>Flask</span><span>Aiven MySQL</span><span>Render</span>
-                    </div>
-                </div>
-
-                <a href="https://meditrust-ai-fraud-detection-2.onrender.com" target="_blank" class="slab-action" title="Launch Cloud Portal"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-
-            <!-- Slab 3: MediSense Diagnostic Suite -->
-            <div class="cyber-slab slab-pink" id="slab-medisense">
-                <div class="slab-info">
-                    <span class="slab-code"><i class="fa-solid fa-dna"></i> // 03_CLINICAL_SUITE</span>
-                    <h3 class="slab-title">MediSense Diagnostic Platform</h3>
-                    <p class="slab-desc">
+                    
+                    <h3 class="epp-title">MediSense Clinical Diagnostic Platform</h3>
+                    
+                    <p class="epp-desc">
                         Evaluating 30+ complex tumor characteristics (`mean radius, texture, concavity, perimeter`) to classify malignant vs. benign tumor profiles with real-time confidence scoring. Deployed on high-concurrency Linux cloud servers (`gunicorn/Render`).
                     </p>
+
+                    <div class="epp-metrics-box">
+                        <div><span class="emb-val" style="color:var(--neon-pink)">30+</span><span class="emb-lbl">Tumor Features</span></div>
+                        <div><span class="emb-val" style="color:var(--neon-pink)">98.9%</span><span class="emb-lbl">Diagnosis Specificity</span></div>
+                    </div>
+
+                    <div class="epp-techs">
+                        <span>Scikit-learn</span><span>Pandas / NumPy</span><span>Flask</span><span>Gunicorn</span><span>Clinical AI</span>
+                    </div>
                 </div>
 
-                <div class="slab-metrics-area">
-                    <div class="slab-stat-row">
-                        <span class="ssr-lbl">Diagnosis Specificity</span>
-                        <span class="ssr-val" style="color:var(--neon-pink)">98.9% Specificity</span>
-                    </div>
-                    <div class="slab-tech-pills">
-                        <span>Scikit-Learn</span><span>Pandas / NumPy</span><span>Flask</span><span>Gunicorn</span><span>Clinical AI</span>
-                    </div>
-                </div>
-
-                <a href="#launchpad" class="slab-action" title="Access Clinical Engine"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#launchpad" class="epp-footer-btn" style="color:var(--neon-pink)"><span>ACCESS CLINICAL ENGINE</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <!-- Slab 4: MMP Prediction Suite -->
-            <div class="cyber-slab slab-emerald" id="slab-mmp">
-                <div class="slab-info">
-                    <span class="slab-code"><i class="fa-solid fa-layer-group"></i> // 04_ENSEMBLE_CORE</span>
-                    <h3 class="slab-title">Multiple ML Prediction Engine (MMP)</h3>
-                    <p class="slab-desc">
-                        Scalable, multi-domain predictive analytics platform executing concurrent ensemble ML pipelines across varied clinical diagnostic datasets. Features bulk CSV batch ingestion, automated normalization, and instant downloadable analytical records.
+            <!-- Project 4: MMP Prediction Suite (`Ensemble Bulk CSV Pipeline`) -->
+            <div class="exec-project-pod epp-emerald" id="project-mmp">
+                <div>
+                    <div class="epp-badge-row">
+                        <span class="epp-badge"><i class="fa-solid fa-layer-group"></i> ENSEMBLE SUITE</span>
+                        <span style="font-family:'Chakra Petch',monospace; color:var(--text-slate); font-weight:700;">// BATCH CSV CORE</span>
+                    </div>
+                    
+                    <h3 class="epp-title">Multiple ML Prediction Engine (MMP)</h3>
+                    
+                    <p class="epp-desc">
+                        Scalable, multi-domain predictive analytics platform executing concurrent ensemble ML pipelines across varied clinical diagnostic datasets. Features bulk CSV batch ingestion, automated normalization, and structured analytical reports.
                     </p>
+
+                    <div class="epp-metrics-box">
+                        <div><span class="emb-val" style="color:var(--neon-emerald)">96.8%</span><span class="emb-lbl">Ensemble Accuracy</span></div>
+                        <div><span class="emb-val" style="color:var(--neon-emerald)">Bulk CSV</span><span class="emb-lbl">Batch Ingest API</span></div>
+                    </div>
+
+                    <div class="epp-techs">
+                        <span>Ensemble ML</span><span>RESTful APIs</span><span>Batch Processing</span><span>Python</span><span>Pandas</span>
+                    </div>
                 </div>
 
-                <div class="slab-metrics-area">
-                    <div class="slab-stat-row">
-                        <span class="ssr-lbl">Ensemble Model Acc</span>
-                        <span class="ssr-val" style="color:var(--neon-emerald)">96.8% Multi-Model</span>
-                    </div>
-                    <div class="slab-tech-pills">
-                        <span>Ensemble ML</span><span>RESTful APIs</span><span>Batch Processing</span><span>Python</span>
-                    </div>
-                </div>
-
-                <a href="https://multiple-ml-prediction-2.onrender.com" target="_blank" class="slab-action" title="Open Analytics Suite"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://multiple-ml-prediction-2.onrender.com" target="_blank" class="epp-footer-btn" style="color:var(--neon-emerald)"><span>OPEN ANALYTICS SUITE</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
         </div>
     </section>
 
-    <!-- Revolutionary Skills: Radial Synapse Banner Nodes (`different` Layout!) -->
-    <section class="section-wrap" id="synapse-nodes">
+    <!-- Structured Internship & Workshop Experience Timeline (`Exact Resume Bullet Points`) -->
+    <section class="section-wrap" id="experience-timeline">
         <div class="section-header">
-            <span class="section-code">// 02. COMPETENCY MATRIX</span>
-            <h2 class="section-heading">Radial Synapse <span class="title-hologram">Banner Nodes</span></h2>
-            <p class="section-subtext">Exploratory data analytics, statistical algorithms, deep neural modeling, and cloud ML infrastructure.</p>
+            <span class="section-code">// 03. EXECUTIVE RECORD</span>
+            <h2 class="section-heading">Internship & Workshop <span class="title-hologram">Experience</span></h2>
+            <p class="section-subtext">Structured industry experience and high-intensity technical laboratory workshops.</p>
         </div>
 
-        <div class="radial-synapses-list">
-            <div class="synapse-banner-node node-cyan-banner">
-                <div class="banner-left">
-                    <i class="fa-solid fa-terminal"></i>
-                    <h3>Algorithmic ML Core</h3>
+        <div class="exec-timeline-grid">
+            
+            <!-- Column 1: Internship Experience -->
+            <div class="timeline-section-block">
+                <h3><i class="fa-solid fa-briefcase"></i> Internship Experience</h3>
+                
+                <div class="timeline-card">
+                    <span class="tc-date">JUN 2024 – JUL 2024</span>
+                    <h4 class="tc-role">Data Scientist Intern</h4>
+                    <div class="tc-org"><i class="fa-brands fa-google"></i> Google Skills4India (Ed-Tech Domain)</div>
+                    <ul class="tc-list">
+                        <li>Utilized advanced SQL and Python (`Scikit-learn`) to perform deep exploratory data analysis (`EDA`) and user segmentation on large-scale educational engagement datasets.</li>
+                        <li>Designed and deployed an AI-based recommendation proof-concept system aimed at optimizing personalized user learning paths based on performance metrics.</li>
+                    </ul>
                 </div>
-                <div class="banner-right">
-                    <p class="banner-desc">Core statistical programming, data preprocessing (`EDA`), hypothesis testing, and supervised/unsupervised ML models.</p>
-                    <div class="banner-chips">
-                        <span>Python</span><span>Scikit-Learn</span><span>Pandas</span><span>NumPy</span><span>EDA</span><span>Regression</span><span>Random Forests</span>
-                    </div>
+
+                <div class="timeline-card">
+                    <span class="tc-date">JUN 2024 – AUG 2024</span>
+                    <h4 class="tc-role">Data Analytics Intern</h4>
+                    <div class="tc-org"><i class="fa-solid fa-building-columns"></i> Solutions Pro Company</div>
+                    <ul class="tc-list">
+                        <li>Cleaned and mapped raw enterprise production data using relational database schemas, accelerating reliable discovery of data anomalies and structural patterns.</li>
+                        <li>Designed interactive visualization systems and summary dashboards to track essential key performance indicators (KPIs) and operational analytics metrics.</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="synapse-banner-node node-pink-banner">
-                <div class="banner-left">
-                    <i class="fa-solid fa-network-wired"></i>
-                    <h3>Neural & Deep AI</h3>
+            <!-- Column 2: Workshops & Technical Training -->
+            <div class="timeline-section-block">
+                <h3><i class="fa-solid fa-laptop-code"></i> Workshops & Training</h3>
+                
+                <div class="timeline-card">
+                    <span class="tc-date">OCT 2024</span>
+                    <h4 class="tc-role">Workshop: Spring Boot & Microservices</h4>
+                    <div class="tc-org"><i class="fa-solid fa-graduation-cap"></i> Kongunadu College of Engineering & Tech</div>
+                    <ul class="tc-list">
+                        <li>Acquired hands-on experience in building scalable backend architecture, RESTful APIs, and microservices utilizing Spring Boot frameworks.</li>
+                    </ul>
                 </div>
-                <div class="banner-right">
-                    <p class="banner-desc">Advanced neural expert reasoning, computer vision (`Tesseract OCR`), anomaly isolation, and real-time inference.</p>
-                    <div class="banner-chips">
-                        <span>Deep Learning</span><span>Multi-Agent AI</span><span>Computer Vision</span><span>OCR Pipelines</span><span>Feature Eng</span><span>Ensemble ML</span>
-                    </div>
+
+                <div class="timeline-card">
+                    <span class="tc-date">MAR 2024</span>
+                    <h4 class="tc-role">Workshop: Machine Learning with R & Python</h4>
+                    <div class="tc-org"><i class="fa-solid fa-graduation-cap"></i> Kongunadu College of Engineering & Tech</div>
+                    <ul class="tc-list">
+                        <li>Engaged in practical sessions focused on implementing core statistical machine learning algorithms and data visualization techniques using R programming and Python environments.</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="synapse-banner-node node-gold-banner">
-                <div class="banner-left">
-                    <i class="fa-solid fa-database"></i>
-                    <h3>Big Data & Cloud</h3>
-                </div>
-                <div class="banner-right">
-                    <p class="banner-desc">High-concurrency cloud deployments, relational database schemas, Looker BI dashboards, and version-controlled CI/CD.</p>
-                    <div class="banner-chips">
-                        <span>SQL / MySQL</span><span>Oracle DB</span><span>Google Cloud (GCP)</span><span>Looker Studio</span><span>Render Cloud</span><span>Gunicorn / Flask</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Career Timeline Split Roadmap (`different` Layout!) -->
-    <section class="section-wrap" id="roadmap">
+    <!-- Education, Certifications & Additional Skills (`Exact Resume Data`) -->
+    <section class="section-wrap" id="credentials-section">
         <div class="section-header">
-            <span class="section-code">// 03. CAREER JOURNEY</span>
-            <h2 class="section-heading">Strategic <span class="title-hologram">Roadmap Logs</span></h2>
-            <p class="section-subtext">Structured real-world engineering experience across leading Ed-Tech and Enterprise analytics organizations.</p>
+            <span class="section-code">// 04. ACADEMIC & ANALYTICAL CREDENTIALS</span>
+            <h2 class="section-heading">Education & <span class="title-hologram">Certifications</span></h2>
+            <p class="section-subtext">Formal degree qualifications, government-backed technical certifications, and analytical soft skills.</p>
         </div>
 
-        <div class="split-roadmap-grid">
-            <div class="roadmap-log-card">
-                <span class="log-date">JUN 2024 – JUL 2024</span>
-                <h3 class="log-role">Data Scientist Intern</h3>
-                <div class="log-org"><i class="fa-brands fa-google"></i> Google Skills4India (Ed-Tech Domain)</div>
-                <ul class="log-list">
-                    <li>Utilized advanced SQL and Python (`Scikit-learn`) to perform deep exploratory data analysis (`EDA`) and user segmentation on large-scale educational engagement datasets.</li>
-                    <li>Designed and deployed an AI-based recommendation proof-of-concept system aimed at optimizing personalized learning paths based on key engagement metrics.</li>
-                </ul>
+        <div class="exec-credentials-grid">
+            
+            <!-- Left: Education & Certifications Card -->
+            <div class="cred-card">
+                <h3><i class="fa-solid fa-award"></i> Education & Certifications</h3>
+                
+                <div class="edu-item">
+                    <div class="edu-title">B.Tech (Artificial Intelligence and Data Science)</div>
+                    <div class="edu-sub">Vetri Vinayaha College of Engineering and Technology (Expected 2026)</div>
+                </div>
+
+                <div class="edu-item">
+                    <div class="edu-title">Naan Mudhalvan Program Certification</div>
+                    <div class="edu-sub">Oracle Certification & AI Green Skills – TNSDC Government Certification</div>
+                </div>
+
+                <div class="edu-item">
+                    <div class="edu-title">Google Cloud Data Analytics Professional Certificate</div>
+                    <div class="edu-sub">Official Google Cloud Professional Certification</div>
+                </div>
             </div>
 
-            <div class="roadmap-log-card">
-                <span class="log-date">JUN 2024 – AUG 2024</span>
-                <h3 class="log-role">Data Analytics Intern</h3>
-                <div class="log-org"><i class="fa-solid fa-building-columns"></i> Solutions Pro Company</div>
-                <ul class="log-list">
-                    <li>Cleaned and mapped raw enterprise production data using relational database schemas, accelerating reliable discovery of data anomalies and structural patterns.</li>
-                    <li>Designed interactive visualization systems and summary dashboards to track essential KPIs and operational metrics.</li>
-                </ul>
+            <!-- Right: Additional Skills Card -->
+            <div class="cred-card">
+                <h3><i class="fa-solid fa-cubes"></i> Additional Skills</h3>
+                
+                <div class="soft-skills-list">
+                    <div class="soft-item"><i class="fa-solid fa-check-double"></i> Analytical Thinking & Problem Solving</div>
+                    <div class="soft-item"><i class="fa-solid fa-check-double"></i> Data Interpretation & Reporting</div>
+                    <div class="soft-item"><i class="fa-solid fa-check-double"></i> Basic Statistical Understanding</div>
+                    <div class="soft-item"><i class="fa-solid fa-check-double"></i> Attention to Detail & Quality</div>
+                    <div class="soft-item"><i class="fa-solid fa-check-double"></i> Communication & Teamwork</div>
+                    <div class="soft-item"><i class="fa-solid fa-check-double"></i> Quick Learner with Adaptability</div>
+                </div>
             </div>
+
         </div>
     </section>
 
     <!-- Command Launchpad Portal -->
     <section class="section-wrap" id="launchpad">
-        <div class="cyber-launch-portal">
-            <span class="section-code">// 04. COMMAND CONNECTION</span>
+        <div class="exec-launchpad">
+            <span class="section-code">// 05. EXECUTIVE CONTACT</span>
             <h2 class="launch-title-main">Initiate Strategic Collaboration</h2>
             <p class="launch-sub-desc">Looking for an elite Data Scientist or AI Architect to engineer autonomous verification models and enterprise clinical ML solutions? Initiate communication.</p>
             
@@ -1224,7 +1393,7 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; 2026 CHANDRU C // ARCHITECTED WITH SPLIT-SCREEN RADAR & ASYMMETRIC CYBER-SLABS TECHNOLOGY.</p>
+        <p>&copy; 2026 CHANDRU C // STRUCTURED ACCORDING TO OFFICIAL EXECUTIVE RESUME TAXONOMY WITH 100% NEURON MATRIX TECHNOLOGY.</p>
     </footer>
 
     <!-- PRESERVED 100% UNTOUCHED ULTRA-FAST 60FPS INTERACTIVE CURSOR NEURONS SCRIPT -->
@@ -1378,7 +1547,7 @@
             if (scrollTimer) return;
             scrollTimer = setTimeout(() => {
                 const sections = document.querySelectorAll('section');
-                const navLinks = document.querySelectorAll('.viper-nav-links a');
+                const navLinks = document.querySelectorAll('.exec-nav-links a');
                 let current = '';
 
                 sections.forEach(sec => {
