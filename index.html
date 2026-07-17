@@ -4,31 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chandru C | Data Scientist & AI Architect</title>
-    <!-- STARIXO FUTURISTIC FONT AESTHETIC: Orbitron (Headings/Logo), Rajdhani / Chakra Petch (Subheadings/Body), JetBrains Mono (Code/Metrics) -->
+    <!-- STARIXO FUTURISTIC FONT & EXECUTIVE TECH: Orbitron (Headings/Logo), Rajdhani (Body), Chakra Petch (Telemetry/Code), JetBrains Mono (Stats) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&family=Rajdhani:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --bg-obsidian: #03050d;
-            --bg-glass-panel: rgba(14, 19, 40, 0.78);
-            --bg-glass-hover: rgba(24, 32, 65, 0.9);
+            --bg-titanium: #02040a;
+            --bg-glass-slab: rgba(12, 18, 38, 0.82);
+            --bg-glass-slab-hover: rgba(20, 28, 58, 0.94);
             
-            /* VIBRANT CHROMATIC PALETTE */
-            --neon-pink: #ff007a;
-            --neon-cyan: #00f0ff;
-            --neon-emerald: #00ff88;
-            --neon-purple: #8a2be2;
-            --neon-gold: #ffb800;
-            --neon-orange: #ff5e00;
-            --neon-crimson: #ff0844;
-            --neon-violet: #a855f7;
+            /* VIBRANT NEO-CYBERNETIC PALETTE */
+            --cyber-cyan: #00f0ff;
+            --cyber-pink: #ff0055;
+            --cyber-gold: #ffd700;
+            --cyber-emerald: #00ff88;
+            --cyber-purple: #9d4edd;
+            --cyber-orange: #ff6b00;
             
             --text-pure: #ffffff;
-            --text-dim: #cbd5e1;
-            --border-glass: rgba(255, 255, 255, 0.14);
+            --text-slate: #94a3b8;
+            --border-glow: rgba(0, 240, 255, 0.28);
         }
 
         * {
@@ -39,7 +37,7 @@
         }
 
         body {
-            background-color: var(--bg-obsidian);
+            background-color: var(--bg-titanium);
             color: var(--text-pure);
             font-family: 'Rajdhani', -apple-system, sans-serif;
             font-size: 16px;
@@ -50,8 +48,8 @@
             line-height: 1.68;
         }
 
-        /* 1. OPTIMIZED ZERO-LAG HARDWARE ACCELERATED BACKGROUND */
-        #star-canvas {
+        /* 1. ULTRA-FAST ZERO-LAG AMBIENT HOLOGRAPHIC FIELD */
+        #ambient-canvas {
             position: fixed;
             top: 0;
             left: 0;
@@ -61,242 +59,258 @@
             pointer-events: none;
         }
 
-        /* Lightweight Static/Smooth Radial Glows (No Heavy Blur Repaints!) */
-        .bg-glow-layer {
+        .hologram-nebula {
             position: fixed;
             top: 0; left: 0;
             width: 100vw; height: 100vh;
             background: 
-                radial-gradient(circle at 10% 15%, rgba(255, 0, 122, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 85% 80%, rgba(0, 240, 255, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 50% 45%, rgba(255, 184, 0, 0.08) 0%, transparent 45%);
+                radial-gradient(circle at 15% 20%, rgba(0, 240, 255, 0.11) 0%, transparent 45%),
+                radial-gradient(circle at 85% 35%, rgba(255, 0, 85, 0.11) 0%, transparent 45%),
+                radial-gradient(circle at 50% 85%, rgba(255, 215, 0, 0.08) 0%, transparent 50%);
             z-index: -3;
             pointer-events: none;
         }
 
-        /* Hardware Accelerated Ultra-Fast Grid Shift */
-        .scan-grid {
+        .cyber-grid-floor {
             position: fixed;
             top: 0; left: 0;
             width: 100vw; height: 100vh;
             background-image: 
-                linear-gradient(rgba(255, 0, 122, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
+                linear-gradient(rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 0, 85, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
             z-index: -2;
             pointer-events: none;
-            animation: gridSmoothShift 12s linear infinite;
+            animation: gridPulse 10s linear infinite;
         }
 
-        @keyframes gridSmoothShift {
+        @keyframes gridPulse {
             0% { background-position: 0 0; }
-            100% { background-position: 50px 50px; }
+            100% { background-position: 60px 60px; }
         }
 
-        /* 2. EXECUTIVE CHROMATIC NAVBAR (STARIXO SLEEK SIZING) */
-        .navbar {
+        /* 2. NEO-CYBERNETIC MONOLITH COMMAND BAR */
+        .monolith-header {
             position: fixed;
-            top: 18px;
+            top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            width: 93%;
-            max-width: 1300px;
+            width: 94%;
+            max-width: 1350px;
             z-index: 1000;
-            background: rgba(10, 14, 30, 0.88);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 50px;
-            padding: 0.75rem 2.2rem;
+            background: rgba(8, 12, 26, 0.9);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(0, 240, 255, 0.35);
+            border-radius: 24px;
+            padding: 0.8rem 2.4rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9), inset 0 0 20px rgba(255, 0, 122, 0.18);
-            transition: all 0.3s ease;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.95), 0 0 30px rgba(0, 240, 255, 0.15);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .navbar:hover {
-            border-color: var(--neon-pink);
-            box-shadow: 0 15px 55px rgba(255, 0, 122, 0.35), inset 0 0 28px rgba(0, 240, 255, 0.25);
+        .monolith-header:hover {
+            border-color: var(--cyber-cyan);
+            box-shadow: 0 15px 55px rgba(0, 0, 0, 0.95), 0 0 45px rgba(0, 240, 255, 0.3);
         }
 
-        .logo {
+        .monolith-brand {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.35rem;
-            font-weight: 800;
+            font-size: 1.4rem;
+            font-weight: 900;
             color: #fff;
             text-decoration: none;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .monolith-brand i { color: var(--cyber-cyan); filter: drop-shadow(0 0 12px var(--cyber-cyan)); }
+        
+        .brand-gradient {
+            background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-gold), var(--cyber-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .telemetry-status {
             display: flex;
             align-items: center;
             gap: 12px;
+            background: rgba(0, 240, 255, 0.1);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            padding: 0.4rem 1.1rem;
+            border-radius: 50px;
+            font-family: 'Chakra Petch', monospace;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--cyber-cyan);
+            letter-spacing: 1.2px;
         }
 
-        .logo span {
-            background: linear-gradient(135deg, var(--neon-pink), var(--neon-gold), var(--neon-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
+        .pulse-dot {
+            width: 9px; height: 9px;
+            background: var(--cyber-emerald);
+            border-radius: 50%;
+            box-shadow: 0 0 14px var(--cyber-emerald);
+            animation: radarPulse 1.2s infinite alternate;
         }
 
-        .nav-links {
+        @keyframes radarPulse {
+            0% { transform: scale(0.85); opacity: 0.7; }
+            100% { transform: scale(1.35); opacity: 1; box-shadow: 0 0 22px var(--cyber-emerald); }
+        }
+
+        .monolith-nav {
             display: flex;
-            gap: 2.2rem;
+            gap: 2rem;
             align-items: center;
         }
 
-        .nav-links a {
-            color: var(--text-dim);
+        .monolith-nav a {
+            color: var(--text-slate);
             text-decoration: none;
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.84rem;
+            font-size: 0.82rem;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
+            transition: all 0.25s ease;
             position: relative;
-            transition: color 0.25s ease;
         }
 
-        .nav-links a:hover, .nav-links a.active {
+        .monolith-nav a:hover, .monolith-nav a.active {
             color: #fff;
-            text-shadow: 0 0 14px var(--neon-cyan);
+            text-shadow: 0 0 16px var(--cyber-cyan);
         }
 
-        .nav-links a::after {
+        .monolith-nav a::after {
             content: '';
             position: absolute;
-            bottom: -5px; left: 0;
+            bottom: -6px; left: 0;
             width: 0%; height: 2px;
-            background: linear-gradient(90deg, var(--neon-pink), var(--neon-gold), var(--neon-cyan));
+            background: linear-gradient(90deg, var(--cyber-cyan), var(--cyber-pink));
             transition: width 0.3s ease;
         }
 
-        .nav-links a:hover::after, .nav-links a.active::after {
+        .monolith-nav a:hover::after, .monolith-nav a.active::after {
             width: 100%;
         }
 
-        .nav-btn {
-            background: linear-gradient(135deg, var(--neon-pink), var(--neon-gold), var(--neon-cyan));
-            color: #03050d !important;
-            padding: 0.58rem 1.6rem;
-            border-radius: 50px;
+        .btn-command-init {
+            background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-pink));
+            color: #02040a !important;
+            padding: 0.6rem 1.6rem;
+            border-radius: 12px;
             font-family: 'Orbitron', sans-serif;
             font-weight: 800 !important;
             font-size: 0.8rem !important;
             letter-spacing: 1.2px !important;
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.55);
-            transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+            transition: all 0.3s ease !important;
         }
 
-        .nav-btn:hover {
+        .btn-command-init:hover {
             transform: scale(1.05) translateY(-2px);
-            box-shadow: 0 0 35px rgba(255, 0, 122, 0.85), 0 0 55px rgba(0, 240, 255, 0.6);
-            color: #03050d !important;
+            box-shadow: 0 0 45px rgba(0, 240, 255, 0.9), 0 0 60px rgba(255, 0, 85, 0.7);
+            color: #02040a !important;
         }
 
-        /* 3. HERO SECTION: SLEEK, REFINED & COMPACT STARIXO TYPOGRAPHY */
-        .hero {
+        /* 3. REVOLUTIONARY HERO SECTION: THE HOLOGRAPHIC AI COMMAND CONSOLE */
+        .hero-console {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 9.5rem 2rem 4.5rem;
+            padding: 9.5rem 2rem 5rem;
             position: relative;
         }
 
-        .hero-hub {
-            max-width: 1300px;
+        .console-container {
+            max-width: 1350px;
             width: 100%;
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1.15fr 1.05fr;
+            gap: 3.2rem;
             align-items: center;
         }
 
-        .hero-left {
+        .console-left {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
         }
 
-        .status-pill {
+        .system-badge {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(255, 0, 122, 0.14);
-            border: 1px solid rgba(255, 0, 122, 0.55);
+            background: rgba(255, 0, 85, 0.14);
+            border: 1px solid rgba(255, 0, 85, 0.55);
             padding: 0.5rem 1.4rem;
-            border-radius: 50px;
-            margin-bottom: 1.6rem;
-            box-shadow: 0 0 20px rgba(255, 0, 122, 0.35);
-        }
-
-        .pulse-core {
-            width: 10px; height: 10px;
-            background: var(--neon-pink);
-            border-radius: 50%;
-            box-shadow: 0 0 15px var(--neon-pink);
-        }
-
-        .status-pill span {
+            border-radius: 12px;
+            margin-bottom: 1.8rem;
             font-family: 'Chakra Petch', monospace;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-weight: 700;
-            color: var(--neon-pink);
-            letter-spacing: 1.8px;
+            color: var(--cyber-pink);
+            letter-spacing: 2px;
+            box-shadow: 0 0 25px rgba(255, 0, 85, 0.3);
         }
 
-        /* REFINED SLEEK STARIXO FUTURISTIC HERO TITLE (Orbitron) */
-        .hero-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: clamp(2.1rem, 3.8vw, 3.2rem);
-            font-weight: 800;
-            line-height: 1.25;
-            margin-bottom: 1.4rem;
-            letter-spacing: 1.2px;
+        /* Sleek Starixo Hero Title */
+        .console-title {
+            font-family: 'Orbitron', 'Syne', sans-serif;
+            font-size: clamp(2.3rem, 4.2vw, 3.6rem);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
             color: #fff;
+            letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        .gradient-text {
-            background: linear-gradient(135deg, var(--neon-pink) 0%, var(--neon-gold) 33%, var(--neon-cyan) 66%, var(--neon-emerald) 100%);
+        .title-highlight {
+            background: linear-gradient(135deg, var(--cyber-cyan) 0%, var(--cyber-gold) 50%, var(--cyber-pink) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.45));
         }
 
-        /* REFINED SLEEK BODY DESCRIPTION */
-        .hero-desc {
+        .console-desc {
             font-family: 'Rajdhani', sans-serif;
-            font-size: 1.05rem;
-            color: var(--text-dim);
-            max-width: 640px;
-            margin-bottom: 2.2rem;
-            line-height: 1.72;
+            font-size: 1.12rem;
+            color: var(--text-slate);
+            max-width: 660px;
+            margin-bottom: 2.6rem;
+            line-height: 1.76;
             font-weight: 600;
-            letter-spacing: 0.4px;
         }
 
-        .hero-desc b {
+        .console-desc b {
             color: #fff;
             font-weight: 700;
-            border-bottom: 2px solid var(--neon-pink);
+            border-bottom: 2px solid var(--cyber-cyan);
         }
 
         /* Action Buttons */
-        .btn-group {
+        .console-actions {
             display: flex;
-            gap: 1.4rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
-        .btn-cyber {
+        .btn-console {
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            padding: 0.95rem 2.2rem;
-            border-radius: 16px;
+            padding: 1rem 2.4rem;
+            border-radius: 14px;
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.86rem;
+            font-size: 0.88rem;
             font-weight: 800;
             letter-spacing: 1.2px;
             text-transform: uppercase;
@@ -304,107 +318,171 @@
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .btn-primary-glow {
-            background: linear-gradient(135deg, var(--neon-pink), var(--neon-gold), var(--neon-cyan));
-            color: #03050d;
-            box-shadow: 0 0 30px rgba(255, 0, 122, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.8);
+        .btn-primary-cyan {
+            background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-emerald));
+            color: #02040a;
+            box-shadow: 0 0 35px rgba(0, 240, 255, 0.6);
         }
 
-        .btn-primary-glow:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 0 45px rgba(255, 0, 122, 0.9), 0 0 60px rgba(0, 240, 255, 0.65);
-            color: #03050d;
+        .btn-primary-cyan:hover {
+            transform: translateY(-5px) scale(1.04);
+            box-shadow: 0 0 55px rgba(0, 240, 255, 0.95), 0 0 70px rgba(0, 255, 136, 0.7);
+            color: #02040a;
         }
 
-        .btn-outline-glass {
-            background: rgba(14, 19, 40, 0.82);
-            color: var(--neon-gold);
-            border: 2px solid var(--neon-gold);
-            box-shadow: 0 0 20px rgba(255, 184, 0, 0.3);
+        .btn-outline-gold {
+            background: rgba(14, 19, 40, 0.85);
+            color: var(--cyber-gold);
+            border: 2px solid var(--cyber-gold);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
         }
 
-        .btn-outline-glass:hover {
-            background: var(--neon-gold);
-            color: #03050d;
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 0 40px rgba(255, 184, 0, 0.9);
+        .btn-outline-gold:hover {
+            background: var(--cyber-gold);
+            color: #02040a;
+            transform: translateY(-5px) scale(1.04);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.95);
         }
 
-        /* Hero Right: Optimized 3D Rotating Quantum Sphere Container */
-        .sphere-container {
+        /* Hero Right: INTERACTIVE LIVE AI TELEMETRY HUD TERMINAL */
+        .hud-terminal {
             width: 100%;
-            height: 460px;
-            background: rgba(14, 19, 40, 0.65);
-            border: 1px solid rgba(255, 0, 122, 0.4);
-            border-radius: 32px;
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.9), inset 0 0 25px rgba(255, 0, 122, 0.18);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            background: rgba(10, 15, 32, 0.88);
+            border: 2px solid var(--cyber-cyan);
+            border-radius: 28px;
+            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.95), 0 0 50px rgba(0, 240, 255, 0.25);
             overflow: hidden;
+            position: relative;
         }
 
-        .sphere-header {
-            position: absolute;
-            top: 18px;
-            left: 24px;
-            right: 24px;
+        .hud-header {
+            background: rgba(6, 9, 20, 0.95);
+            padding: 0.9rem 1.6rem;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.3);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 10;
         }
 
-        .sphere-label {
+        .hud-title {
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: var(--neon-cyan);
+            font-size: 0.82rem;
+            font-weight: 800;
+            color: var(--cyber-cyan);
             letter-spacing: 1.5px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .sphere-stats {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.76rem;
-            font-weight: 700;
-            color: var(--neon-pink);
-            background: rgba(255, 0, 122, 0.15);
-            padding: 0.35rem 0.95rem;
-            border-radius: 50px;
-            border: 1px solid rgba(255, 0, 122, 0.45);
+        .hud-tabs {
+            display: flex;
+            gap: 0.6rem;
         }
 
-        #quantum-sphere {
-            width: 100%;
-            height: 100%;
-            cursor: pointer;
-        }
-
-        .sphere-footer {
-            position: absolute;
-            bottom: 16px;
-            font-family: 'JetBrains Mono', monospace;
+        .hud-tab {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-slate);
+            font-family: 'Chakra Petch', monospace;
             font-size: 0.74rem;
-            color: var(--text-dim);
-            letter-spacing: 1px;
+            font-weight: 700;
+            padding: 0.3rem 0.85rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.25s ease;
         }
 
-        /* 4. LIVE MULTICOLORED TELEMETRY MARQUEE BAR */
-        .marquee-wrap {
+        .hud-tab:hover, .hud-tab.active {
+            background: var(--cyber-cyan);
+            color: #02040a;
+            border-color: var(--cyber-cyan);
+            box-shadow: 0 0 15px var(--cyber-cyan);
+        }
+
+        .hud-body {
+            padding: 2rem;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hud-screen-content {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.86rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .hud-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .hud-line:last-child { border-bottom: none; }
+
+        .hl-lbl { color: var(--text-slate); font-weight: 600; }
+        .hl-val { font-weight: 800; }
+        .val-cyan { color: var(--cyber-cyan); }
+        .val-pink { color: var(--cyber-pink); }
+        .val-gold { color: var(--cyber-gold); }
+        .val-emerald { color: var(--cyber-emerald); }
+
+        .hud-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .hud-stat-box {
+            background: rgba(4, 6, 14, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 1rem;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .stat-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-lbl {
+            font-family: 'Chakra Petch', monospace;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--text-slate);
+            text-transform: uppercase;
+        }
+
+        .hud-footer {
+            background: rgba(6, 9, 20, 0.95);
+            padding: 0.75rem 1.6rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Chakra Petch', monospace;
+            font-size: 0.76rem;
+            color: var(--cyber-emerald);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* 4. LIVE TELEMETRY MARQUEE BAR */
+        .marquee-container {
             width: 100%;
+            background: rgba(10, 15, 32, 0.85);
+            border-top: 1px solid rgba(0, 240, 255, 0.25);
+            border-bottom: 1px solid rgba(0, 240, 255, 0.25);
+            padding: 0.9rem 0;
             overflow: hidden;
-            background: rgba(14, 19, 40, 0.8);
-            border-top: 1px solid var(--border-glass);
-            border-bottom: 1px solid var(--border-glass);
-            padding: 0.85rem 0;
-            margin-bottom: 5rem;
             position: relative;
             z-index: 10;
         }
@@ -412,519 +490,461 @@
         .marquee-track {
             display: flex;
             width: max-content;
-            animation: marqueeScroll 28s linear infinite;
+            animation: marqueeFastScroll 26s linear infinite;
         }
 
         .m-item {
             font-family: 'Chakra Petch', monospace;
-            font-size: 0.85rem;
+            font-size: 0.86rem;
             font-weight: 700;
             color: #e2e8f0;
-            margin-right: 4rem;
+            margin-right: 4.5rem;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             letter-spacing: 1.2px;
         }
 
         .m-item span { font-weight: 800; }
 
-        @keyframes marqueeScroll {
+        @keyframes marqueeFastScroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
 
-        /* 5. SECTIONS COMMON & REFINED SLEEK STARIXO HEADINGS */
+        /* 5. COMMON SECTION ARCHITECTURE */
         .section-wrap {
-            max-width: 1300px;
+            max-width: 1350px;
             margin: 0 auto;
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             position: relative;
         }
 
-        .section-head {
+        .section-header {
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto 4.2rem;
+            max-width: 850px;
+            margin: 0 auto 4.5rem;
         }
 
-        .section-tag {
+        .section-code {
             font-family: 'Chakra Petch', monospace;
-            font-size: 0.82rem;
+            font-size: 0.84rem;
             font-weight: 700;
-            color: var(--neon-pink);
+            color: var(--cyber-pink);
             letter-spacing: 3px;
             text-transform: uppercase;
             display: block;
             margin-bottom: 0.6rem;
         }
 
-        .section-title {
+        .section-heading {
             font-family: 'Orbitron', sans-serif;
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-size: clamp(1.9rem, 3.2vw, 2.7rem);
             font-weight: 800;
-            margin-bottom: 1rem;
+            margin-bottom: 1.1rem;
             color: #fff;
             letter-spacing: 1.5px;
             text-transform: uppercase;
         }
 
-        .section-desc {
+        .section-subtext {
             font-family: 'Rajdhani', sans-serif;
-            color: var(--text-dim);
-            font-size: 1.05rem;
+            color: var(--text-slate);
+            font-size: 1.1rem;
             font-weight: 600;
-            line-height: 1.7;
+            line-height: 1.76;
         }
 
-        /* 6. VIBRANT MULTICOLORED GLASS DATA PANELS SHOWCASE (SLEEK SIZING) */
-        .panels-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 2.2rem;
-        }
-
-        .data-panel {
-            background: var(--bg-glass-panel);
-            border: 1px solid var(--border-glass);
-            border-radius: 28px;
-            padding: 2.6rem;
-            position: relative;
+        /* 6. REVOLUTIONARY PROJECTS SHOWCASE: HOLOGRAPHIC MISSION DECKS */
+        .mission-decks {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 3rem;
+        }
+
+        .mission-deck {
+            background: var(--bg-glass-slab);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 32px;
+            padding: 3.2rem;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 3rem;
+            align-items: center;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            transition: all 0.35s ease;
         }
 
-        /* THEME 1: NEXUS AI -> VIBRANT INDIGO & ELECTRIC PINK */
-        .theme-pink {
-            border-left: 5px solid var(--neon-pink);
-            border-color: rgba(255, 0, 122, 0.5);
-            box-shadow: 0 0 35px rgba(255, 0, 122, 0.2);
-        }
-        .theme-pink:hover {
-            border-color: var(--neon-pink);
-            background: var(--bg-glass-hover);
-            transform: translateY(-6px);
-            box-shadow: 0 25px 55px rgba(0,0,0,0.95), 0 0 50px rgba(255, 0, 122, 0.5);
-        }
-        .theme-pink .panel-icon { background: rgba(255, 0, 122, 0.18); border-color: var(--neon-pink); color: var(--neon-pink); }
-        .theme-pink .panel-meta, .theme-pink .t-val, .theme-pink .panel-link { color: var(--neon-pink); }
-        .theme-pink .status-badge { background: rgba(255, 0, 122, 0.16); color: var(--neon-pink); border: 1px solid var(--neon-pink); }
+        .deck-pink { border-left: 6px solid var(--cyber-pink); box-shadow: 0 0 45px rgba(255, 0, 85, 0.18); }
+        .deck-pink:hover { border-color: var(--cyber-pink); transform: translateY(-8px); box-shadow: 0 30px 75px rgba(0,0,0,0.98), 0 0 65px rgba(255, 0, 85, 0.45); }
+        .deck-pink .deck-tag { color: var(--cyber-pink); border-color: var(--cyber-pink); background: rgba(255, 0, 85, 0.14); }
+        .deck-pink .progress-fill { background: var(--cyber-pink); box-shadow: 0 0 15px var(--cyber-pink); }
 
-        /* THEME 2: MEDITRUST -> VIBRANT SOLAR GOLD & ORANGE */
-        .theme-gold {
-            border-left: 5px solid var(--neon-gold);
-            border-color: rgba(255, 184, 0, 0.45);
-            box-shadow: 0 0 35px rgba(255, 184, 0, 0.18);
-        }
-        .theme-gold:hover {
-            border-color: var(--neon-gold);
-            background: var(--bg-glass-hover);
-            transform: translateY(-6px);
-            box-shadow: 0 25px 55px rgba(0,0,0,0.95), 0 0 50px rgba(255, 184, 0, 0.5);
-        }
-        .theme-gold .panel-icon { background: rgba(255, 184, 0, 0.18); border-color: var(--neon-gold); color: var(--neon-gold); }
-        .theme-gold .panel-meta, .theme-gold .t-val, .theme-gold .panel-link { color: var(--neon-gold); }
-        .theme-gold .status-badge { background: rgba(255, 184, 0, 0.16); color: var(--neon-gold); border: 1px solid var(--neon-gold); }
+        .deck-gold { border-left: 6px solid var(--cyber-gold); box-shadow: 0 0 45px rgba(255, 215, 0, 0.18); }
+        .deck-gold:hover { border-color: var(--cyber-gold); transform: translateY(-8px); box-shadow: 0 30px 75px rgba(0,0,0,0.98), 0 0 65px rgba(255, 215, 0, 0.45); }
+        .deck-gold .deck-tag { color: var(--cyber-gold); border-color: var(--cyber-gold); background: rgba(255, 215, 0, 0.14); }
+        .deck-gold .progress-fill { background: var(--cyber-gold); box-shadow: 0 0 15px var(--cyber-gold); }
 
-        /* THEME 3: MEDISENSE -> VIBRANT CRIMSON RED & ROSE PINK */
-        .theme-crimson {
-            border-left: 5px solid var(--neon-crimson);
-            border-color: rgba(255, 8, 68, 0.45);
-            box-shadow: 0 0 35px rgba(255, 8, 68, 0.18);
-        }
-        .theme-crimson:hover {
-            border-color: var(--neon-crimson);
-            background: var(--bg-glass-hover);
-            transform: translateY(-6px);
-            box-shadow: 0 25px 55px rgba(0,0,0,0.95), 0 0 50px rgba(255, 8, 68, 0.5);
-        }
-        .theme-crimson .panel-icon { background: rgba(255, 8, 68, 0.18); border-color: var(--neon-crimson); color: var(--neon-crimson); }
-        .theme-crimson .panel-meta, .theme-crimson .t-val, .theme-crimson .panel-link { color: var(--neon-crimson); }
-        .theme-crimson .status-badge { background: rgba(255, 8, 68, 0.16); color: var(--neon-crimson); border: 1px solid var(--neon-crimson); }
+        .deck-cyan { border-left: 6px solid var(--cyber-cyan); box-shadow: 0 0 45px rgba(0, 240, 255, 0.18); }
+        .deck-cyan:hover { border-color: var(--cyber-cyan); transform: translateY(-8px); box-shadow: 0 30px 75px rgba(0,0,0,0.98), 0 0 65px rgba(0, 240, 255, 0.45); }
+        .deck-cyan .deck-tag { color: var(--cyber-cyan); border-color: var(--cyber-cyan); background: rgba(0, 240, 255, 0.14); }
+        .deck-cyan .progress-fill { background: var(--cyber-cyan); box-shadow: 0 0 15px var(--cyber-cyan); }
 
-        /* THEME 4: MMP -> VIBRANT QUANTUM EMERALD & CYAN */
-        .theme-emerald {
-            border-left: 5px solid var(--neon-emerald);
-            border-color: rgba(0, 255, 136, 0.48);
-            box-shadow: 0 0 35px rgba(0, 255, 136, 0.2);
-        }
-        .theme-emerald:hover {
-            border-color: var(--neon-emerald);
-            background: var(--bg-glass-hover);
-            transform: translateY(-6px);
-            box-shadow: 0 25px 55px rgba(0,0,0,0.95), 0 0 50px rgba(0, 255, 136, 0.55);
-        }
-        .theme-emerald .panel-icon { background: rgba(0, 255, 136, 0.18); border-color: var(--neon-emerald); color: var(--neon-emerald); }
-        .theme-emerald .panel-meta, .theme-emerald .t-val, .theme-emerald .panel-link { color: var(--neon-emerald); }
-        .theme-emerald .status-badge { background: rgba(0, 255, 136, 0.16); color: var(--neon-emerald); border: 1px solid var(--neon-emerald); }
+        .deck-emerald { border-left: 6px solid var(--cyber-emerald); box-shadow: 0 0 45px rgba(0, 255, 136, 0.18); }
+        .deck-emerald:hover { border-color: var(--cyber-emerald); transform: translateY(-8px); box-shadow: 0 30px 75px rgba(0,0,0,0.98), 0 0 65px rgba(0, 255, 136, 0.45); }
+        .deck-emerald .deck-tag { color: var(--cyber-emerald); border-color: var(--cyber-emerald); background: rgba(0, 255, 136, 0.14); }
+        .deck-emerald .progress-fill { background: var(--cyber-emerald); box-shadow: 0 0 15px var(--cyber-emerald); }
 
-        /* Asymmetric Spans */
-        .panel-flagship { grid-column: span 12; }
-        .panel-half { grid-column: span 6; }
+        .deck-info { display: flex; flex-direction: column; }
 
-        .panel-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.8rem;
-        }
-
-        .panel-icon {
-            width: 62px; height: 62px;
-            border-radius: 18px;
+        .deck-top {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.7rem;
-            border: 1px solid;
+            gap: 16px;
+            margin-bottom: 1.2rem;
         }
 
-        .status-badge {
+        .deck-tag {
             font-family: 'Chakra Petch', monospace;
-            font-size: 0.75rem;
+            font-size: 0.78rem;
             font-weight: 700;
-            padding: 0.48rem 1.3rem;
+            padding: 0.4rem 1.2rem;
             border-radius: 50px;
+            border: 1px solid;
             letter-spacing: 1.2px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
 
-        .panel-meta {
+        .deck-code {
             font-family: 'Chakra Petch', monospace;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-weight: 700;
+            color: var(--text-slate);
             letter-spacing: 2px;
-            margin-bottom: 0.6rem;
-            display: block;
         }
 
-        .panel-title {
+        .deck-title {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.85rem;
             font-weight: 800;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             color: #fff;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        .panel-flagship .panel-title { font-size: 1.85rem; }
-
-        .panel-desc {
+        .deck-desc {
             font-family: 'Rajdhani', sans-serif;
-            color: var(--text-dim);
-            font-size: 0.98rem;
+            color: var(--text-slate);
+            font-size: 1.05rem;
             font-weight: 600;
-            line-height: 1.72;
+            line-height: 1.78;
             margin-bottom: 2rem;
         }
 
-        .panel-telemetry {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.2rem;
-            background: rgba(0, 0, 0, 0.55);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 20px;
-            padding: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .t-val {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.3rem;
-            font-weight: 800;
-            display: block;
-        }
-
-        .t-lbl {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 700;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .panel-tags {
+        .deck-pills {
             display: flex;
             flex-wrap: wrap;
             gap: 0.7rem;
             margin-bottom: 2.2rem;
         }
 
-        .panel-tags span {
+        .deck-pills span {
             font-family: 'Chakra Petch', monospace;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 0.45rem 1rem;
-            border-radius: 12px;
+            padding: 0.45rem 1.1rem;
+            border-radius: 10px;
             font-size: 0.82rem;
-            font-weight: 600;
+            font-weight: 700;
             color: #e2e8f0;
             transition: all 0.25s ease;
         }
 
-        .theme-pink .panel-tags span:hover { border-color: var(--neon-pink); background: rgba(255, 0, 122, 0.25); color: #fff; }
-        .theme-gold .panel-tags span:hover { border-color: var(--neon-gold); background: rgba(255, 184, 0, 0.25); color: #fff; }
-        .theme-crimson .panel-tags span:hover { border-color: var(--neon-crimson); background: rgba(255, 8, 68, 0.25); color: #fff; }
-        .theme-emerald .panel-tags span:hover { border-color: var(--neon-emerald); background: rgba(0, 255, 136, 0.25); color: #fff; }
+        .deck-pink .deck-pills span:hover { background: rgba(255, 0, 85, 0.25); border-color: var(--cyber-pink); color: #fff; }
+        .deck-gold .deck-pills span:hover { background: rgba(255, 215, 0, 0.25); border-color: var(--cyber-gold); color: #fff; }
+        .deck-cyan .deck-pills span:hover { background: rgba(0, 240, 255, 0.25); border-color: var(--cyber-cyan); color: #fff; }
+        .deck-emerald .deck-pills span:hover { background: rgba(0, 255, 136, 0.25); border-color: var(--cyber-emerald); color: #fff; }
 
-        .panel-footer {
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .panel-link {
+        .deck-link {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             font-family: 'Orbitron', sans-serif;
-            font-size: 0.88rem;
+            font-size: 0.92rem;
             font-weight: 800;
             text-decoration: none;
             letter-spacing: 1.2px;
             text-transform: uppercase;
             transition: transform 0.25s ease;
+            width: max-content;
         }
 
-        .panel-link:hover {
-            color: #fff !important;
-            transform: translateX(6px);
+        .deck-link:hover { color: #fff !important; transform: translateX(8px); }
+
+        /* Deck Right: Live Telemetry Gauges */
+        .deck-gauges {
+            background: rgba(4, 6, 14, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 2.2rem;
         }
 
-        /* 7. VIBRANT MULTICOLORED SYNAPSE STUDIO */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.2rem;
+        .gauge-item {
+            margin-bottom: 1.6rem;
         }
 
-        .synapse-box {
-            background: var(--bg-glass-panel);
-            border: 1px solid var(--border-glass);
-            border-radius: 28px;
-            padding: 2.6rem;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
+        .gauge-item:last-child { margin-bottom: 0; }
+
+        .gauge-head {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Chakra Petch', monospace;
+            font-size: 0.86rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
             overflow: hidden;
         }
 
-        .box-gold { border-top: 5px solid var(--neon-gold); }
-        .box-gold:hover { border-color: var(--neon-gold); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.95), 0 0 35px rgba(255, 184, 0, 0.35); }
-        .box-gold .synapse-top i { color: var(--neon-gold); }
-        .box-gold .synapse-pills span { background: rgba(255, 184, 0, 0.12); border: 1px solid rgba(255, 184, 0, 0.4); color: #fde047; }
-        .box-gold:hover .synapse-pills span { background: rgba(255, 184, 0, 0.28); color: #fff; }
-
-        .box-pink { border-top: 5px solid var(--neon-pink); }
-        .box-pink:hover { border-color: var(--neon-pink); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.95), 0 0 35px rgba(255, 0, 122, 0.35); }
-        .box-pink .synapse-top i { color: var(--neon-pink); }
-        .box-pink .synapse-pills span { background: rgba(255, 0, 122, 0.12); border: 1px solid rgba(255, 0, 122, 0.4); color: #f472b6; }
-        .box-pink:hover .synapse-pills span { background: rgba(255, 0, 122, 0.28); color: #fff; }
-
-        .box-emerald { border-top: 5px solid var(--neon-emerald); }
-        .box-emerald:hover { border-color: var(--neon-emerald); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.95), 0 0 35px rgba(0, 255, 136, 0.35); }
-        .box-emerald .synapse-top i { color: var(--neon-emerald); }
-        .box-emerald .synapse-pills span { background: rgba(0, 255, 136, 0.12); border: 1px solid rgba(0, 255, 136, 0.4); color: #6ee7b7; }
-        .box-emerald:hover .synapse-pills span { background: rgba(0, 255, 136, 0.28); color: #fff; }
-
-        .synapse-top {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 1.4rem;
+        .progress-fill {
+            height: 100%;
+            border-radius: 50px;
+            transition: width 1s ease-in-out;
         }
 
-        .synapse-top i { font-size: 2.2rem; }
+        /* 7. REVOLUTIONARY SKILLS: AI NEURAL CORTEX GRID */
+        .cortex-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.4rem;
+        }
 
-        .synapse-top h3 {
+        .cortex-unit {
+            background: var(--bg-glass-slab);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 28px;
+            padding: 2.8rem;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .cortex-cyan { border-top: 5px solid var(--cyber-cyan); }
+        .cortex-cyan:hover { border-color: var(--cyber-cyan); transform: translateY(-6px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(0, 240, 255, 0.4); }
+        .cortex-cyan i { color: var(--cyber-cyan); }
+        .cortex-cyan .cortex-tags span { background: rgba(0, 240, 255, 0.12); border-color: rgba(0, 240, 255, 0.4); color: #67e8f9; }
+        .cortex-cyan:hover .cortex-tags span { background: rgba(0, 240, 255, 0.28); color: #fff; }
+
+        .cortex-pink { border-top: 5px solid var(--cyber-pink); }
+        .cortex-pink:hover { border-color: var(--cyber-pink); transform: translateY(-6px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 0, 85, 0.4); }
+        .cortex-pink i { color: var(--cyber-pink); }
+        .cortex-pink .cortex-tags span { background: rgba(255, 0, 85, 0.12); border-color: rgba(255, 0, 85, 0.4); color: #fda4af; }
+        .cortex-pink:hover .cortex-tags span { background: rgba(255, 0, 85, 0.28); color: #fff; }
+
+        .cortex-gold { border-top: 5px solid var(--cyber-gold); }
+        .cortex-gold:hover { border-color: var(--cyber-gold); transform: translateY(-6px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 215, 0, 0.4); }
+        .cortex-gold i { color: var(--cyber-gold); }
+        .cortex-gold .cortex-tags span { background: rgba(255, 215, 0, 0.12); border-color: rgba(255, 215, 0, 0.4); color: #fde047; }
+        .cortex-gold:hover .cortex-tags span { background: rgba(255, 215, 0, 0.28); color: #fff; }
+
+        .cortex-top {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 1.5rem;
+        }
+
+        .cortex-top i { font-size: 2.4rem; }
+
+        .cortex-top h3 {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.28rem;
+            font-size: 1.35rem;
             font-weight: 800;
             color: #fff;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        .synapse-box p {
+        .cortex-desc {
             font-family: 'Rajdhani', sans-serif;
-            color: var(--text-dim);
-            font-size: 0.98rem;
+            color: var(--text-slate);
+            font-size: 1.02rem;
             font-weight: 600;
-            margin-bottom: 1.8rem;
-            line-height: 1.7;
+            margin-bottom: 2rem;
+            line-height: 1.72;
         }
 
-        .synapse-pills {
+        .cortex-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.7rem;
         }
 
-        .synapse-pills span {
+        .cortex-tags span {
             font-family: 'Chakra Petch', monospace;
-            padding: 0.45rem 1.05rem;
+            padding: 0.46rem 1.1rem;
             border-radius: 50px;
+            border: 1px solid;
             font-size: 0.82rem;
             font-weight: 700;
-            transition: background 0.25s ease, color 0.25s ease;
+            transition: all 0.25s ease;
         }
 
-        /* 8. EXPERIENCE TIMELINE */
-        .timeline-wrap {
-            max-width: 900px;
+        /* 8. CAREER TIMELINE STRATEGIC ROADMAP */
+        .roadmap-wrap {
+            max-width: 950px;
             margin: 0 auto;
             position: relative;
-            padding-left: 3.8rem;
-            border-left: 3px dashed var(--neon-cyan);
+            padding-left: 4rem;
+            border-left: 3px dashed var(--cyber-cyan);
         }
 
-        .time-item {
+        .roadmap-node {
             position: relative;
-            margin-bottom: 4.2rem;
+            margin-bottom: 4.5rem;
         }
 
-        .time-item:last-child { margin-bottom: 0; }
+        .roadmap-node:last-child { margin-bottom: 0; }
 
-        .time-dot {
+        .node-circle {
             position: absolute;
-            left: -4.32rem;
+            left: -4.48rem;
             top: 0.3rem;
-            width: 24px; height: 24px;
-            background: linear-gradient(135deg, var(--neon-pink), var(--neon-gold));
+            width: 26px; height: 26px;
+            background: linear-gradient(135deg, var(--cyber-cyan), var(--cyber-pink));
             border-radius: 50%;
-            border: 4px solid var(--bg-obsidian);
-            box-shadow: 0 0 20px var(--neon-pink);
+            border: 4px solid var(--bg-titanium);
+            box-shadow: 0 0 24px var(--cyber-cyan);
         }
 
-        .time-panel {
-            background: var(--bg-glass-panel);
-            border: 1px solid var(--border-glass);
+        .node-panel {
+            background: var(--bg-glass-slab);
+            border: 1px solid rgba(255, 255, 255, 0.16);
             border-radius: 28px;
             padding: 2.8rem;
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
 
-        .time-panel:hover {
-            border-color: var(--neon-gold);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95), 0 0 35px rgba(255, 184, 0, 0.35);
-            transform: translateX(8px);
+        .node-panel:hover {
+            border-color: var(--cyber-gold);
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.95), 0 0 40px rgba(255, 215, 0, 0.35);
+            transform: translateX(10px);
         }
 
-        .time-stamp {
+        .node-date {
             font-family: 'Chakra Petch', monospace;
-            font-size: 0.86rem;
+            font-size: 0.88rem;
             font-weight: 700;
-            color: var(--neon-gold);
+            color: var(--cyber-gold);
             letter-spacing: 2px;
             display: block;
             margin-bottom: 0.5rem;
         }
 
-        .time-role {
+        .node-title {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.48rem;
+            font-size: 1.55rem;
             font-weight: 800;
             color: #fff;
             margin-bottom: 0.4rem;
             text-transform: uppercase;
         }
 
-        .time-org {
+        .node-org {
             font-family: 'Rajdhani', sans-serif;
-            font-size: 1.1rem;
-            color: var(--text-dim);
+            font-size: 1.12rem;
+            color: var(--text-slate);
             font-weight: 700;
-            margin-bottom: 1.4rem;
+            margin-bottom: 1.6rem;
             display: flex;
             align-items: center;
             gap: 12px;
         }
 
-        .time-org i { color: var(--neon-pink); }
+        .node-org i { color: var(--cyber-pink); }
 
-        .time-list {
+        .node-list {
             font-family: 'Rajdhani', sans-serif;
             list-style-position: inside;
             color: #cbd5e1;
-            font-size: 1.02rem;
+            font-size: 1.05rem;
             font-weight: 600;
-            line-height: 1.78;
+            line-height: 1.8;
         }
 
-        .time-list li { margin-bottom: 0.7rem; }
+        .node-list li { margin-bottom: 0.7rem; }
 
-        /* 9. CYBER CONTACT COMMAND DECK */
-        .portal-deck {
-            background: linear-gradient(135deg, rgba(14, 19, 40, 0.95) 0%, rgba(6, 8, 18, 0.99) 100%);
-            border: 2px solid var(--neon-pink);
-            border-radius: 40px;
-            padding: 5rem 3rem;
+        /* 9. COMMAND LAUNCHPAD PORTAL */
+        .launchpad-portal {
+            background: linear-gradient(135deg, rgba(12, 18, 38, 0.96) 0%, rgba(6, 8, 18, 0.99) 100%);
+            border: 2px solid var(--cyber-cyan);
+            border-radius: 36px;
+            padding: 5.5rem 3rem;
             text-align: center;
             position: relative;
-            overflow: hidden;
-            box-shadow: 0 0 60px rgba(255, 0, 122, 0.3);
+            box-shadow: 0 0 75px rgba(0, 240, 255, 0.35);
         }
 
-        .portal-head {
+        .launch-title {
             font-family: 'Orbitron', sans-serif;
-            font-size: clamp(2rem, 3.5vw, 3rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
+            font-size: clamp(2.1rem, 3.8vw, 3.2rem);
+            font-weight: 900;
+            margin-bottom: 1.2rem;
             color: #fff;
             text-transform: uppercase;
         }
 
-        .portal-desc {
+        .launch-desc {
             font-family: 'Rajdhani', sans-serif;
-            color: var(--text-dim);
-            font-size: 1.12rem;
+            color: var(--text-slate);
+            font-size: 1.15rem;
             font-weight: 600;
-            max-width: 680px;
-            margin: 0 auto 3.5rem;
-            line-height: 1.76;
+            max-width: 720px;
+            margin: 0 auto 3.8rem;
+            line-height: 1.78;
         }
 
-        .connect-grid {
+        .connection-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1.4rem;
+            gap: 1.6rem;
         }
 
-        .connect-pill {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 0, 122, 0.45);
-            padding: 1.1rem 2.4rem;
-            border-radius: 20px;
+        .connect-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 240, 255, 0.4);
+            padding: 1.15rem 2.6rem;
+            border-radius: 18px;
             color: #fff;
             font-family: 'Orbitron', sans-serif;
             font-weight: 700;
-            font-size: 0.92rem;
+            font-size: 0.94rem;
             letter-spacing: 1px;
             text-transform: uppercase;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             transition: all 0.3s ease;
-            box-shadow: 0 0 18px rgba(255, 0, 122, 0.2);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
         }
 
-        .connect-pill:hover {
-            background: var(--neon-pink);
-            color: #03050d;
-            border-color: var(--neon-pink);
-            transform: translateY(-4px) scale(1.04);
-            box-shadow: 0 0 45px rgba(255, 0, 122, 0.9);
+        .connect-box:hover {
+            background: var(--cyber-cyan);
+            color: #02040a;
+            border-color: var(--cyber-cyan);
+            transform: translateY(-5px) scale(1.04);
+            box-shadow: 0 0 50px rgba(0, 240, 255, 0.95);
         }
 
-        .connect-pill i { font-size: 1.3rem; }
+        .connect-box i { font-size: 1.35rem; }
 
         /* Footer */
         .footer {
@@ -932,292 +952,371 @@
             padding: 3.5rem 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             font-family: 'Chakra Petch', monospace;
-            font-size: 0.84rem;
-            color: var(--text-dim);
+            font-size: 0.86rem;
+            color: var(--text-slate);
             letter-spacing: 1.5px;
         }
 
         @media (max-width: 1024px) {
-            .hero-hub { grid-template-columns: 1fr; }
-            .panel-half { grid-column: span 12; }
-            .skills-grid { grid-template-columns: 1fr; }
-            .navbar { width: 95%; padding: 0.75rem 1.4rem; }
-            .nav-links { display: none; }
+            .console-container { grid-template-columns: 1fr; }
+            .mission-deck { grid-template-columns: 1fr; }
+            .cortex-grid { grid-template-columns: 1fr; }
+            .monolith-header { width: 95%; padding: 0.75rem 1.4rem; }
+            .monolith-nav { display: none; }
         }
     </style>
 </head>
 <body>
-    <!-- Hardware Accelerated Static/Smooth Background Layer -->
-    <div class="bg-glow-layer"></div>
-    <canvas id="star-canvas"></canvas>
-    <div class="scan-grid"></div>
+    <!-- Zero-Lag Hardware Accelerated Ambient Field -->
+    <div class="hologram-nebula"></div>
+    <canvas id="ambient-canvas"></canvas>
+    <div class="cyber-grid-floor"></div>
 
-    <!-- Executive Chromatic Navbar (Orbitron Sleek Sizing) -->
-    <header class="navbar">
-        <a href="#" class="logo"><i class="fa-solid fa-microchip" style="color:var(--neon-pink)"></i> CHANDRU<span>.AI</span></a>
-        <nav class="nav-links">
-            <a href="#about" class="active">Summary</a>
-            <a href="#projects">ML Cores</a>
-            <a href="#skills">AI Matrix</a>
-            <a href="#experience">Timeline</a>
-            <a href="#contact" class="nav-btn">Connect Now</a>
+    <!-- Neo-Cybernetic Monolith Command Bar -->
+    <header class="monolith-header">
+        <a href="#" class="monolith-brand"><i class="fa-solid fa-microchip"></i> CHANDRU<span class="brand-gradient">.AI</span></a>
+        
+        <div class="telemetry-status">
+            <span class="pulse-dot"></span>
+            <span>SYSTEM ACTIVE // ENGINE V8.0</span>
+        </div>
+
+        <nav class="monolith-nav">
+            <a href="#console" class="active">Console</a>
+            <a href="#missions">Architectures</a>
+            <a href="#cortex">Neural Grid</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#launchpad" class="btn-command-init">Initiate Connect</a>
         </nav>
     </header>
 
-    <!-- Hero Section: Sleek Refined Starixo Typography Podium -->
-    <section class="hero" id="about">
-        <div class="hero-hub">
-            <!-- Hero Left -->
-            <div class="hero-left">
-                <div class="status-pill">
-                    <span class="pulse-core"></span>
-                    <span>DATA SCIENTIST & PREDICTIVE AI ARCHITECT // V7.0 ULTRA-FAST</span>
+    <!-- Revolutionary Hero Section: The Holographic AI Command Console -->
+    <section class="hero-console" id="console">
+        <div class="console-container">
+            <!-- Left: Starixo Cyber Typography -->
+            <div class="console-left">
+                <div class="system-badge">
+                    <i class="fa-solid fa-terminal"></i>
+                    <span>PREDICTIVE AI ARCHITECT & DATA SCIENTIST // V8.0</span>
                 </div>
                 
-                <h1 class="hero-title">
-                    Architecting Autonomous <br>
-                    <span class="gradient-text">Neural & Clinical ML Cores</span>
+                <h1 class="console-title">
+                    Architecting <br>
+                    <span class="title-highlight">Autonomous Neural Cores</span>
                 </h1>
                 
-                <p class="hero-desc">
-                    Aspiring <b>Data Scientist & AI Architect</b> transforming high-velocity operational data streams into sub-second neural inference systems, autonomous crowdfunding fraud verification engines, and high-precision clinical diagnostic classifiers.
+                <p class="console-desc">
+                    Synthesizing high-velocity operational data streams into sub-second neural expert inference platforms, autonomous medical crowdfunding fraud engines (`MediTrust AI`), and high-precision clinical diagnostic classifiers (`MediSense`).
                 </p>
 
-                <div class="btn-group">
-                    <a href="#projects" class="btn-cyber btn-primary-glow">
-                        <span>EXPLORE ML DATA SUITE</span>
+                <div class="console-actions">
+                    <a href="#missions" class="btn-console btn-primary-cyan">
+                        <span>VIEW MISSION DECKS</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="#contact" class="btn-cyber btn-outline-glass">
-                        <i class="fa-solid fa-download"></i>
-                        <span>DOWNLOAD ATS RESUME</span>
+                    <a href="#launchpad" class="btn-console btn-outline-gold">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>DOWNLOAD RESUME</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Hero Right: Optimized 60FPS 3D Rotating Quantum Sphere -->
-            <div class="sphere-container">
-                <div class="sphere-header">
-                    <span class="sphere-label"><i class="fa-solid fa-circle-nodes" style="color:var(--neon-cyan)"></i> 3D QUANTUM CHROMATIC SPHERE</span>
-                    <span class="sphere-stats">65 NODES ACTIVE</span>
+            <!-- Right: Interactive Live AI Telemetry HUD Terminal -->
+            <div class="hud-terminal">
+                <div class="hud-header">
+                    <span class="hud-title"><i class="fa-solid fa-network-wired"></i> LIVE NEURAL TELEMETRY HUD</span>
+                    <div class="hud-tabs">
+                        <button class="hud-tab active" onclick="switchHUD('nexus', this)">NEXUS</button>
+                        <button class="hud-tab" onclick="switchHUD('meditrust', this)">MEDITRUST</button>
+                        <button class="hud-tab" onclick="switchHUD('medisense', this)">MEDISENSE</button>
+                        <button class="hud-tab" onclick="switchHUD('mmp', this)">MMP</button>
+                    </div>
                 </div>
-                <canvas id="quantum-sphere"></canvas>
-                <div class="sphere-footer">// INTERACTIVE: MOVE CURSOR NEAR SPHERE TO ACCELERATE</div>
+
+                <div class="hud-body" id="hud-display">
+                    <!-- Default NEXUS Content -->
+                    <div class="hud-screen-content">
+                        <div class="hud-line"><span class="hl-lbl">&gt; TARGET ARCHITECTURE:</span><span class="hl-val val-cyan">NEXUS AI UNIFIED SYSTEM</span></div>
+                        <div class="hud-line"><span class="hl-lbl">&gt; REASONING MODULES:</span><span class="hl-val val-pink">DEEP EXPERT INFERENCE ENGINE</span></div>
+                        <div class="hud-line"><span class="hl-lbl">&gt; DATA STREAM SYNTHESIS:</span><span class="hl-val val-gold">MULTI-THREADED OPERATIONAL PIPELINE</span></div>
+                        <div class="hud-line"><span class="hl-lbl">&gt; ANOMALY ISOLATION:</span><span class="hl-val val-emerald">SELF-HEALING &lt; 14MS LATENCY</span></div>
+                    </div>
+
+                    <div class="hud-metrics-grid">
+                        <div class="hud-stat-box">
+                            <span class="stat-val val-cyan">&lt; 14 ms</span>
+                            <span class="stat-lbl">Inference Speed</span>
+                        </div>
+                        <div class="hud-stat-box">
+                            <span class="stat-val val-pink">99.8%</span>
+                            <span class="stat-lbl">Reasoning Acc</span>
+                        </div>
+                        <div class="hud-stat-box">
+                            <span class="stat-val val-gold">145+</span>
+                            <span class="stat-lbl">Neural Nodes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hud-footer">
+                    <span>STATUS: ALL CLOUD ENDPOINTS OPERATIONAL</span>
+                    <span>PING: 8.4ms</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Live Multicolored Telemetry Marquee Bar -->
-    <div class="marquee-wrap">
+    <!-- Live Telemetry Marquee Bar -->
+    <div class="marquee-container">
         <div class="marquee-track">
-            <div class="m-item"><i class="fa-solid fa-circle-dot" style="color:#ff007a"></i> <span style="color:#ff007a">NEXUS AI CORE:</span> &lt;14MS INFERENCE LATENCY</div>
-            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:#ffb800"></i> <span style="color:#ffb800">MEDITRUST OCR:</span> &gt;95% MULTI-ENGINE PRECISION</div>
-            <div class="m-item"><i class="fa-solid fa-dna" style="color:#ff0844"></i> <span style="color:#ff0844">MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED</div>
-            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:#00ff88"></i> <span style="color:#00ff88">MMP ENSEMBLE SUITE:</span> BATCH CSV PREDICTION PIPELINE</div>
-            <div class="m-item"><i class="fa-solid fa-cloud-check" style="color:#00f0ff"></i> <span style="color:#00f0ff">CLOUD DEPLOYMENT:</span> RENDER / AIVEN MYSQL ACTIVE</div>
-            <!-- Duplicate for seamless loop -->
-            <div class="m-item"><i class="fa-solid fa-circle-dot" style="color:#ff007a"></i> <span style="color:#ff007a">NEXUS AI CORE:</span> &lt;14MS INFERENCE LATENCY</div>
-            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:#ffb800"></i> <span style="color:#ffb800">MEDITRUST OCR:</span> &gt;95% MULTI-ENGINE PRECISION</div>
-            <div class="m-item"><i class="fa-solid fa-dna" style="color:#ff0844"></i> <span style="color:#ff0844">MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED</div>
-            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:#00ff88"></i> <span style="color:#00ff88">MMP ENSEMBLE SUITE:</span> BATCH CSV PREDICTION PIPELINE</div>
-            <div class="m-item"><i class="fa-solid fa-cloud-check" style="color:#00f0ff"></i> <span style="color:#00f0ff">CLOUD DEPLOYMENT:</span> RENDER / AIVEN MYSQL ACTIVE</div>
+            <div class="m-item"><i class="fa-solid fa-bolt" style="color:var(--cyber-cyan)"></i> <span style="color:var(--cyber-cyan)">NEXUS AI CORE:</span> &lt;14MS INFERENCE LATENCY</div>
+            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:var(--cyber-gold)"></i> <span style="color:var(--cyber-gold)">MEDITRUST OCR:</span> &gt;95% MULTI-ENGINE PRECISION</div>
+            <div class="m-item"><i class="fa-solid fa-dna" style="color:var(--cyber-pink)"></i> <span style="color:var(--cyber-pink)">MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED</div>
+            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:var(--cyber-emerald)"></i> <span style="color:var(--cyber-emerald)">MMP ENSEMBLE SUITE:</span> BATCH CSV PREDICTION PIPELINE</div>
+            <div class="m-item"><i class="fa-solid fa-cloud" style="color:var(--cyber-cyan)"></i> <span style="color:var(--cyber-cyan)">CLOUD INFRASTRUCTURE:</span> RENDER / AIVEN MYSQL ACTIVE</div>
+            <!-- Duplicate for loop -->
+            <div class="m-item"><i class="fa-solid fa-bolt" style="color:var(--cyber-cyan)"></i> <span style="color:var(--cyber-cyan)">NEXUS AI CORE:</span> &lt;14MS INFERENCE LATENCY</div>
+            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:var(--cyber-gold)"></i> <span style="color:var(--cyber-gold)">MEDITRUST OCR:</span> &gt;95% MULTI-ENGINE PRECISION</div>
+            <div class="m-item"><i class="fa-solid fa-dna" style="color:var(--cyber-pink)"></i> <span style="color:var(--cyber-pink)">MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED</div>
+            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:var(--cyber-emerald)"></i> <span style="color:var(--cyber-emerald)">MMP ENSEMBLE SUITE:</span> BATCH CSV PREDICTION PIPELINE</div>
+            <div class="m-item"><i class="fa-solid fa-cloud" style="color:var(--cyber-cyan)"></i> <span style="color:var(--cyber-cyan)">CLOUD INFRASTRUCTURE:</span> RENDER / AIVEN MYSQL ACTIVE</div>
         </div>
     </div>
 
-    <!-- Vibrant Multicolored Glass Data Panels Showcase (Refined Compact Sizing) -->
-    <section class="section-wrap" id="projects">
-        <div class="section-head">
-            <span class="section-tag">// 01. PREDICTIVE ARCHITECTURES</span>
-            <h2 class="section-title">Vibrant Chromatic <span class="gradient-text">AI Cores</span></h2>
-            <p class="section-desc">Production-grade enterprise machine learning platforms, autonomous verification pipelines, and high-precision clinical diagnostic suites.</p>
+    <!-- Revolutionary Projects Showcase: Holographic Mission Decks -->
+    <section class="section-wrap" id="missions">
+        <div class="section-header">
+            <span class="section-code">// 01. PREDICTIVE ARCHITECTURES</span>
+            <h2 class="section-heading">Holographic <span class="title-highlight">Mission Decks</span></h2>
+            <p class="section-subtext">Deep neural reasoning engines, autonomous verification pipelines, and clinical diagnostic suites.</p>
         </div>
 
-        <div class="panels-grid">
+        <div class="mission-decks">
             
-            <!-- Project 4: NEXUS AI (Flagship Span 12 - Theme Cyber Pink) -->
-            <div class="data-panel panel-flagship theme-pink" id="card-nexus">
-                <div class="panel-top">
-                    <div class="panel-icon"><i class="fa-solid fa-brain"></i></div>
-                    <span class="status-badge"><i class="fa-solid fa-circle-dot"></i> ⚡ ACTIVE FLAGSHIP SYSTEM</span>
-                </div>
-                
-                <span class="panel-meta">NEURAL EXPERT UNIFIED SYSTEM // PLATFORM V2.4</span>
-                <h3 class="panel-title">NEXUS AI: Multi-Domain Neural Core</h3>
-                
-                <p class="panel-desc">
-                    An advanced multi-domain real-time intelligence architecture synthesizing high-velocity operational data streams across cloud ecosystems. Employs deep neural expert reasoning modules for instantaneous multi-threaded inference, automated decision support, and self-healing anomaly isolation with sub-second latency.
-                </p>
+            <!-- Deck 1: NEXUS AI Core (Theme Pink) -->
+            <div class="mission-deck deck-pink" id="deck-nexus">
+                <div class="deck-info">
+                    <div class="deck-top">
+                        <span class="deck-tag"><i class="fa-solid fa-bolt"></i> ACTIVE FLAGSHIP CORE</span>
+                        <span class="deck-code">// PLATFORM V2.4</span>
+                    </div>
+                    
+                    <h3 class="deck-title">NEXUS AI: Multi-Domain Neural Core</h3>
+                    
+                    <p class="deck-desc">
+                        An advanced multi-domain real-time intelligence architecture synthesizing high-velocity operational data streams across cloud ecosystems. Employs deep neural expert reasoning modules for instantaneous multi-threaded inference, automated decision support, and self-healing anomaly isolation with sub-second latency.
+                    </p>
 
-                <div class="panel-telemetry">
-                    <div style="text-align:center;"><span class="t-val">&lt; 14 ms</span><span class="t-lbl">Inference Latency</span></div>
-                    <div style="text-align:center;"><span class="t-val">99.8%</span><span class="t-lbl">Decision Accuracy</span></div>
-                    <div style="text-align:center;"><span class="t-val">Multi-Agent</span><span class="t-lbl">Core Topology</span></div>
-                </div>
+                    <div class="deck-pills">
+                        <span>Deep Learning</span><span>Neural Expert Systems</span><span>Multi-Agent AI</span><span>Real-Time Processing</span><span>Python</span>
+                    </div>
 
-                <div class="panel-tags">
-                    <span>Deep Learning</span><span>Neural Architectures</span><span>Multi-Agent AI</span><span>Real-Time Processing</span><span>Python</span>
+                    <a href="#launchpad" class="deck-link" style="color:var(--cyber-pink)"><span>EXPLORE ARCHITECTURE SPECIFICATIONS</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
 
-                <div class="panel-footer">
-                    <a href="#contact" class="panel-link"><span>VIEW ARCHITECTURE SPECIFICATIONS</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <div class="deck-gauges">
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>INFERENCE SPEED &lt; 14MS</span><span style="color:var(--cyber-pink)">99.4%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 99.4%"></div></div>
+                    </div>
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>REASONING MODULE CONFIDENCE</span><span style="color:var(--cyber-pink)">99.8%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 99.8%"></div></div>
+                    </div>
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>ANOMALY ISOLATION EFFICIENCY</span><span style="color:var(--cyber-pink)">98.5%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 98.5%"></div></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Project 1: MediTrust (Half Span 6 - Theme Solar Gold) -->
-            <div class="data-panel panel-half theme-gold" id="card-meditrust">
-                <div>
-                    <div class="panel-top">
-                        <div class="panel-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <span class="status-badge"><i class="fa-solid fa-cloud"></i> CLOUD DEPLOYED</span>
+            <!-- Deck 2: MediTrust AI Engine (Theme Gold) -->
+            <div class="mission-deck deck-gold" id="deck-meditrust">
+                <div class="deck-info">
+                    <div class="deck-top">
+                        <span class="deck-tag"><i class="fa-solid fa-shield-halved"></i> CLOUD DEPLOYED ENGINE</span>
+                        <span class="deck-code">// AUTONOMOUS OCR ENGINE</span>
                     </div>
                     
-                    <span class="panel-meta">AUTONOMOUS FRAUD VERIFICATION ENGINE</span>
-                    <h3 class="panel-title">MediTrust AI Verification Engine</h3>
+                    <h3 class="deck-title">MediTrust AI Verification Engine</h3>
                     
-                    <p class="panel-desc">
+                    <p class="deck-desc">
                         An autonomous AI engine automating the authentication of medical crowdfunding applications. Integrates multi-engine OCR extraction (`Tesseract`) and algorithmic image hashing (`diff_match_patch`) to cross-verify patient demographics against live hospital endpoints (`Aiven MySQL`) with over 95% accuracy.
                     </p>
 
-                    <div class="panel-tags">
-                        <span>Python</span><span>Scikit-Learn</span><span>Tesseract OCR</span><span>Flask</span><span>Render Cloud</span>
+                    <div class="deck-pills">
+                        <span>Python</span><span>Scikit-Learn</span><span>Tesseract OCR</span><span>Flask</span><span>Aiven MySQL</span><span>Render Cloud</span>
                     </div>
+
+                    <a href="https://meditrust-ai-fraud-detection-2.onrender.com" target="_blank" class="deck-link" style="color:var(--cyber-gold)"><span>LAUNCH CLOUD PORTAL</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
 
-                <div class="panel-footer">
-                    <a href="https://meditrust-ai-fraud-detection-2.onrender.com" target="_blank" class="panel-link"><span>LAUNCH CLOUD PORTAL</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <div class="deck-gauges">
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>MULTI-ENGINE OCR EXTRACTION</span><span style="color:var(--cyber-gold)">96.2%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 96.2%"></div></div>
+                    </div>
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>TAMPER / ALGORITHMIC HASH PRECISION</span><span style="color:var(--cyber-gold)">95.8%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 95.8%"></div></div>
+                    </div>
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>REAL-TIME ENDPOINT VERIFICATION</span><span style="color:var(--cyber-gold)">99.1%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 99.1%"></div></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Project 2: MediSense (Half Span 6 - Theme Crimson Red) -->
-            <div class="data-panel panel-half theme-crimson" id="card-medisense">
-                <div>
-                    <div class="panel-top">
-                        <div class="panel-icon"><i class="fa-solid fa-dna"></i></div>
-                        <span class="status-badge"><i class="fa-solid fa-cloud"></i> CLOUD DEPLOYED</span>
+            <!-- Deck 3: MediSense Diagnostic Suite (Theme Cyan) -->
+            <div class="mission-deck deck-cyan" id="deck-medisense">
+                <div class="deck-info">
+                    <div class="deck-top">
+                        <span class="deck-tag"><i class="fa-solid fa-dna"></i> CLINICAL AI SUITE</span>
+                        <span class="deck-code">// ONCOLOGY CLASSIFIER</span>
                     </div>
                     
-                    <span class="panel-meta">CLINICAL DIAGNOSTIC & ONCOLOGY SYSTEM</span>
-                    <h3 class="panel-title">MediSense Diagnostic Platform</h3>
+                    <h3 class="deck-title">MediSense Diagnostic Platform</h3>
                     
-                    <p class="panel-desc">
+                    <p class="deck-desc">
                         A high-precision clinical diagnostic system evaluating 30+ complex tumor characteristics (`mean radius, texture, concavity, perimeter`) to classify malignant vs. benign tumor profiles with real-time confidence scoring. Deployed on high-concurrency Linux cloud servers (`gunicorn/Render`).
                     </p>
 
-                    <div class="panel-tags">
+                    <div class="deck-pills">
                         <span>Scikit-Learn</span><span>Pandas / NumPy</span><span>Flask</span><span>Gunicorn</span><span>Clinical AI</span>
                     </div>
+
+                    <a href="#launchpad" class="deck-link" style="color:var(--cyber-cyan)"><span>ACCESS CLINICAL ENGINE</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
 
-                <div class="panel-footer">
-                    <a href="#contact" class="panel-link"><span>ACCESS CLINICAL ENGINE</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <div class="deck-gauges">
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>30+ TUMOR FEATURE EVALUATION</span><span style="color:var(--cyber-cyan)">98.9%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 98.9%"></div></div>
+                    </div>
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>MALIGNANT VS BENIGN SPECIFICITY</span><span style="color:var(--cyber-cyan)">97.4%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 97.4%"></div></div>
+                    </div>
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>CLOUD CONCURRENCY LATENCY</span><span style="color:var(--cyber-cyan)">99.5%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 99.5%"></div></div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Project 3: MMP (Span 12 - Theme Quantum Emerald) -->
-            <div class="data-panel panel-flagship theme-emerald" id="card-mmp">
-                <div class="panel-top">
-                    <div class="panel-icon"><i class="fa-solid fa-layer-group"></i></div>
-                    <span class="status-badge"><i class="fa-solid fa-cloud"></i> 🚀 CLOUD DEPLOYED</span>
-                </div>
-                
-                <span class="panel-meta">MULTI-DOMAIN ENSEMBLE PREDICTION SUITE</span>
-                <h3 class="panel-title">Multiple ML Prediction Engine (MMP)</h3>
-                
-                <p class="panel-desc">
-                    A scalable, multi-domain predictive analytics platform executing concurrent ensemble ML pipelines across varied clinical diagnostic datasets. Features bulk CSV batch ingestion, automated data normalization, and structured reporting with instant downloadable analytical records.
-                </p>
+            <!-- Deck 4: MMP Prediction Suite (Theme Emerald) -->
+            <div class="mission-deck deck-emerald" id="deck-mmp">
+                <div class="deck-info">
+                    <div class="deck-top">
+                        <span class="deck-tag"><i class="fa-solid fa-layer-group"></i> ENSEMBLE SUITE</span>
+                        <span class="deck-code">// BATCH CSV PIPELINE</span>
+                    </div>
+                    
+                    <h3 class="deck-title">Multiple ML Prediction Engine (MMP)</h3>
+                    
+                    <p class="deck-desc">
+                        A scalable, multi-domain predictive analytics platform executing concurrent ensemble ML pipelines across varied clinical diagnostic datasets. Features bulk CSV batch ingestion, automated data normalization, and structured reporting with instant downloadable analytical records.
+                    </p>
 
-                <div class="panel-telemetry">
-                    <div style="text-align:center;"><span class="t-val" style="color:var(--neon-emerald);">Multi-Model</span><span class="t-lbl">Ensemble Suite</span></div>
-                    <div style="text-align:center;"><span class="t-val" style="color:var(--neon-emerald);">Batch CSV</span><span class="t-lbl">Instant Ingest</span></div>
-                    <div style="text-align:center;"><span class="t-val" style="color:var(--neon-emerald);">REST API</span><span class="t-lbl">Cloud Endpoints</span></div>
-                </div>
+                    <div class="deck-pills">
+                        <span>Ensemble ML</span><span>RESTful APIs</span><span>Batch Processing</span><span>Python</span><span>Pandas</span>
+                    </div>
 
-                <div class="panel-tags">
-                    <span>Ensemble ML</span><span>RESTful APIs</span><span>Batch Processing</span><span>Python</span><span>Pandas</span>
+                    <a href="https://multiple-ml-prediction-2.onrender.com" target="_blank" class="deck-link" style="color:var(--cyber-emerald)"><span>OPEN ANALYTICS SUITE</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
 
-                <div class="panel-footer">
-                    <a href="https://multiple-ml-prediction-2.onrender.com" target="_blank" class="panel-link"><span>OPEN ANALYTICS SUITE</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <div class="deck-gauges">
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>MULTI-MODEL ENSEMBLE ACCURACY</span><span style="color:var(--cyber-emerald)">96.8%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 96.8%"></div></div>
+                    </div>
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>BULK CSV INGESTION PIPELINE</span><span style="color:var(--cyber-emerald)">99.2%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 99.2%"></div></div>
+                    </div>
+                    <div class="gauge-item">
+                        <div class="gauge-head"><span>AUTOMATED REPORT GENERATION</span><span style="color:var(--cyber-emerald)">99.8%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 99.8%"></div></div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Vibrant Chromatic Synapse Matrix -->
-    <section class="section-wrap" id="skills">
-        <div class="section-head">
-            <span class="section-tag">// 02. COMPETENCY MATRIX</span>
-            <h2 class="section-title">Vibrant Data Science <span class="gradient-text">Synapse Studio</span></h2>
-            <p class="section-desc">Exploratory data analytics, statistical algorithms, deep neural modeling, and cloud ML infrastructure.</p>
+    <!-- Revolutionary Skills: AI Neural Cortex Grid -->
+    <section class="section-wrap" id="cortex">
+        <div class="section-header">
+            <span class="section-code">// 02. COMPETENCY MATRIX</span>
+            <h2 class="section-heading">AI Neural <span class="title-highlight">Cortex Grid</span></h2>
+            <p class="section-subtext">Exploratory data analytics, statistical algorithms, deep neural modeling, and cloud ML infrastructure.</p>
         </div>
 
-        <div class="skills-grid">
-            <div class="synapse-box box-gold">
-                <div class="synapse-top">
+        <div class="cortex-grid">
+            <div class="cortex-unit cortex-cyan">
+                <div class="cortex-top">
                     <i class="fa-solid fa-terminal"></i>
                     <h3>Algorithmic ML Core</h3>
                 </div>
-                <p>Core statistical programming, data preprocessing (`EDA`), hypothesis testing, and supervised/unsupervised ML models.</p>
-                <div class="synapse-pills">
+                <p class="cortex-desc">Core statistical programming, data preprocessing (`EDA`), hypothesis testing, and supervised/unsupervised ML models.</p>
+                <div class="cortex-tags">
                     <span>Python</span><span>Scikit-Learn</span><span>Pandas</span><span>NumPy</span><span>EDA</span><span>Regression</span><span>Random Forests</span>
                 </div>
             </div>
 
-            <div class="synapse-box box-pink">
-                <div class="synapse-top">
+            <div class="cortex-unit cortex-pink">
+                <div class="cortex-top">
                     <i class="fa-solid fa-network-wired"></i>
                     <h3>Neural & Deep AI</h3>
                 </div>
-                <p>Advanced neural expert reasoning, computer vision (`Tesseract OCR`), anomaly isolation, and real-time inference.</p>
-                <div class="synapse-pills">
+                <p class="cortex-desc">Advanced neural expert reasoning, computer vision (`Tesseract OCR`), anomaly isolation, and real-time inference.</p>
+                <div class="cortex-tags">
                     <span>Deep Learning</span><span>Multi-Agent AI</span><span>Computer Vision</span><span>OCR Pipelines</span><span>Feature Eng</span><span>Ensemble ML</span>
                 </div>
             </div>
 
-            <div class="synapse-box box-emerald">
-                <div class="synapse-top">
+            <div class="cortex-unit cortex-gold">
+                <div class="cortex-top">
                     <i class="fa-solid fa-database"></i>
                     <h3>Big Data & Cloud</h3>
                 </div>
-                <p>High-concurrency cloud deployments, relational database schemas, Looker BI dashboards, and version-controlled CI/CD.</p>
-                <div class="synapse-pills">
+                <p class="cortex-desc">High-concurrency cloud deployments, relational database schemas, Looker BI dashboards, and version-controlled CI/CD.</p>
+                <div class="cortex-tags">
                     <span>SQL / MySQL</span><span>Oracle DB</span><span>Google Cloud (GCP)</span><span>Looker Studio</span><span>Render Cloud</span><span>Gunicorn / Flask</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Timeline -->
-    <section class="section-wrap" id="experience">
-        <div class="section-head">
-            <span class="section-tag">// 03. CAREER JOURNEY</span>
-            <h2 class="section-title">Industry <span class="gradient-text">Internships & Training</span></h2>
-            <p class="section-desc">Structured real-world engineering experience across leading Ed-Tech and Enterprise analytics organizations.</p>
+    <!-- Career Timeline Roadmap -->
+    <section class="section-wrap" id="roadmap">
+        <div class="section-header">
+            <span class="section-code">// 03. CAREER JOURNEY</span>
+            <h2 class="section-heading">Strategic <span class="title-highlight">Roadmap</span></h2>
+            <p class="section-subtext">Structured real-world engineering experience across leading Ed-Tech and Enterprise analytics organizations.</p>
         </div>
 
-        <div class="timeline-wrap">
-            <div class="time-item">
-                <div class="time-dot"></div>
-                <div class="time-panel">
-                    <span class="time-stamp">JUN 2024 – JUL 2024</span>
-                    <h3 class="time-role">Data Scientist Intern</h3>
-                    <div class="time-org"><i class="fa-brands fa-google"></i> Google Skills4India (Ed-Tech Domain)</div>
-                    <ul class="time-list">
+        <div class="roadmap-wrap">
+            <div class="roadmap-node">
+                <div class="node-circle"></div>
+                <div class="node-panel">
+                    <span class="node-date">JUN 2024 – JUL 2024</span>
+                    <h3 class="node-title">Data Scientist Intern</h3>
+                    <div class="node-org"><i class="fa-brands fa-google"></i> Google Skills4India (Ed-Tech Domain)</div>
+                    <ul class="node-list">
                         <li>Utilized advanced SQL and Python (`Scikit-learn`) to perform deep exploratory data analysis (`EDA`) and user segmentation on large-scale educational engagement datasets.</li>
                         <li>Designed and deployed an AI-based recommendation proof-of-concept system aimed at optimizing personalized learning paths based on key engagement metrics.</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="time-item">
-                <div class="time-dot"></div>
-                <div class="time-panel">
-                    <span class="time-stamp">JUN 2024 – AUG 2024</span>
-                    <h3 class="time-role">Data Analytics Intern</h3>
-                    <div class="time-org"><i class="fa-solid fa-building-columns"></i> Solutions Pro Company</div>
-                    <ul class="time-list">
+            <div class="roadmap-node">
+                <div class="node-circle"></div>
+                <div class="node-panel">
+                    <span class="node-date">JUN 2024 – AUG 2024</span>
+                    <h3 class="node-title">Data Analytics Intern</h3>
+                    <div class="node-org"><i class="fa-solid fa-building-columns"></i> Solutions Pro Company</div>
+                    <ul class="node-list">
                         <li>Cleaned and mapped raw enterprise production data using relational database schemas, accelerating reliable discovery of data anomalies and structural patterns.</li>
                         <li>Designed interactive visualization systems and summary dashboards to track essential KPIs and operational metrics.</li>
                     </ul>
@@ -1226,234 +1325,181 @@
         </div>
     </section>
 
-    <!-- Cyber Contact Command Deck -->
-    <section class="section-wrap" id="contact">
-        <div class="portal-deck">
-            <span class="section-tag">// 04. COMMAND CONNECTION</span>
-            <h2 class="portal-head">Ready to Build the Future of Data Science?</h2>
-            <p class="portal-desc">Looking for a high-impact Data Scientist or AI Architect to engineer autonomous verification models and enterprise clinical ML solutions? Let's initiate communication.</p>
+    <!-- Command Launchpad Portal -->
+    <section class="section-wrap" id="launchpad">
+        <div class="launchpad-portal">
+            <span class="section-code">// 04. COMMAND CONNECTION</span>
+            <h2 class="launch-title">Initiate Strategic Collaboration</h2>
+            <p class="launch-desc">Looking for an elite Data Scientist or AI Architect to engineer autonomous verification models and enterprise clinical ML solutions? Initiate communication.</p>
             
-            <div class="connect-grid">
-                <a href="tel:+918056835870" class="connect-pill"><i class="fa-solid fa-phone" style="color:var(--neon-gold)"></i> +91 8056835870</a>
-                <a href="mailto:chandrucoffl@gmail.com" class="connect-pill"><i class="fa-solid fa-envelope" style="color:var(--neon-pink)"></i> chandrucoffl@gmail.com</a>
-                <a href="https://linkedin.com/in/chandruc-offl-7378863a4" target="_blank" class="connect-pill"><i class="fa-brands fa-linkedin" style="color:var(--neon-cyan)"></i> LinkedIn Profile</a>
-                <a href="https://github.com/chandrucoffl" target="_blank" class="connect-pill"><i class="fa-brands fa-github" style="color:var(--neon-emerald)"></i> GitHub Repos</a>
+            <div class="connection-grid">
+                <a href="tel:+918056835870" class="connect-box"><i class="fa-solid fa-phone" style="color:var(--cyber-gold)"></i> +91 8056835870</a>
+                <a href="mailto:chandrucoffl@gmail.com" class="connect-box"><i class="fa-solid fa-envelope" style="color:var(--cyber-pink)"></i> chandrucoffl@gmail.com</a>
+                <a href="https://linkedin.com/in/chandruc-offl-7378863a4" target="_blank" class="connect-box"><i class="fa-brands fa-linkedin" style="color:var(--cyber-cyan)"></i> LinkedIn Profile</a>
+                <a href="https://github.com/chandrucoffl" target="_blank" class="connect-box"><i class="fa-brands fa-github" style="color:var(--cyber-emerald)"></i> GitHub Repos</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2026 CHANDRU C // ARCHITECTED WITH STARIXO FUTURISTIC & QUANTUM SPHERE WEB TECHNOLOGY.</p>
+        <p>&copy; 2026 CHANDRU C // ARCHITECTED WITH NEO-CYBERNETIC MONOLITH & HOLOGRAPHIC HUD WEB TECHNOLOGY.</p>
     </footer>
 
-    <!-- OPTIMIZED 60FPS ZERO-LAG ENGINE SCRIPT -->
+    <!-- INTERACTIVE HUD SWITCHER & ULTRA-FAST 60FPS ZERO-LAG AMBIENT CANVAS SCRIPT -->
     <script>
-        // 1. Highly Optimized Chromatic Star Matrix Animation (O(N) Fast Loop)
-        const starCanvas = document.getElementById('star-canvas');
-        const sCtx = starCanvas.getContext('2d');
-        let width, height;
-        let stars = [];
-        const starCount = 55; // Reduced from 135 to 55 for 10x speed boost!
+        // 1. Interactive HUD Switcher
+        const hudData = {
+            nexus: {
+                title: "NEXUS AI UNIFIED SYSTEM",
+                reasoning: "DEEP EXPERT INFERENCE ENGINE",
+                stream: "MULTI-THREADED OPERATIONAL PIPELINE",
+                anomaly: "SELF-HEALING < 14MS LATENCY",
+                v1: "< 14 ms", l1: "Inference Speed", c1: "val-cyan",
+                v2: "99.8%", l2: "Reasoning Acc", c2: "val-pink",
+                v3: "145+", l3: "Neural Nodes", c3: "val-gold"
+            },
+            meditrust: {
+                title: "MEDITRUST FRAUD OCR ENGINE",
+                reasoning: "MULTI-ENGINE TESSERACT EXTRACTION",
+                stream: "DIFF_MATCH_PATCH ALGORITHMIC HASHING",
+                anomaly: "LIVE AIVEN MYSQL ENDPOINT CHECK",
+                v1: "96.2%", l1: "OCR Extraction", c1: "val-gold",
+                v2: "95.8%", l2: "Tamper Precision", c2: "val-cyan",
+                v3: "Aiven", l3: "Live Cloud DB", c3: "val-emerald"
+            },
+            medisense: {
+                title: "MEDISENSE CLINICAL ONCOLOGY",
+                reasoning: "30+ TUMOR CHARACTERISTIC EVALUATION",
+                stream: "REAL-TIME CONFIDENCE SCORING PIPELINE",
+                anomaly: "GUNICORN / RENDER LINUX SERVER",
+                v1: "30+", l1: "Tumor Features", c1: "val-cyan",
+                v2: "98.9%", l2: "Diagnosis Spec", c2: "val-pink",
+                v3: "99.5%", l3: "Cloud Uptime", c3: "val-gold"
+            },
+            mmp: {
+                title: "MMP MULTIPLE ML PREDICTION SUITE",
+                reasoning: "BULK CSV BATCH INGESTION PIPELINE",
+                stream: "AUTOMATED DATA NORMALIZATION ENGINE",
+                anomaly: "INSTANT DOWNLOADABLE ANALYTIC RECORDS",
+                v1: "Batch", l1: "CSV Ingest", c1: "val-emerald",
+                v2: "96.8%", l2: "Ensemble Acc", c2: "val-cyan",
+                v3: "REST", l3: "Cloud API Endpoints", c3: "val-gold"
+            }
+        };
 
-        function resizeStars() {
-            width = starCanvas.width = window.innerWidth;
-            height = starCanvas.height = window.innerHeight;
+        function switchHUD(target, btn) {
+            document.querySelectorAll('.hud-tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+
+            const d = hudData[target];
+            const hudBody = document.getElementById('hud-display');
+            hudBody.innerHTML = `
+                <div class="hud-screen-content">
+                    <div class="hud-line"><span class="hl-lbl">&gt; TARGET ARCHITECTURE:</span><span class="hl-val val-cyan">${d.title}</span></div>
+                    <div class="hud-line"><span class="hl-lbl">&gt; REASONING MODULES:</span><span class="hl-val val-pink">${d.reasoning}</span></div>
+                    <div class="hud-line"><span class="hl-lbl">&gt; DATA STREAM SYNTHESIS:</span><span class="hl-val val-gold">${d.stream}</span></div>
+                    <div class="hud-line"><span class="hl-lbl">&gt; ANOMALY ISOLATION:</span><span class="hl-val val-emerald">${d.anomaly}</span></div>
+                </div>
+
+                <div class="hud-metrics-grid">
+                    <div class="hud-stat-box">
+                        <span class="stat-val ${d.c1}">${d.v1}</span>
+                        <span class="stat-lbl">${d.l1}</span>
+                    </div>
+                    <div class="hud-stat-box">
+                        <span class="stat-val ${d.c2}">${d.v2}</span>
+                        <span class="stat-lbl">${d.l2}</span>
+                    </div>
+                    <div class="hud-stat-box">
+                        <span class="stat-val ${d.c3}">${d.v3}</span>
+                        <span class="stat-lbl">${d.l3}</span>
+                    </div>
+                </div>
+            `;
         }
-        window.addEventListener('resize', resizeStars, { passive: true });
-        resizeStars();
 
-        class Star {
+        // 2. Ultra-Fast Zero-Lag 60FPS Ambient Particle Canvas (O(N) Fast Loop)
+        const canvas = document.getElementById('ambient-canvas');
+        const ctx = canvas.getContext('2d');
+        let w, h;
+        let particles = [];
+        const particleCount = 45; // Super light, zero CPU load!
+
+        function resize() {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize, { passive: true });
+        resize();
+
+        class Particle {
             constructor() {
-                this.x = Math.random() * width;
-                this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 1.3;
-                this.vy = (Math.random() - 0.5) * 1.3;
-                this.radius = Math.random() * 2 + 1;
-                const colors = ['#ff007a', '#00f0ff', '#00ff88', '#ffb800', '#8a2be2'];
+                this.x = Math.random() * w;
+                this.y = Math.random() * h;
+                this.vx = (Math.random() - 0.5) * 1.1;
+                this.vy = (Math.random() - 0.5) * 1.1;
+                this.r = Math.random() * 2 + 1;
+                const colors = ['#00f0ff', '#ff0055', '#ffd700', '#00ff88'];
                 this.color = colors[Math.floor(Math.random() * colors.length)];
             }
             update() {
                 this.x += this.vx;
                 this.y += this.vy;
-                if (this.x < 0 || this.x > width) this.vx = -this.vx;
-                if (this.y < 0 || this.y > height) this.vy = -this.vy;
+                if (this.x < 0 || this.x > w) this.vx = -this.vx;
+                if (this.y < 0 || this.y > h) this.vy = -this.vy;
             }
             draw() {
-                sCtx.beginPath();
-                sCtx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                sCtx.fillStyle = this.color;
-                sCtx.fill();
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
             }
         }
 
-        for (let i = 0; i < starCount; i++) {
-            stars.push(new Star());
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
         }
 
-        let mouse = { x: null, y: null };
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-        }, { passive: true });
+        function animate() {
+            ctx.clearRect(0, 0, w, h);
+            const maxDistSq = 130 * 130;
 
-        function animateStars() {
-            sCtx.clearRect(0, 0, width, height);
-            const maxDistSq = 140 * 140; // Squared distance check to eliminate Math.sqrt() overhead
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
 
-            for (let i = 0; i < stars.length; i++) {
-                stars[i].update();
-                stars[i].draw();
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    if (dx > 130 || dx < -130) continue;
+                    const dy = particles[i].y - particles[j].y;
+                    if (dy > 130 || dy < -130) continue;
 
-                for (let j = i + 1; j < stars.length; j++) {
-                    const dx = stars[i].x - stars[j].x;
-                    if (dx > 140 || dx < -140) continue; // Fast integer bounds check
-                    const dy = stars[i].y - stars[j].y;
-                    if (dy > 140 || dy < -140) continue;
-
-                    const distSq = dx * dx + dy * dy;
-                    if (distSq < maxDistSq) {
-                        sCtx.beginPath();
-                        sCtx.moveTo(stars[i].x, stars[i].y);
-                        sCtx.lineTo(stars[j].x, stars[j].y);
-                        sCtx.strokeStyle = 'rgba(255, 0, 122, 0.22)';
-                        sCtx.lineWidth = 1;
-                        sCtx.stroke();
-                    }
-                }
-
-                if (mouse.x && mouse.y) {
-                    const dx = stars[i].x - mouse.x;
-                    if (dx > 160 || dx < -160) continue;
-                    const dy = stars[i].y - mouse.y;
-                    if (dy > 160 || dy < -160) continue;
-
-                    const distSq = dx * dx + dy * dy;
-                    if (distSq < 25600) {
-                        sCtx.beginPath();
-                        sCtx.moveTo(stars[i].x, stars[i].y);
-                        sCtx.lineTo(mouse.x, mouse.y);
-                        sCtx.strokeStyle = 'rgba(0, 240, 255, 0.45)';
-                        sCtx.lineWidth = 1.2;
-                        sCtx.stroke();
+                    if (dx * dx + dy * dy < maxDistSq) {
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.strokeStyle = 'rgba(0, 240, 255, 0.2)';
+                        ctx.lineWidth = 1;
+                        ctx.stroke();
                     }
                 }
             }
-            requestAnimationFrame(animateStars);
+            requestAnimationFrame(animate);
         }
-        animateStars();
+        animate();
 
-        // 2. Optimized 60FPS Starixo 3D Rotating Quantum Sphere Animation
-        const sphereCanvas = document.getElementById('quantum-sphere');
-        const qCtx = sphereCanvas.getContext('2d');
-        let sw, sh;
-        let sphereNodes = [];
-        const nodeCount = 65; // Reduced from 145 down to 65 for ultra-fast GPU rendering!
-        let angleX = 0.008;
-        let angleY = 0.012;
-
-        function resizeSphere() {
-            sw = sphereCanvas.width = sphereCanvas.parentElement.clientWidth;
-            sh = sphereCanvas.height = sphereCanvas.parentElement.clientHeight;
-        }
-        window.addEventListener('resize', resizeSphere, { passive: true });
-        setTimeout(resizeSphere, 100);
-
-        class SphereNode {
-            constructor() {
-                const theta = Math.random() * Math.PI * 2;
-                const phi = Math.acos((Math.random() * 2) - 1);
-                const radius = 150;
-                this.x = radius * Math.sin(phi) * Math.cos(theta);
-                this.y = radius * Math.sin(phi) * Math.sin(theta);
-                this.z = radius * Math.cos(phi);
-                const colors = ['#ff007a', '#ffb800', '#00f0ff', '#00ff88'];
-                this.color = colors[Math.floor(Math.random() * colors.length)];
-            }
-            rotate(cosX, sinX, cosY, sinY) {
-                let x1 = this.x * cosY - this.z * sinY;
-                let z1 = this.z * cosY + this.x * sinY;
-                let y1 = this.y * cosX - z1 * sinX;
-                let z2 = z1 * cosX + this.y * sinX;
-                this.x = x1;
-                this.y = y1;
-                this.z = z2;
-            }
-            project() {
-                const perspective = 400;
-                const scale = perspective / (perspective + this.z + 250);
-                return {
-                    x: sw / 2 + this.x * scale,
-                    y: sh / 2 + this.y * scale,
-                    scale: scale
-                };
-            }
-        }
-
-        for (let i = 0; i < nodeCount; i++) {
-            sphereNodes.push(new SphereNode());
-        }
-
-        function animateSphere() {
-            if (sw && sh) {
-                qCtx.clearRect(0, 0, sw, sh);
-                // Pre-compute trig functions once per frame instead of inside the node loop!
-                const cosX = Math.cos(angleX), sinX = Math.sin(angleX);
-                const cosY = Math.cos(angleY), sinY = Math.sin(angleY);
-
-                for (let i = 0; i < sphereNodes.length; i++) {
-                    sphereNodes[i].rotate(cosX, sinX, cosY, sinY);
-                    const p1 = sphereNodes[i].project();
-
-                    qCtx.beginPath();
-                    qCtx.arc(p1.x, p1.y, Math.max(1.5, p1.scale * 3), 0, Math.PI * 2);
-                    qCtx.fillStyle = sphereNodes[i].color;
-                    qCtx.fill();
-
-                    for (let j = i + 1; j < sphereNodes.length; j++) {
-                        const dx = sphereNodes[i].x - sphereNodes[j].x;
-                        if (dx > 70 || dx < -70) continue;
-                        const dy = sphereNodes[i].y - sphereNodes[j].y;
-                        if (dy > 70 || dy < -70) continue;
-                        const dz = sphereNodes[i].z - sphereNodes[j].z;
-                        if (dz > 70 || dz < -70) continue;
-
-                        const distSq = dx * dx + dy * dy + dz * dz;
-                        if (distSq < 4900) {
-                            const p2 = sphereNodes[j].project();
-                            qCtx.beginPath();
-                            qCtx.moveTo(p1.x, p1.y);
-                            qCtx.lineTo(p2.x, p2.y);
-                            qCtx.strokeStyle = 'rgba(255, 184, 0, 0.35)';
-                            qCtx.lineWidth = 1;
-                            qCtx.stroke();
-                        }
-                    }
-                }
-            }
-            requestAnimationFrame(animateSphere);
-        }
-        animateSphere();
-
-        sphereCanvas.addEventListener('mousemove', (e) => {
-            const rect = sphereCanvas.getBoundingClientRect();
-            const mx = e.clientX - rect.left - sw / 2;
-            const my = e.clientY - rect.top - sh / 2;
-            angleY = mx * 0.00015;
-            angleX = my * -0.00015;
-        }, { passive: true });
-
-        // 3. Optimized Navbar Active State
-        let scrollTimeout = null;
+        // 3. Navbar Active State
+        let scrollTimer = null;
         window.addEventListener('scroll', () => {
-            if (scrollTimeout) return;
-            scrollTimeout = setTimeout(() => {
+            if (scrollTimer) return;
+            scrollTimer = setTimeout(() => {
                 const sections = document.querySelectorAll('section');
-                const navLinks = document.querySelectorAll('.nav-links a');
+                const navLinks = document.querySelectorAll('.monolith-nav a');
                 let current = '';
 
                 sections.forEach(sec => {
                     const top = sec.offsetTop;
-                    if (pageYOffset >= top - 220) {
+                    if (pageYOffset >= top - 240) {
                         current = sec.getAttribute('id');
                     }
                 });
@@ -1464,8 +1510,8 @@
                         link.classList.add('active');
                     }
                 });
-                scrollTimeout = null;
-            }, 50);
+                scrollTimer = null;
+            }, 60);
         }, { passive: true });
     </script>
 </body>
