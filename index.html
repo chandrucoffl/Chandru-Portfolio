@@ -13,8 +13,8 @@
     <style>
         :root {
             --bg-titanium: #02040a;
-            --bg-pod-glass: rgba(13, 19, 42, 0.78);
-            --bg-pod-hover: rgba(22, 31, 65, 0.92);
+            --bg-glass-panel: rgba(11, 16, 35, 0.82);
+            --bg-glass-hover: rgba(20, 28, 58, 0.94);
             
             /* VIBRANT NEO-CYBERNETIC PALETTE */
             --neon-cyan: #00f0ff;
@@ -89,36 +89,36 @@
             100% { background-position: 60px 60px; }
         }
 
-        /* 2. REVOLUTIONARY METAVERSE ORBITAL COMMAND NAVBAR */
-        .orbital-navbar {
+        /* 2. REVOLUTIONARY VIPER-RADIAL COMMAND NAVBAR */
+        .viper-navbar {
             position: fixed;
             top: 18px;
             left: 50%;
             transform: translateX(-50%);
-            width: 93%;
-            max-width: 1380px;
+            width: 94%;
+            max-width: 1400px;
             z-index: 1000;
-            background: rgba(8, 12, 28, 0.88);
+            background: rgba(6, 10, 24, 0.9);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(0, 240, 255, 0.32);
-            border-radius: 50px;
-            padding: 0.75rem 2.4rem;
+            border: 1px solid rgba(0, 240, 255, 0.35);
+            border-radius: 20px;
+            padding: 0.8rem 2.6rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.95), inset 0 0 25px rgba(0, 240, 255, 0.15);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.95), 0 0 30px rgba(0, 240, 255, 0.18);
             transition: all 0.3s ease;
         }
 
-        .orbital-navbar:hover {
+        .viper-navbar:hover {
             border-color: var(--neon-cyan);
-            box-shadow: 0 15px 55px rgba(0, 0, 0, 0.95), inset 0 0 35px rgba(0, 240, 255, 0.28);
+            box-shadow: 0 15px 55px rgba(0, 0, 0, 0.95), 0 0 45px rgba(0, 240, 255, 0.35);
         }
 
-        .brand-logo {
+        .viper-brand {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.38rem;
+            font-size: 1.42rem;
             font-weight: 900;
             color: #fff;
             text-decoration: none;
@@ -128,7 +128,7 @@
             gap: 14px;
         }
 
-        .brand-logo i { color: var(--neon-cyan); filter: drop-shadow(0 0 12px var(--neon-cyan)); }
+        .viper-brand i { color: var(--neon-cyan); filter: drop-shadow(0 0 12px var(--neon-cyan)); }
         
         .brand-text {
             background: linear-gradient(135deg, var(--neon-cyan), var(--neon-gold), var(--neon-pink));
@@ -140,37 +140,37 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            background: rgba(255, 0, 85, 0.15);
-            border: 1px solid rgba(255, 0, 85, 0.45);
-            padding: 0.45rem 1.2rem;
+            background: rgba(0, 240, 255, 0.12);
+            border: 1px solid rgba(0, 240, 255, 0.45);
+            padding: 0.45rem 1.3rem;
             border-radius: 50px;
             font-family: 'Chakra Petch', monospace;
             font-size: 0.78rem;
             font-weight: 700;
-            color: var(--neon-pink);
+            color: var(--neon-cyan);
             letter-spacing: 1.5px;
         }
 
         .beacon-pulse {
             width: 9px; height: 9px;
-            background: var(--neon-pink);
+            background: var(--neon-emerald);
             border-radius: 50%;
-            box-shadow: 0 0 15px var(--neon-pink);
+            box-shadow: 0 0 15px var(--neon-emerald);
             animation: beaconGlow 1s infinite alternate;
         }
 
         @keyframes beaconGlow {
             0% { transform: scale(0.85); opacity: 0.7; }
-            100% { transform: scale(1.35); opacity: 1; box-shadow: 0 0 25px var(--neon-pink); }
+            100% { transform: scale(1.35); opacity: 1; box-shadow: 0 0 25px var(--neon-emerald); }
         }
 
-        .orbital-nav-links {
+        .viper-nav-links {
             display: flex;
-            gap: 2.2rem;
+            gap: 2.4rem;
             align-items: center;
         }
 
-        .orbital-nav-links a {
+        .viper-nav-links a {
             color: var(--text-slate);
             text-decoration: none;
             font-family: 'Orbitron', sans-serif;
@@ -182,29 +182,29 @@
             position: relative;
         }
 
-        .orbital-nav-links a:hover, .orbital-nav-links a.active {
+        .viper-nav-links a:hover, .viper-nav-links a.active {
             color: #fff;
             text-shadow: 0 0 16px var(--neon-cyan);
         }
 
-        .orbital-nav-links a::after {
+        .viper-nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -5px; left: 0;
+            bottom: -6px; left: 0;
             width: 0%; height: 2px;
             background: linear-gradient(90deg, var(--neon-cyan), var(--neon-pink));
             transition: width 0.3s ease;
         }
 
-        .orbital-nav-links a:hover::after, .orbital-nav-links a.active::after {
+        .viper-nav-links a:hover::after, .viper-nav-links a.active::after {
             width: 100%;
         }
 
-        .btn-orbital-connect {
+        .btn-viper-connect {
             background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
             color: #02040a !important;
-            padding: 0.58rem 1.6rem;
-            border-radius: 50px;
+            padding: 0.6rem 1.6rem;
+            border-radius: 12px;
             font-family: 'Orbitron', sans-serif;
             font-weight: 800 !important;
             font-size: 0.8rem !important;
@@ -213,100 +213,116 @@
             transition: all 0.3s ease !important;
         }
 
-        .btn-orbital-connect:hover {
+        .btn-viper-connect:hover {
             transform: scale(1.05) translateY(-2px);
             box-shadow: 0 0 45px rgba(0, 240, 255, 0.9), 0 0 60px rgba(255, 0, 85, 0.7);
             color: #02040a !important;
         }
 
-        /* 3. REVOLUTIONARY HERO SECTION: THE CENTER-ALIGNED ORBITAL FLOATING COMMAND POD */
-        .hero-orbital-pod {
+        /* 3. REVOLUTIONARY HERO SECTION: ASYMMETRIC SPLIT-SCREEN RADAR & 4-QUADRANT MATRIX */
+        .radar-hero {
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 9.5rem 2rem 5rem;
             position: relative;
-            text-align: center;
         }
 
-        .pod-container {
-            max-width: 1100px;
+        .split-hero-container {
+            max-width: 1400px;
             width: 100%;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1.15fr 1.1fr;
+            gap: 3.5rem;
             align-items: center;
         }
 
-        .status-badge-ring {
+        .hero-identity-slab {
+            background: rgba(11, 16, 35, 0.75);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-left: 6px solid var(--neon-cyan);
+            border-radius: 32px;
+            padding: 3.4rem;
+            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.95), 0 0 45px rgba(0, 240, 255, 0.18);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scanner-line {
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: linear-gradient(180deg, transparent, var(--neon-cyan), transparent);
+            animation: scanEdge 4s linear infinite;
+        }
+
+        @keyframes scanEdge {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        .status-pill-cyber {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            background: rgba(0, 240, 255, 0.12);
-            border: 1px solid rgba(0, 240, 255, 0.55);
-            padding: 0.55rem 1.6rem;
-            border-radius: 50px;
-            margin-bottom: 2rem;
+            gap: 10px;
+            background: rgba(255, 0, 85, 0.14);
+            border: 1px solid rgba(255, 0, 85, 0.55);
+            padding: 0.5rem 1.4rem;
+            border-radius: 12px;
+            margin-bottom: 1.8rem;
             font-family: 'Chakra Petch', monospace;
-            font-size: 0.84rem;
+            font-size: 0.82rem;
             font-weight: 700;
-            color: var(--neon-cyan);
-            letter-spacing: 2.2px;
-            box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+            color: var(--neon-pink);
+            letter-spacing: 2px;
+            box-shadow: 0 0 25px rgba(255, 0, 85, 0.3);
         }
 
-        /* Sleek Starixo Hero Title */
-        .orbital-title {
+        .hero-title-main {
             font-family: 'Orbitron', 'Syne', sans-serif;
-            font-size: clamp(2.4rem, 4.6vw, 4rem);
+            font-size: clamp(2.3rem, 4vw, 3.5rem);
             font-weight: 900;
-            line-height: 1.18;
-            margin-bottom: 1.6rem;
+            line-height: 1.2;
+            margin-bottom: 1.4rem;
             color: #fff;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
         }
 
         .title-hologram {
-            background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-gold) 45%, var(--neon-pink) 100%);
+            background: linear-gradient(135deg, var(--neon-cyan) 0%, var(--neon-gold) 50%, var(--neon-pink) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.4));
+            filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.45));
         }
 
-        .orbital-subtitle {
+        .hero-body-text {
             font-family: 'Rajdhani', sans-serif;
-            font-size: 1.18rem;
+            font-size: 1.12rem;
             color: var(--text-slate);
-            max-width: 760px;
-            margin: 0 auto 2.8rem;
-            line-height: 1.78;
+            margin-bottom: 2.6rem;
+            line-height: 1.76;
             font-weight: 600;
-            letter-spacing: 0.5px;
         }
 
-        .orbital-subtitle b {
+        .hero-body-text b {
             color: #fff;
             font-weight: 700;
             border-bottom: 2px solid var(--neon-cyan);
         }
 
-        /* Hero Action Pods */
-        .pod-actions {
+        .hero-action-row {
             display: flex;
-            gap: 1.6rem;
-            justify-content: center;
+            gap: 1.4rem;
             flex-wrap: wrap;
-            margin-bottom: 4rem;
         }
 
-        .btn-pod {
+        .btn-split {
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            padding: 1rem 2.6rem;
-            border-radius: 50px;
+            padding: 1rem 2.4rem;
+            border-radius: 14px;
             font-family: 'Orbitron', sans-serif;
             font-size: 0.88rem;
             font-weight: 800;
@@ -316,125 +332,119 @@
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .btn-pod-primary {
+        .btn-primary-split {
             background: linear-gradient(135deg, var(--neon-cyan), var(--neon-emerald));
             color: #02040a;
-            box-shadow: 0 0 35px rgba(0, 240, 255, 0.65);
+            box-shadow: 0 0 35px rgba(0, 240, 255, 0.6);
         }
 
-        .btn-pod-primary:hover {
+        .btn-primary-split:hover {
             transform: translateY(-5px) scale(1.04);
             box-shadow: 0 0 55px rgba(0, 240, 255, 0.95), 0 0 70px rgba(0, 255, 136, 0.7);
             color: #02040a;
         }
 
-        .btn-pod-glass {
+        .btn-outline-split {
             background: rgba(14, 19, 40, 0.85);
             color: var(--neon-gold);
             border: 2px solid var(--neon-gold);
-            box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.25);
         }
 
-        .btn-pod-glass:hover {
+        .btn-outline-split:hover {
             background: var(--neon-gold);
             color: #02040a;
             transform: translateY(-5px) scale(1.04);
             box-shadow: 0 0 50px rgba(255, 215, 0, 0.95);
         }
 
-        /* INTERACTIVE FLOATING ORBITAL COMMAND STRIP (REPLACES BOXY HUD!) */
-        .command-strip-wrap {
-            width: 100%;
-            max-width: 1150px;
-            background: rgba(10, 16, 36, 0.88);
-            border: 2px solid var(--neon-cyan);
-            border-radius: 32px;
-            padding: 2.2rem;
-            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.95), 0 0 55px rgba(0, 240, 255, 0.28);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .strip-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 1.4rem;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.18);
-            margin-bottom: 1.8rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .strip-header-title {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.88rem;
-            font-weight: 800;
-            color: var(--neon-cyan);
-            letter-spacing: 1.8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .strip-tabs {
-            display: flex;
-            gap: 0.8rem;
-            flex-wrap: wrap;
-        }
-
-        .strip-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.22);
-            color: var(--text-slate);
-            font-family: 'Chakra Petch', monospace;
-            font-size: 0.78rem;
-            font-weight: 700;
-            padding: 0.45rem 1.1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.25s ease;
-        }
-
-        .strip-btn:hover, .strip-btn.active {
-            background: var(--neon-cyan);
-            color: #02040a;
-            border-color: var(--neon-cyan);
-            box-shadow: 0 0 20px var(--neon-cyan);
-        }
-
-        .strip-data-grid {
+        /* Hero Right: Interactive 4-Quadrant Neural Telemetry Matrix */
+        .quadrant-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.6rem;
-            text-align: left;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.8rem;
         }
 
-        .strip-box {
-            background: rgba(4, 7, 16, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            padding: 1.4rem;
-            border-radius: 20px;
+        .quadrant-box {
+            background: rgba(10, 16, 36, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 26px;
+            padding: 2.2rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
         }
 
-        .box-lbl {
+        .quadrant-box:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 25px 65px rgba(0, 0, 0, 0.95);
+        }
+
+        .quad-cyan { border-top: 4px solid var(--neon-cyan); }
+        .quad-cyan:hover { border-color: var(--neon-cyan); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(0, 240, 255, 0.38); }
+        
+        .quad-pink { border-top: 4px solid var(--neon-pink); }
+        .quad-pink:hover { border-color: var(--neon-pink); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 0, 85, 0.38); }
+        
+        .quad-gold { border-top: 4px solid var(--neon-gold); }
+        .quad-gold:hover { border-color: var(--neon-gold); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 215, 0, 0.38); }
+        
+        .quad-emerald { border-top: 4px solid var(--neon-emerald); }
+        .quad-emerald:hover { border-color: var(--neon-emerald); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(0, 255, 136, 0.38); }
+
+        .quad-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.2rem;
             font-family: 'Chakra Petch', monospace;
-            font-size: 0.74rem;
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .quad-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.32rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 0.6rem;
+            text-transform: uppercase;
+        }
+
+        .quad-desc {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 0.94rem;
+            color: var(--text-slate);
+            font-weight: 600;
+            margin-bottom: 1.6rem;
+            line-height: 1.6;
+        }
+
+        .quad-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .qs-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+        .qs-lbl {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.68rem;
             font-weight: 700;
             color: var(--text-slate);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-
-        .box-val {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 800;
-            display: block;
         }
 
         /* 4. LIVE TELEMETRY MARQUEE BAR */
@@ -476,7 +486,7 @@
 
         /* 5. COMMON SECTION ARCHITECTURE */
         .section-wrap {
-            max-width: 1380px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 6.5rem 2rem;
             position: relative;
@@ -517,290 +527,262 @@
             line-height: 1.76;
         }
 
-        /* 6. REVOLUTIONARY PROJECTS SHOWCASE: 2x2 METAVERSE FLOATING GLASS PODS GRID */
-        .metaverse-pods-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2.6rem;
-        }
-
-        .metaverse-pod {
-            background: var(--bg-pod-glass);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            border-radius: 36px;
-            padding: 3.2rem;
-            position: relative;
+        /* 6. REVOLUTIONARY PROJECTS: FULL-SPAN ASYMMETRIC CYBER-SLABS (`different` Layout!) */
+        .cyber-slabs-list {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 2.8rem;
+        }
+
+        .cyber-slab {
+            background: var(--bg-glass-panel);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 28px;
+            padding: 3rem 3.4rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1.3fr auto;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
             overflow: hidden;
-            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.35s ease;
         }
 
-        .pod-pink { border-top: 6px solid var(--neon-pink); box-shadow: 0 0 45px rgba(255, 0, 85, 0.2); }
-        .pod-pink:hover { border-color: var(--neon-pink); transform: translateY(-10px); box-shadow: 0 30px 80px rgba(0,0,0,0.98), 0 0 65px rgba(255, 0, 85, 0.55); }
-        .pod-pink .pod-badge { color: var(--neon-pink); border-color: var(--neon-pink); background: rgba(255, 0, 85, 0.15); }
-        .pod-pink .pod-stats-pill { color: var(--neon-pink); border-color: rgba(255, 0, 85, 0.4); }
+        .slab-pink { border-left: 8px solid var(--neon-pink); }
+        .slab-pink:hover { border-color: var(--neon-pink); transform: translateX(12px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(255, 0, 85, 0.45); }
+        .slab-pink .slab-code { color: var(--neon-pink); }
 
-        .pod-gold { border-top: 6px solid var(--neon-gold); box-shadow: 0 0 45px rgba(255, 215, 0, 0.2); }
-        .pod-gold:hover { border-color: var(--neon-gold); transform: translateY(-10px); box-shadow: 0 30px 80px rgba(0,0,0,0.98), 0 0 65px rgba(255, 215, 0, 0.55); }
-        .pod-gold .pod-badge { color: var(--neon-gold); border-color: var(--neon-gold); background: rgba(255, 215, 0, 0.15); }
-        .pod-gold .pod-stats-pill { color: var(--neon-gold); border-color: rgba(255, 215, 0, 0.4); }
+        .slab-gold { border-left: 8px solid var(--neon-gold); }
+        .slab-gold:hover { border-color: var(--neon-gold); transform: translateX(12px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(255, 215, 0, 0.45); }
+        .slab-gold .slab-code { color: var(--neon-gold); }
 
-        .pod-cyan { border-top: 6px solid var(--neon-cyan); box-shadow: 0 0 45px rgba(0, 240, 255, 0.2); }
-        .pod-cyan:hover { border-color: var(--neon-cyan); transform: translateY(-10px); box-shadow: 0 30px 80px rgba(0,0,0,0.98), 0 0 65px rgba(0, 240, 255, 0.55); }
-        .pod-cyan .pod-badge { color: var(--neon-cyan); border-color: var(--neon-cyan); background: rgba(0, 240, 255, 0.15); }
-        .pod-cyan .pod-stats-pill { color: var(--neon-cyan); border-color: rgba(0, 240, 255, 0.4); }
+        .slab-cyan { border-left: 8px solid var(--neon-cyan); }
+        .slab-cyan:hover { border-color: var(--neon-cyan); transform: translateX(12px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(0, 240, 255, 0.45); }
+        .slab-cyan .slab-code { color: var(--neon-cyan); }
 
-        .pod-emerald { border-top: 6px solid var(--neon-emerald); box-shadow: 0 0 45px rgba(0, 255, 136, 0.2); }
-        .pod-emerald:hover { border-color: var(--neon-emerald); transform: translateY(-10px); box-shadow: 0 30px 80px rgba(0,0,0,0.98), 0 0 65px rgba(0, 255, 136, 0.55); }
-        .pod-emerald .pod-badge { color: var(--neon-emerald); border-color: var(--neon-emerald); background: rgba(0, 255, 136, 0.15); }
-        .pod-emerald .pod-stats-pill { color: var(--neon-emerald); border-color: rgba(0, 255, 136, 0.4); }
+        .slab-emerald { border-left: 8px solid var(--neon-emerald); }
+        .slab-emerald:hover { border-color: var(--neon-emerald); transform: translateX(12px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(0, 255, 136, 0.45); }
+        .slab-emerald .slab-code { color: var(--neon-emerald); }
 
-        .pod-top-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.8rem;
-        }
+        .slab-info { display: flex; flex-direction: column; }
 
-        .pod-badge {
+        .slab-code {
             font-family: 'Chakra Petch', monospace;
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             font-weight: 700;
-            padding: 0.45rem 1.3rem;
-            border-radius: 50px;
-            border: 1px solid;
-            letter-spacing: 1.5px;
+            letter-spacing: 2.5px;
+            margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .pod-title {
+        .slab-title {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.75rem;
             font-weight: 800;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.1rem;
             color: #fff;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        .pod-desc {
+        .slab-desc {
             font-family: 'Rajdhani', sans-serif;
             color: var(--text-slate);
-            font-size: 1.05rem;
+            font-size: 1.04rem;
             font-weight: 600;
-            line-height: 1.78;
-            margin-bottom: 2.2rem;
-        }
-
-        .pod-metrics-row {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            background: rgba(4, 6, 14, 0.75);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 20px;
-            padding: 1.1rem;
-            margin-bottom: 2.2rem;
-            text-align: center;
-        }
-
-        .pod-stats-pill {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.15rem;
-            font-weight: 800;
-            display: block;
-        }
-
-        .pod-stats-lbl {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.68rem;
-            font-weight: 700;
-            color: var(--text-slate);
-            text-transform: uppercase;
-        }
-
-        .pod-tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.7rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .pod-tech-tags span {
-            font-family: 'Chakra Petch', monospace;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 0.45rem 1.1rem;
-            border-radius: 12px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: #e2e8f0;
-            transition: all 0.25s ease;
-        }
-
-        .pod-pink .pod-tech-tags span:hover { background: rgba(255, 0, 85, 0.25); border-color: var(--neon-pink); color: #fff; }
-        .pod-gold .pod-tech-tags span:hover { background: rgba(255, 215, 0, 0.25); border-color: var(--neon-gold); color: #fff; }
-        .pod-cyan .pod-tech-tags span:hover { background: rgba(0, 240, 255, 0.25); border-color: var(--neon-cyan); color: #fff; }
-        .pod-emerald .pod-tech-tags span:hover { background: rgba(0, 255, 136, 0.25); border-color: var(--neon-emerald); color: #fff; }
-
-        .pod-footer-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 800;
-            text-decoration: none;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            transition: transform 0.25s ease;
-            width: max-content;
-        }
-
-        .pod-footer-btn:hover { color: #fff !important; transform: translateX(8px); }
-
-        /* 7. REVOLUTIONARY SKILLS: HOLOGRAPHIC QUANTUM CORTEX MATRIX */
-        .cortex-matrix-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.6rem;
-        }
-
-        .matrix-pod {
-            background: var(--bg-pod-glass);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            border-radius: 32px;
-            padding: 3rem;
-            transition: all 0.35s ease;
-            position: relative;
-        }
-
-        .matrix-cyan { border-top: 5px solid var(--neon-cyan); }
-        .matrix-cyan:hover { border-color: var(--neon-cyan); transform: translateY(-8px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(0, 240, 255, 0.45); }
-        .matrix-cyan i { color: var(--neon-cyan); }
-        .matrix-cyan .matrix-chips span { background: rgba(0, 240, 255, 0.12); border-color: rgba(0, 240, 255, 0.45); color: #67e8f9; }
-        .matrix-cyan:hover .matrix-chips span { background: rgba(0, 240, 255, 0.28); color: #fff; }
-
-        .matrix-pink { border-top: 5px solid var(--neon-pink); }
-        .matrix-pink:hover { border-color: var(--neon-pink); transform: translateY(-8px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(255, 0, 85, 0.45); }
-        .matrix-pink i { color: var(--neon-pink); }
-        .matrix-pink .matrix-chips span { background: rgba(255, 0, 85, 0.12); border-color: rgba(255, 0, 85, 0.45); color: #fda4af; }
-        .matrix-pink:hover .matrix-chips span { background: rgba(255, 0, 85, 0.28); color: #fff; }
-
-        .matrix-gold { border-top: 5px solid var(--neon-gold); }
-        .matrix-gold:hover { border-color: var(--neon-gold); transform: translateY(-8px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 50px rgba(255, 215, 0, 0.45); }
-        .matrix-gold i { color: var(--neon-gold); }
-        .matrix-gold .matrix-chips span { background: rgba(255, 215, 0, 0.12); border-color: rgba(255, 215, 0, 0.45); color: #fde047; }
-        .matrix-gold:hover .matrix-chips span { background: rgba(255, 215, 0, 0.28); color: #fff; }
-
-        .matrix-top {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            margin-bottom: 1.6rem;
-        }
-
-        .matrix-top i { font-size: 2.4rem; }
-
-        .matrix-top h3 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.38rem;
-            font-weight: 800;
-            color: #fff;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .matrix-desc {
-            font-family: 'Rajdhani', sans-serif;
-            color: var(--text-slate);
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 2.2rem;
             line-height: 1.76;
         }
 
-        .matrix-chips {
+        .slab-metrics-area {
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
+            flex-direction: column;
+            gap: 1.6rem;
         }
 
-        .matrix-chips span {
+        .slab-stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(4, 6, 14, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            padding: 1.1rem 1.6rem;
+        }
+
+        .ssr-lbl {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-slate);
+            text-transform: uppercase;
+        }
+
+        .ssr-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.28rem;
+            font-weight: 800;
+        }
+
+        .slab-tech-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+        }
+
+        .slab-tech-pills span {
             font-family: 'Chakra Petch', monospace;
-            padding: 0.48rem 1.15rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.42rem 1.05rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #e2e8f0;
+        }
+
+        .slab-action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 65px; height: 65px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            color: #fff;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .slab-pink:hover .slab-action { background: var(--neon-pink); color: #02040a; border-color: var(--neon-pink); box-shadow: 0 0 25px var(--neon-pink); }
+        .slab-gold:hover .slab-action { background: var(--neon-gold); color: #02040a; border-color: var(--neon-gold); box-shadow: 0 0 25px var(--neon-gold); }
+        .slab-cyan:hover .slab-action { background: var(--neon-cyan); color: #02040a; border-color: var(--neon-cyan); box-shadow: 0 0 25px var(--neon-cyan); }
+        .slab-emerald:hover .slab-action { background: var(--neon-emerald); color: #02040a; border-color: var(--neon-emerald); box-shadow: 0 0 25px var(--neon-emerald); }
+
+        /* 7. REVOLUTIONARY SKILLS: RADIAL SYNAPSE BANNER NODES (`different` Layout!) */
+        .radial-synapses-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.2rem;
+        }
+
+        .synapse-banner-node {
+            background: var(--bg-glass-panel);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 28px;
+            padding: 2.6rem 3.4rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .node-cyan-banner { border-top: 4px solid var(--neon-cyan); }
+        .node-cyan-banner:hover { border-color: var(--neon-cyan); transform: translateY(-6px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(0, 240, 255, 0.38); }
+        .node-cyan-banner i { color: var(--neon-cyan); }
+        .node-cyan-banner .banner-chips span { background: rgba(0, 240, 255, 0.12); border-color: rgba(0, 240, 255, 0.45); color: #67e8f9; }
+
+        .node-pink-banner { border-top: 4px solid var(--neon-pink); }
+        .node-pink-banner:hover { border-color: var(--neon-pink); transform: translateY(-6px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 0, 85, 0.38); }
+        .node-pink-banner i { color: var(--neon-pink); }
+        .node-pink-banner .banner-chips span { background: rgba(255, 0, 85, 0.12); border-color: rgba(255, 0, 85, 0.45); color: #fda4af; }
+
+        .node-gold-banner { border-top: 4px solid var(--neon-gold); }
+        .node-gold-banner:hover { border-color: var(--neon-gold); transform: translateY(-6px); box-shadow: 0 25px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 215, 0, 0.38); }
+        .node-gold-banner i { color: var(--neon-gold); }
+        .node-gold-banner .banner-chips span { background: rgba(255, 215, 0, 0.12); border-color: rgba(255, 215, 0, 0.45); color: #fde047; }
+
+        .banner-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .banner-left i { font-size: 2.8rem; }
+
+        .banner-left h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .banner-right {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .banner-desc {
+            font-family: 'Rajdhani', sans-serif;
+            color: var(--text-slate);
+            font-size: 1.04rem;
+            font-weight: 600;
+            line-height: 1.72;
+        }
+
+        .banner-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+        }
+
+        .banner-chips span {
+            font-family: 'Chakra Petch', monospace;
+            padding: 0.45rem 1.15rem;
             border-radius: 50px;
             border: 1px solid;
             font-size: 0.84rem;
             font-weight: 700;
-            transition: all 0.25s ease;
         }
 
-        /* 8. CAREER TIMELINE STRATEGIC ROADMAP */
-        .timeline-orbital-wrap {
-            max-width: 950px;
-            margin: 0 auto;
-            position: relative;
-            padding-left: 4.2rem;
-            border-left: 3px dashed var(--neon-cyan);
+        /* 8. CAREER TIMELINE SPLIT LOGS (`different` Layout!) */
+        .split-roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.8rem;
         }
 
-        .timeline-orbital-node {
-            position: relative;
-            margin-bottom: 4.5rem;
-        }
-
-        .timeline-orbital-node:last-child { margin-bottom: 0; }
-
-        .node-beacon {
-            position: absolute;
-            left: -4.68rem;
-            top: 0.3rem;
-            width: 26px; height: 26px;
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink));
-            border-radius: 50%;
-            border: 4px solid var(--bg-titanium);
-            box-shadow: 0 0 25px var(--neon-cyan);
-        }
-
-        .node-content-pod {
-            background: var(--bg-pod-glass);
+        .roadmap-log-card {
+            background: var(--bg-glass-panel);
             border: 1px solid rgba(255, 255, 255, 0.16);
-            border-radius: 32px;
+            border-radius: 30px;
             padding: 3rem;
+            position: relative;
             transition: all 0.3s ease;
         }
 
-        .node-content-pod:hover {
+        .roadmap-log-card:hover {
             border-color: var(--neon-gold);
             box-shadow: 0 20px 55px rgba(0, 0, 0, 0.95), 0 0 45px rgba(255, 215, 0, 0.38);
-            transform: translateX(10px);
+            transform: translateY(-8px);
         }
 
-        .node-time {
+        .log-date {
             font-family: 'Chakra Petch', monospace;
             font-size: 0.88rem;
             font-weight: 700;
             color: var(--neon-gold);
             letter-spacing: 2px;
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
         }
 
-        .node-role-title {
+        .log-role {
             font-family: 'Orbitron', sans-serif;
-            font-size: 1.58rem;
+            font-size: 1.55rem;
             font-weight: 800;
             color: #fff;
             margin-bottom: 0.4rem;
             text-transform: uppercase;
         }
 
-        .node-company {
+        .log-org {
             font-family: 'Rajdhani', sans-serif;
             font-size: 1.14rem;
             color: var(--text-slate);
@@ -811,9 +793,9 @@
             gap: 12px;
         }
 
-        .node-company i { color: var(--neon-pink); }
+        .log-org i { color: var(--neon-pink); }
 
-        .node-details {
+        .log-list {
             font-family: 'Rajdhani', sans-serif;
             list-style-position: inside;
             color: #cbd5e1;
@@ -822,10 +804,10 @@
             line-height: 1.8;
         }
 
-        .node-details li { margin-bottom: 0.7rem; }
+        .log-list li { margin-bottom: 0.7rem; }
 
         /* 9. COMMAND LAUNCHPAD PORTAL */
-        .orbital-launchpad {
+        .cyber-launch-portal {
             background: linear-gradient(135deg, rgba(13, 19, 42, 0.96) 0%, rgba(6, 8, 18, 0.99) 100%);
             border: 2px solid var(--neon-cyan);
             border-radius: 40px;
@@ -835,7 +817,7 @@
             box-shadow: 0 0 75px rgba(0, 240, 255, 0.38);
         }
 
-        .launch-heading {
+        .launch-title-main {
             font-family: 'Orbitron', sans-serif;
             font-size: clamp(2.1rem, 3.8vw, 3.2rem);
             font-weight: 900;
@@ -844,7 +826,7 @@
             text-transform: uppercase;
         }
 
-        .launch-subtext {
+        .launch-sub-desc {
             font-family: 'Rajdhani', sans-serif;
             color: var(--text-slate);
             font-size: 1.15rem;
@@ -854,14 +836,14 @@
             line-height: 1.78;
         }
 
-        .connection-links-grid {
+        .connection-pills-row {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 1.6rem;
         }
 
-        .connect-pill-box {
+        .connect-pill-btn {
             background: rgba(255, 255, 255, 0.06);
             border: 1px solid rgba(0, 240, 255, 0.45);
             padding: 1.15rem 2.6rem;
@@ -880,7 +862,7 @@
             box-shadow: 0 0 20px rgba(0, 240, 255, 0.22);
         }
 
-        .connect-pill-box:hover {
+        .connect-pill-btn:hover {
             background: var(--neon-cyan);
             color: #02040a;
             border-color: var(--neon-cyan);
@@ -888,7 +870,7 @@
             box-shadow: 0 0 50px rgba(0, 240, 255, 0.95);
         }
 
-        .connect-pill-box i { font-size: 1.35rem; }
+        .connect-pill-btn i { font-size: 1.35rem; }
 
         /* Footer */
         .footer {
@@ -902,11 +884,13 @@
         }
 
         @media (max-width: 1024px) {
-            .metaverse-pods-grid { grid-template-columns: 1fr; }
-            .cortex-matrix-grid { grid-template-columns: 1fr; }
-            .strip-data-grid { grid-template-columns: repeat(2, 1fr); }
-            .orbital-navbar { width: 95%; padding: 0.75rem 1.4rem; }
-            .orbital-nav-links { display: none; }
+            .split-hero-container { grid-template-columns: 1fr; }
+            .quadrant-grid { grid-template-columns: 1fr; }
+            .cyber-slab { grid-template-columns: 1fr; }
+            .synapse-banner-node { grid-template-columns: 1fr; }
+            .split-roadmap-grid { grid-template-columns: 1fr; }
+            .viper-navbar { width: 95%; padding: 0.75rem 1.4rem; }
+            .viper-nav-links { display: none; }
         }
     </style>
 </head>
@@ -916,80 +900,104 @@
     <canvas id="ambient-canvas"></canvas>
     <div class="cyber-grid-floor"></div>
 
-    <!-- Metaverse Orbital Command Navbar -->
-    <header class="orbital-navbar">
-        <a href="#" class="brand-logo"><i class="fa-solid fa-microchip"></i> CHANDRU<span class="brand-text">.AI</span></a>
+    <!-- Revolutionary Viper-Radial Command Navbar -->
+    <header class="viper-navbar">
+        <a href="#" class="viper-brand"><i class="fa-solid fa-microchip"></i> CHANDRU<span class="brand-text">.AI</span></a>
         
         <div class="radar-pill">
             <span class="beacon-pulse"></span>
-            <span>SYSTEM ACTIVE // ORBITAL V9.0</span>
+            <span>SYSTEM ACTIVE // VIPER V10.0</span>
         </div>
 
-        <nav class="orbital-nav-links">
-            <a href="#orbital-hub" class="active">Orbital Hub</a>
-            <a href="#metaverse-pods">AI Pods</a>
-            <a href="#cortex-grid">Cortex Matrix</a>
+        <nav class="viper-nav-links">
+            <a href="#radar-hub" class="active">Radar Hub</a>
+            <a href="#cyber-slabs">AI Slabs</a>
+            <a href="#synapse-nodes">Synapse Grid</a>
             <a href="#roadmap">Roadmap</a>
-            <a href="#launchpad" class="btn-orbital-connect">Initiate Connect</a>
+            <a href="#launchpad" class="btn-viper-connect">Initiate Connect</a>
         </nav>
     </header>
 
-    <!-- Revolutionary Hero Section: Center-Aligned Orbital Floating Command Pod -->
-    <section class="hero-orbital-pod" id="orbital-hub">
-        <div class="pod-container">
-            <div class="status-badge-ring">
-                <i class="fa-solid fa-circle-nodes"></i>
-                <span>DATA SCIENTIST & PREDICTIVE AI ARCHITECT // V9.0</span>
-            </div>
-            
-            <h1 class="orbital-title">
-                Architecting Autonomous <br>
-                <span class="title-hologram">Metaverse & Neural Cores</span>
-            </h1>
-            
-            <p class="orbital-subtitle">
-                Transforming high-velocity operational data streams into sub-second neural expert inference platforms, autonomous medical crowdfunding fraud engines (`MediTrust AI`), and high-precision clinical diagnostic classifiers (`MediSense`).
-            </p>
+    <!-- Revolutionary Hero Section: Asymmetric Split-Screen Radar & 4-Quadrant Matrix -->
+    <section class="radar-hero" id="radar-hub">
+        <div class="split-hero-container">
+            <!-- Left: Hero Identity Slab -->
+            <div class="hero-identity-slab">
+                <div class="scanner-line"></div>
+                
+                <div class="status-pill-cyber">
+                    <i class="fa-solid fa-circle-nodes"></i>
+                    <span>PREDICTIVE AI ARCHITECT & DATA SCIENTIST // V10.0</span>
+                </div>
+                
+                <h1 class="hero-title-main">
+                    Architecting <br>
+                    <span class="title-hologram">Radial Neural Cores</span>
+                </h1>
+                
+                <p class="hero-body-text">
+                    Transforming high-velocity operational data streams into sub-second neural expert inference platforms, autonomous medical crowdfunding fraud engines (`MediTrust AI`), and high-precision clinical diagnostic classifiers (`MediSense`).
+                </p>
 
-            <div class="pod-actions">
-                <a href="#metaverse-pods" class="btn-pod btn-pod-primary">
-                    <span>EXPLORE METAVERSE PODS</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#launchpad" class="btn-pod btn-pod-glass">
-                    <i class="fa-solid fa-file-arrow-down"></i>
-                    <span>DOWNLOAD ATS RESUME</span>
-                </a>
+                <div class="hero-action-row">
+                    <a href="#cyber-slabs" class="btn-split btn-primary-split">
+                        <span>EXPLORE AI SLABS</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#launchpad" class="btn-split btn-outline-split">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        <span>DOWNLOAD RESUME</span>
+                    </a>
+                </div>
             </div>
 
-            <!-- Interactive Floating Orbital Command Strip (Replaces Boxy HUD!) -->
-            <div class="command-strip-wrap">
-                <div class="strip-top">
-                    <span class="strip-header-title"><i class="fa-solid fa-network-wired"></i> LIVE ORBITAL TELEMETRY COMMAND STRIP</span>
-                    <div class="strip-tabs">
-                        <button class="strip-btn active" onclick="switchOrbital('nexus', this)">NEXUS CORE</button>
-                        <button class="strip-btn" onclick="switchOrbital('meditrust', this)">MEDITRUST OCR</button>
-                        <button class="strip-btn" onclick="switchOrbital('medisense', this)">MEDISENSE CLASSIFIER</button>
-                        <button class="strip-btn" onclick="switchOrbital('mmp', this)">MMP ENSEMBLE</button>
+            <!-- Right: Interactive 4-Quadrant Neural Telemetry Matrix (`different` Hero HUD!) -->
+            <div class="quadrant-grid">
+                <div class="quadrant-box quad-cyan" onclick="location.href='#slab-nexus'">
+                    <div>
+                        <div class="quad-top"><span>// 01_CORE</span><i class="fa-solid fa-bolt" style="color:var(--neon-cyan)"></i></div>
+                        <h3 class="quad-title">NEXUS AI</h3>
+                        <p class="quad-desc">Deep expert reasoning modules & sub-second multi-threaded operational inference.</p>
+                    </div>
+                    <div class="quad-stats">
+                        <span class="qs-val" style="color:var(--neon-cyan)">&lt; 14 ms</span>
+                        <span class="qs-lbl">Latency Speed</span>
                     </div>
                 </div>
 
-                <div class="strip-data-grid" id="orbital-display">
-                    <div class="strip-box">
-                        <span class="box-lbl">Target Architecture</span>
-                        <span class="box-val" style="color:var(--neon-cyan)">NEXUS AI UNIFIED SYSTEM</span>
+                <div class="quadrant-box quad-gold" onclick="location.href='#slab-meditrust'">
+                    <div>
+                        <div class="quad-top"><span>// 02_ENGINE</span><i class="fa-solid fa-shield-halved" style="color:var(--neon-gold)"></i></div>
+                        <h3 class="quad-title">MediTrust OCR</h3>
+                        <p class="quad-desc">Autonomous multi-engine Tesseract extraction & live Aiven MySQL endpoint verify.</p>
                     </div>
-                    <div class="strip-box">
-                        <span class="box-lbl">Inference Latency</span>
-                        <span class="box-val" style="color:var(--neon-pink)">&lt; 14 ms Speed</span>
+                    <div class="quad-stats">
+                        <span class="qs-val" style="color:var(--neon-gold)">96.2%</span>
+                        <span class="qs-lbl">OCR Extraction</span>
                     </div>
-                    <div class="strip-box">
-                        <span class="box-lbl">Decision Accuracy</span>
-                        <span class="box-val" style="color:var(--neon-gold)">99.8% Precision</span>
+                </div>
+
+                <div class="quadrant-box quad-pink" onclick="location.href='#slab-medisense'">
+                    <div>
+                        <div class="quad-top"><span>// 03_CLINICAL</span><i class="fa-solid fa-dna" style="color:var(--neon-pink)"></i></div>
+                        <h3 class="quad-title">MediSense ML</h3>
+                        <p class="quad-desc">30+ tumor characteristics evaluated for benign vs. malignant real-time specificity.</p>
                     </div>
-                    <div class="strip-box">
-                        <span class="box-lbl">Active Neural Nodes</span>
-                        <span class="box-val" style="color:var(--neon-emerald)">145+ Cloud Nodes</span>
+                    <div class="quad-stats">
+                        <span class="qs-val" style="color:var(--neon-pink)">98.9%</span>
+                        <span class="qs-lbl">Diagnosis Spec</span>
+                    </div>
+                </div>
+
+                <div class="quadrant-box quad-emerald" onclick="location.href='#slab-mmp'">
+                    <div>
+                        <div class="quad-top"><span>// 04_ENSEMBLE</span><i class="fa-solid fa-layer-group" style="color:var(--neon-emerald)"></i></div>
+                        <h3 class="quad-title">MMP Suite</h3>
+                        <p class="quad-desc">Concurrent multi-domain ensemble pipeline with bulk CSV ingestion & REST API.</p>
+                    </div>
+                    <div class="quad-stats">
+                        <span class="qs-val" style="color:var(--neon-emerald)">96.8%</span>
+                        <span class="qs-lbl">Ensemble Acc</span>
                     </div>
                 </div>
             </div>
@@ -1013,277 +1021,215 @@
         </div>
     </div>
 
-    <!-- Revolutionary Projects Showcase: 2x2 Metaverse Floating Glass Pods Grid -->
-    <section class="section-wrap" id="metaverse-pods">
+    <!-- Revolutionary Projects: Full-Span Asymmetric Cyber-Slabs (`different` Layout!) -->
+    <section class="section-wrap" id="cyber-slabs">
         <div class="section-header">
             <span class="section-code">// 01. PREDICTIVE ARCHITECTURES</span>
-            <h2 class="section-heading">Metaverse <span class="title-hologram">Command Pods</span></h2>
+            <h2 class="section-heading">Asymmetric <span class="title-hologram">Cyber-Slabs</span></h2>
             <p class="section-subtext">Production-grade enterprise machine learning platforms, autonomous verification pipelines, and high-precision clinical diagnostic suites.</p>
         </div>
 
-        <div class="metaverse-pods-grid">
+        <div class="cyber-slabs-list">
             
-            <!-- Pod 1: NEXUS AI Core (Theme Pink) -->
-            <div class="metaverse-pod pod-pink" id="pod-nexus">
-                <div>
-                    <div class="pod-top-row">
-                        <span class="pod-badge"><i class="fa-solid fa-bolt"></i> FLAGSHIP AI POD</span>
-                        <span style="font-family:'Chakra Petch',monospace; color:var(--text-slate); font-weight:700;">// V2.4 CORE</span>
-                    </div>
-                    
-                    <h3 class="pod-title">NEXUS AI: Multi-Domain Core</h3>
-                    
-                    <p class="pod-desc">
-                        An advanced multi-domain real-time intelligence architecture synthesizing high-velocity operational data streams across cloud ecosystems. Employs deep neural expert reasoning modules for instantaneous multi-threaded inference, automated decision support, and self-healing anomaly isolation with sub-second latency.
+            <!-- Slab 1: NEXUS AI Core -->
+            <div class="cyber-slab slab-cyan" id="slab-nexus">
+                <div class="slab-info">
+                    <span class="slab-code"><i class="fa-solid fa-bolt"></i> // 01_SYS_FLAGSHIP</span>
+                    <h3 class="slab-title">NEXUS AI: Multi-Domain Core</h3>
+                    <p class="slab-desc">
+                        Synthesizing high-velocity operational data streams across cloud ecosystems. Employs deep neural expert reasoning modules for instantaneous multi-threaded inference, automated decision support, and self-healing anomaly isolation with sub-second latency.
                     </p>
+                </div>
 
-                    <div class="pod-metrics-row">
-                        <div><span class="pod-stats-pill" style="color:var(--neon-pink)">&lt; 14 ms</span><span class="pod-stats-lbl">Inference Latency</span></div>
-                        <div><span class="pod-stats-pill" style="color:var(--neon-pink)">99.8%</span><span class="pod-stats-lbl">Decision Accuracy</span></div>
-                        <div><span class="pod-stats-pill" style="color:var(--neon-pink)">Multi-Agent</span><span class="pod-stats-lbl">Core Topology</span></div>
+                <div class="slab-metrics-area">
+                    <div class="slab-stat-row">
+                        <span class="ssr-lbl">Inference Latency</span>
+                        <span class="ssr-val" style="color:var(--neon-cyan)">&lt; 14 ms Speed</span>
                     </div>
-
-                    <div class="pod-tech-tags">
-                        <span>Deep Learning</span><span>Neural Expert Systems</span><span>Multi-Agent AI</span><span>Real-Time Processing</span><span>Python</span>
+                    <div class="slab-tech-pills">
+                        <span>Deep Learning</span><span>Neural Systems</span><span>Multi-Agent AI</span><span>Python</span>
                     </div>
                 </div>
 
-                <a href="#launchpad" class="pod-footer-btn" style="color:var(--neon-pink)"><span>EXPLORE ARCHITECTURE SPECIFICATIONS</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#launchpad" class="slab-action" title="Explore Architecture Specs"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <!-- Pod 2: MediTrust AI Engine (Theme Gold) -->
-            <div class="metaverse-pod pod-gold" id="pod-meditrust">
-                <div>
-                    <div class="pod-top-row">
-                        <span class="pod-badge"><i class="fa-solid fa-shield-halved"></i> CLOUD DEPLOYED POD</span>
-                        <span style="font-family:'Chakra Petch',monospace; color:var(--text-slate); font-weight:700;">// OCR ENGINE</span>
-                    </div>
-                    
-                    <h3 class="pod-title">MediTrust AI Verification Engine</h3>
-                    
-                    <p class="pod-desc">
-                        An autonomous AI engine automating the authentication of medical crowdfunding applications. Integrates multi-engine OCR extraction (`Tesseract`) and algorithmic image hashing (`diff_match_patch`) to cross-verify patient demographics against live hospital endpoints (`Aiven MySQL`) with over 95% accuracy.
+            <!-- Slab 2: MediTrust AI Engine -->
+            <div class="cyber-slab slab-gold" id="slab-meditrust">
+                <div class="slab-info">
+                    <span class="slab-code"><i class="fa-solid fa-shield-halved"></i> // 02_OCR_ENGINE</span>
+                    <h3 class="slab-title">MediTrust AI Verification Engine</h3>
+                    <p class="slab-desc">
+                        Automating authentication of medical crowdfunding applications. Integrates multi-engine OCR extraction (`Tesseract`) and algorithmic image hashing (`diff_match_patch`) to cross-verify demographics against live hospital endpoints (`Aiven MySQL`) with &gt;95% accuracy.
                     </p>
+                </div>
 
-                    <div class="pod-metrics-row">
-                        <div><span class="pod-stats-pill" style="color:var(--neon-gold)">96.2%</span><span class="pod-stats-lbl">OCR Extraction</span></div>
-                        <div><span class="pod-stats-pill" style="color:var(--neon-gold)">95.8%</span><span class="pod-stats-lbl">Tamper Precision</span></div>
-                        <div><span class="pod-stats-pill" style="color:var(--neon-gold)">Aiven SQL</span><span class="pod-stats-lbl">Live Cloud DB</span></div>
+                <div class="slab-metrics-area">
+                    <div class="slab-stat-row">
+                        <span class="ssr-lbl">OCR Extraction Accuracy</span>
+                        <span class="ssr-val" style="color:var(--neon-gold)">96.2% Precision</span>
                     </div>
-
-                    <div class="pod-tech-tags">
-                        <span>Python</span><span>Scikit-Learn</span><span>Tesseract OCR</span><span>Flask</span><span>Aiven MySQL</span><span>Render Cloud</span>
+                    <div class="slab-tech-pills">
+                        <span>Scikit-Learn</span><span>Tesseract OCR</span><span>Flask</span><span>Aiven MySQL</span><span>Render</span>
                     </div>
                 </div>
 
-                <a href="https://meditrust-ai-fraud-detection-2.onrender.com" target="_blank" class="pod-footer-btn" style="color:var(--neon-gold)"><span>LAUNCH CLOUD PORTAL</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://meditrust-ai-fraud-detection-2.onrender.com" target="_blank" class="slab-action" title="Launch Cloud Portal"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <!-- Pod 3: MediSense Diagnostic Suite (Theme Cyan) -->
-            <div class="metaverse-pod pod-cyan" id="pod-medisense">
-                <div>
-                    <div class="pod-top-row">
-                        <span class="pod-badge"><i class="fa-solid fa-dna"></i> CLINICAL AI POD</span>
-                        <span style="font-family:'Chakra Petch',monospace; color:var(--text-slate); font-weight:700;">// ONCOLOGY CORE</span>
-                    </div>
-                    
-                    <h3 class="pod-title">MediSense Diagnostic Platform</h3>
-                    
-                    <p class="pod-desc">
-                        A high-precision clinical diagnostic system evaluating 30+ complex tumor characteristics (`mean radius, texture, concavity, perimeter`) to classify malignant vs. benign tumor profiles with real-time confidence scoring. Deployed on high-concurrency Linux cloud servers (`gunicorn/Render`).
+            <!-- Slab 3: MediSense Diagnostic Suite -->
+            <div class="cyber-slab slab-pink" id="slab-medisense">
+                <div class="slab-info">
+                    <span class="slab-code"><i class="fa-solid fa-dna"></i> // 03_CLINICAL_SUITE</span>
+                    <h3 class="slab-title">MediSense Diagnostic Platform</h3>
+                    <p class="slab-desc">
+                        Evaluating 30+ complex tumor characteristics (`mean radius, texture, concavity, perimeter`) to classify malignant vs. benign tumor profiles with real-time confidence scoring. Deployed on high-concurrency Linux cloud servers (`gunicorn/Render`).
                     </p>
+                </div>
 
-                    <div class="pod-metrics-row">
-                        <div><span class="pod-stats-pill" style="color:var(--neon-cyan)">30+</span><span class="pod-stats-lbl">Tumor Features</span></div>
-                        <div><span class="pod-stats-pill" style="color:var(--neon-cyan)">98.9%</span><span class="pod-stats-lbl">Diagnosis Specificity</span></div>
-                        <div><span class="pod-stats-pill" style="color:var(--neon-cyan)">99.5%</span><span class="pod-stats-lbl">Cloud Concurrency</span></div>
+                <div class="slab-metrics-area">
+                    <div class="slab-stat-row">
+                        <span class="ssr-lbl">Diagnosis Specificity</span>
+                        <span class="ssr-val" style="color:var(--neon-pink)">98.9% Specificity</span>
                     </div>
-
-                    <div class="pod-tech-tags">
+                    <div class="slab-tech-pills">
                         <span>Scikit-Learn</span><span>Pandas / NumPy</span><span>Flask</span><span>Gunicorn</span><span>Clinical AI</span>
                     </div>
                 </div>
 
-                <a href="#launchpad" class="pod-footer-btn" style="color:var(--neon-cyan)"><span>ACCESS CLINICAL ENGINE</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#launchpad" class="slab-action" title="Access Clinical Engine"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
-            <!-- Pod 4: MMP Prediction Suite (Theme Emerald) -->
-            <div class="metaverse-pod pod-emerald" id="pod-mmp">
-                <div>
-                    <div class="pod-top-row">
-                        <span class="pod-badge"><i class="fa-solid fa-layer-group"></i> ENSEMBLE SUITE POD</span>
-                        <span style="font-family:'Chakra Petch',monospace; color:var(--text-slate); font-weight:700;">// BATCH CSV CORE</span>
-                    </div>
-                    
-                    <h3 class="pod-title">Multiple ML Prediction Engine (MMP)</h3>
-                    
-                    <p class="pod-desc">
-                        A scalable, multi-domain predictive analytics platform executing concurrent ensemble ML pipelines across varied clinical diagnostic datasets. Features bulk CSV batch ingestion, automated data normalization, and structured reporting with instant downloadable analytical records.
+            <!-- Slab 4: MMP Prediction Suite -->
+            <div class="cyber-slab slab-emerald" id="slab-mmp">
+                <div class="slab-info">
+                    <span class="slab-code"><i class="fa-solid fa-layer-group"></i> // 04_ENSEMBLE_CORE</span>
+                    <h3 class="slab-title">Multiple ML Prediction Engine (MMP)</h3>
+                    <p class="slab-desc">
+                        Scalable, multi-domain predictive analytics platform executing concurrent ensemble ML pipelines across varied clinical diagnostic datasets. Features bulk CSV batch ingestion, automated normalization, and instant downloadable analytical records.
                     </p>
+                </div>
 
-                    <div class="pod-metrics-row">
-                        <div><span class="pod-stats-pill" style="color:var(--neon-emerald)">96.8%</span><span class="pod-stats-lbl">Ensemble Accuracy</span></div>
-                        <div><span class="pod-stats-pill" style="color:var(--neon-emerald)">Bulk CSV</span><span class="pod-stats-lbl">Batch Ingestion</span></div>
-                        <div><span class="pod-stats-pill" style="color:var(--neon-emerald)">REST API</span><span class="pod-stats-lbl">Cloud Endpoints</span></div>
+                <div class="slab-metrics-area">
+                    <div class="slab-stat-row">
+                        <span class="ssr-lbl">Ensemble Model Acc</span>
+                        <span class="ssr-val" style="color:var(--neon-emerald)">96.8% Multi-Model</span>
                     </div>
-
-                    <div class="pod-tech-tags">
-                        <span>Ensemble ML</span><span>RESTful APIs</span><span>Batch Processing</span><span>Python</span><span>Pandas</span>
+                    <div class="slab-tech-pills">
+                        <span>Ensemble ML</span><span>RESTful APIs</span><span>Batch Processing</span><span>Python</span>
                     </div>
                 </div>
 
-                <a href="https://multiple-ml-prediction-2.onrender.com" target="_blank" class="pod-footer-btn" style="color:var(--neon-emerald)"><span>OPEN ANALYTICS SUITE</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="https://multiple-ml-prediction-2.onrender.com" target="_blank" class="slab-action" title="Open Analytics Suite"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
 
         </div>
     </section>
 
-    <!-- Revolutionary Skills: Holographic Quantum Cortex Matrix Grid -->
-    <section class="section-wrap" id="cortex-grid">
+    <!-- Revolutionary Skills: Radial Synapse Banner Nodes (`different` Layout!) -->
+    <section class="section-wrap" id="synapse-nodes">
         <div class="section-header">
             <span class="section-code">// 02. COMPETENCY MATRIX</span>
-            <h2 class="section-heading">Quantum Cortex <span class="title-hologram">Matrix Grid</span></h2>
+            <h2 class="section-heading">Radial Synapse <span class="title-hologram">Banner Nodes</span></h2>
             <p class="section-subtext">Exploratory data analytics, statistical algorithms, deep neural modeling, and cloud ML infrastructure.</p>
         </div>
 
-        <div class="cortex-matrix-grid">
-            <div class="matrix-pod matrix-cyan">
-                <div class="matrix-top">
+        <div class="radial-synapses-list">
+            <div class="synapse-banner-node node-cyan-banner">
+                <div class="banner-left">
                     <i class="fa-solid fa-terminal"></i>
                     <h3>Algorithmic ML Core</h3>
                 </div>
-                <p class="matrix-desc">Core statistical programming, data preprocessing (`EDA`), hypothesis testing, and supervised/unsupervised ML models.</p>
-                <div class="matrix-chips">
-                    <span>Python</span><span>Scikit-Learn</span><span>Pandas</span><span>NumPy</span><span>EDA</span><span>Regression</span><span>Random Forests</span>
+                <div class="banner-right">
+                    <p class="banner-desc">Core statistical programming, data preprocessing (`EDA`), hypothesis testing, and supervised/unsupervised ML models.</p>
+                    <div class="banner-chips">
+                        <span>Python</span><span>Scikit-Learn</span><span>Pandas</span><span>NumPy</span><span>EDA</span><span>Regression</span><span>Random Forests</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="matrix-pod matrix-pink">
-                <div class="matrix-top">
+            <div class="synapse-banner-node node-pink-banner">
+                <div class="banner-left">
                     <i class="fa-solid fa-network-wired"></i>
                     <h3>Neural & Deep AI</h3>
                 </div>
-                <p class="matrix-desc">Advanced neural expert reasoning, computer vision (`Tesseract OCR`), anomaly isolation, and real-time inference.</p>
-                <div class="matrix-chips">
-                    <span>Deep Learning</span><span>Multi-Agent AI</span><span>Computer Vision</span><span>OCR Pipelines</span><span>Feature Eng</span><span>Ensemble ML</span>
+                <div class="banner-right">
+                    <p class="banner-desc">Advanced neural expert reasoning, computer vision (`Tesseract OCR`), anomaly isolation, and real-time inference.</p>
+                    <div class="banner-chips">
+                        <span>Deep Learning</span><span>Multi-Agent AI</span><span>Computer Vision</span><span>OCR Pipelines</span><span>Feature Eng</span><span>Ensemble ML</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="matrix-pod matrix-gold">
-                <div class="matrix-top">
+            <div class="synapse-banner-node node-gold-banner">
+                <div class="banner-left">
                     <i class="fa-solid fa-database"></i>
                     <h3>Big Data & Cloud</h3>
                 </div>
-                <p class="matrix-desc">High-concurrency cloud deployments, relational database schemas, Looker BI dashboards, and version-controlled CI/CD.</p>
-                <div class="matrix-chips">
-                    <span>SQL / MySQL</span><span>Oracle DB</span><span>Google Cloud (GCP)</span><span>Looker Studio</span><span>Render Cloud</span><span>Gunicorn / Flask</span>
+                <div class="banner-right">
+                    <p class="banner-desc">High-concurrency cloud deployments, relational database schemas, Looker BI dashboards, and version-controlled CI/CD.</p>
+                    <div class="banner-chips">
+                        <span>SQL / MySQL</span><span>Oracle DB</span><span>Google Cloud (GCP)</span><span>Looker Studio</span><span>Render Cloud</span><span>Gunicorn / Flask</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Career Timeline Roadmap -->
+    <!-- Career Timeline Split Roadmap (`different` Layout!) -->
     <section class="section-wrap" id="roadmap">
         <div class="section-header">
             <span class="section-code">// 03. CAREER JOURNEY</span>
-            <h2 class="section-heading">Strategic <span class="title-hologram">Roadmap</span></h2>
+            <h2 class="section-heading">Strategic <span class="title-hologram">Roadmap Logs</span></h2>
             <p class="section-subtext">Structured real-world engineering experience across leading Ed-Tech and Enterprise analytics organizations.</p>
         </div>
 
-        <div class="timeline-orbital-wrap">
-            <div class="timeline-orbital-node">
-                <div class="node-beacon"></div>
-                <div class="node-content-pod">
-                    <span class="node-time">JUN 2024 – JUL 2024</span>
-                    <h3 class="node-role-title">Data Scientist Intern</h3>
-                    <div class="node-company"><i class="fa-brands fa-google"></i> Google Skills4India (Ed-Tech Domain)</div>
-                    <ul class="node-details">
-                        <li>Utilized advanced SQL and Python (`Scikit-learn`) to perform deep exploratory data analysis (`EDA`) and user segmentation on large-scale educational engagement datasets.</li>
-                        <li>Designed and deployed an AI-based recommendation proof-of-concept system aimed at optimizing personalized learning paths based on key engagement metrics.</li>
-                    </ul>
-                </div>
+        <div class="split-roadmap-grid">
+            <div class="roadmap-log-card">
+                <span class="log-date">JUN 2024 – JUL 2024</span>
+                <h3 class="log-role">Data Scientist Intern</h3>
+                <div class="log-org"><i class="fa-brands fa-google"></i> Google Skills4India (Ed-Tech Domain)</div>
+                <ul class="log-list">
+                    <li>Utilized advanced SQL and Python (`Scikit-learn`) to perform deep exploratory data analysis (`EDA`) and user segmentation on large-scale educational engagement datasets.</li>
+                    <li>Designed and deployed an AI-based recommendation proof-of-concept system aimed at optimizing personalized learning paths based on key engagement metrics.</li>
+                </ul>
             </div>
 
-            <div class="timeline-orbital-node">
-                <div class="node-beacon"></div>
-                <div class="node-content-pod">
-                    <span class="node-time">JUN 2024 – AUG 2024</span>
-                    <h3 class="node-role-title">Data Analytics Intern</h3>
-                    <div class="node-company"><i class="fa-solid fa-building-columns"></i> Solutions Pro Company</div>
-                    <ul class="node-details">
-                        <li>Cleaned and mapped raw enterprise production data using relational database schemas, accelerating reliable discovery of data anomalies and structural patterns.</li>
-                        <li>Designed interactive visualization systems and summary dashboards to track essential KPIs and operational metrics.</li>
-                    </ul>
-                </div>
+            <div class="roadmap-log-card">
+                <span class="log-date">JUN 2024 – AUG 2024</span>
+                <h3 class="log-role">Data Analytics Intern</h3>
+                <div class="log-org"><i class="fa-solid fa-building-columns"></i> Solutions Pro Company</div>
+                <ul class="log-list">
+                    <li>Cleaned and mapped raw enterprise production data using relational database schemas, accelerating reliable discovery of data anomalies and structural patterns.</li>
+                    <li>Designed interactive visualization systems and summary dashboards to track essential KPIs and operational metrics.</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Command Launchpad Portal -->
     <section class="section-wrap" id="launchpad">
-        <div class="orbital-launchpad">
+        <div class="cyber-launch-portal">
             <span class="section-code">// 04. COMMAND CONNECTION</span>
-            <h2 class="launch-heading">Initiate Strategic Collaboration</h2>
-            <p class="launch-subtext">Looking for an elite Data Scientist or AI Architect to engineer autonomous verification models and enterprise clinical ML solutions? Initiate communication.</p>
+            <h2 class="launch-title-main">Initiate Strategic Collaboration</h2>
+            <p class="launch-sub-desc">Looking for an elite Data Scientist or AI Architect to engineer autonomous verification models and enterprise clinical ML solutions? Initiate communication.</p>
             
-            <div class="connection-links-grid">
-                <a href="tel:+918056835870" class="connect-pill-box"><i class="fa-solid fa-phone" style="color:var(--neon-gold)"></i> +91 8056835870</a>
-                <a href="mailto:chandrucoffl@gmail.com" class="connect-pill-box"><i class="fa-solid fa-envelope" style="color:var(--neon-pink)"></i> chandrucoffl@gmail.com</a>
-                <a href="https://linkedin.com/in/chandruc-offl-7378863a4" target="_blank" class="connect-pill-box"><i class="fa-brands fa-linkedin" style="color:var(--neon-cyan)"></i> LinkedIn Profile</a>
-                <a href="https://github.com/chandrucoffl" target="_blank" class="connect-pill-box"><i class="fa-brands fa-github" style="color:var(--neon-emerald)"></i> GitHub Repos</a>
+            <div class="connection-pills-row">
+                <a href="tel:+918056835870" class="connect-pill-btn"><i class="fa-solid fa-phone" style="color:var(--neon-gold)"></i> +91 8056835870</a>
+                <a href="mailto:chandrucoffl@gmail.com" class="connect-pill-btn"><i class="fa-solid fa-envelope" style="color:var(--neon-pink)"></i> chandrucoffl@gmail.com</a>
+                <a href="https://linkedin.com/in/chandruc-offl-7378863a4" target="_blank" class="connect-pill-btn"><i class="fa-brands fa-linkedin" style="color:var(--neon-cyan)"></i> LinkedIn Profile</a>
+                <a href="https://github.com/chandrucoffl" target="_blank" class="connect-pill-btn"><i class="fa-brands fa-github" style="color:var(--neon-emerald)"></i> GitHub Repos</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2026 CHANDRU C // ARCHITECTED WITH FUTURISTIC METAVERSE COMMAND PODS & ORBITAL HUD TECHNOLOGY.</p>
+        <p>&copy; 2026 CHANDRU C // ARCHITECTED WITH SPLIT-SCREEN RADAR & ASYMMETRIC CYBER-SLABS TECHNOLOGY.</p>
     </footer>
 
-    <!-- INTERACTIVE ORBITAL COMMAND STRIP SWITCHER & PRESERVED 100% UNTOUCHED CURSOR NEURON SCRIPT -->
+    <!-- PRESERVED 100% UNTOUCHED ULTRA-FAST 60FPS INTERACTIVE CURSOR NEURONS SCRIPT -->
     <script>
-        // 1. Interactive Orbital Command Strip Switcher
-        const orbitalData = {
-            nexus: [
-                { l: "Target Architecture", v: "NEXUS AI UNIFIED SYSTEM", c: "var(--neon-cyan)" },
-                { l: "Inference Latency", v: "< 14 ms Speed", c: "var(--neon-pink)" },
-                { l: "Decision Accuracy", v: "99.8% Precision", c: "var(--neon-gold)" },
-                { l: "Active Neural Nodes", v: "145+ Cloud Nodes", c: "var(--neon-emerald)" }
-            ],
-            meditrust: [
-                { l: "Target Engine", v: "MEDITRUST OCR PLATFORM", c: "var(--neon-gold)" },
-                { l: "OCR Extraction", v: "96.2% Multi-Engine", c: "var(--neon-cyan)" },
-                { l: "Tamper Precision", v: "95.8% Hash Match", c: "var(--neon-pink)" },
-                { l: "Live Endpoint", v: "Aiven MySQL Cloud DB", c: "var(--neon-emerald)" }
-            ],
-            medisense: [
-                { l: "Clinical System", v: "MEDISENSE ONCOLOGY CORE", c: "var(--neon-cyan)" },
-                { l: "Tumor Features", v: "30+ Markers Evaluated", c: "var(--neon-pink)" },
-                { l: "Diagnosis Spec", v: "98.9% Specificity", c: "var(--neon-gold)" },
-                { l: "Cloud Uptime", v: "99.5% Concurrency", c: "var(--neon-emerald)" }
-            ],
-            mmp: [
-                { l: "Ensemble Platform", v: "MMP MULTIPLE PREDICTION", c: "var(--neon-emerald)" },
-                { l: "Ensemble Accuracy", v: "96.8% Multi-Model", c: "var(--neon-cyan)" },
-                { l: "Batch Processing", v: "Bulk CSV Ingest", c: "var(--neon-gold)" },
-                { l: "API Architecture", v: "REST Cloud Endpoints", c: "var(--neon-pink)" }
-            ]
-        };
-
-        function switchOrbital(target, btn) {
-            document.querySelectorAll('.strip-btn').forEach(t => t.classList.remove('active'));
-            btn.classList.add('active');
-
-            const d = orbitalData[target];
-            const orbitalBody = document.getElementById('orbital-display');
-            orbitalBody.innerHTML = d.map(item => `
-                <div class="strip-box">
-                    <span class="box-lbl">${item.l}</span>
-                    <span class="box-val" style="color:${item.c}">${item.v}</span>
-                </div>
-            `).join('');
-        }
-
-        // 2. Ultra-Fast 60FPS Interactive Cursor Neural Synapse Matrix (PRESERVED EXACTLY 100% UNTOUCHED!)
+        // Ultra-Fast 60FPS Interactive Cursor Neural Synapse Matrix (PRESERVED EXACTLY 100% UNTOUCHED!)
         const canvas = document.getElementById('ambient-canvas');
         const ctx = canvas.getContext('2d');
         let w, h;
@@ -1426,13 +1372,13 @@
         }
         animateNeurons();
 
-        // 3. Navbar Active State
+        // Navbar Active State
         let scrollTimer = null;
         window.addEventListener('scroll', () => {
             if (scrollTimer) return;
             scrollTimer = setTimeout(() => {
                 const sections = document.querySelectorAll('section');
-                const navLinks = document.querySelectorAll('.orbital-nav-links a');
+                const navLinks = document.querySelectorAll('.viper-nav-links a');
                 let current = '';
 
                 sections.forEach(sec => {
