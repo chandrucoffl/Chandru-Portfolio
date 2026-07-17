@@ -12,19 +12,23 @@
     
     <style>
         :root {
-            --bg-obsidian: #020308;
-            --bg-glass-panel: rgba(12, 16, 34, 0.76);
-            --bg-glass-hover: rgba(20, 26, 54, 0.86);
+            --bg-obsidian: #03050d;
+            --bg-glass-panel: rgba(14, 19, 40, 0.76);
+            --bg-glass-hover: rgba(24, 32, 65, 0.88);
+            
+            /* VIBRANT COLOURFUL CHROMATIC PALETTE */
+            --neon-pink: #ff007a;
             --neon-cyan: #00f0ff;
             --neon-emerald: #00ff88;
-            --neon-violet: #8a2be2;
-            --neon-blue: #2563eb;
+            --neon-purple: #8a2be2;
+            --neon-gold: #ffb800;
+            --neon-orange: #ff5e00;
+            --neon-crimson: #ff0844;
+            --neon-violet: #a855f7;
+            
             --text-pure: #ffffff;
-            --text-dim: #94a3b8;
-            --border-neon: rgba(0, 240, 255, 0.25);
-            --border-emerald: rgba(0, 255, 136, 0.35);
-            --glow-cyan: 0 0 35px rgba(0, 240, 255, 0.35);
-            --glow-emerald: 0 0 35px rgba(0, 255, 136, 0.35);
+            --text-dim: #cbd5e1;
+            --border-glass: rgba(255, 255, 255, 0.14);
         }
 
         * {
@@ -42,10 +46,10 @@
             position: relative;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            line-height: 1.75;
+            line-height: 1.76;
         }
 
-        /* 1. CONTINUOUS MOVING BACKGROUND & QUANTUM STAR MATRIX */
+        /* 1. CONTINUOUS MOVING MULTICOLORED BACKGROUND & AURORA ORBS */
         #star-canvas {
             position: fixed;
             top: 0;
@@ -56,51 +60,58 @@
             pointer-events: none;
         }
 
-        .ambient-plasma {
+        .ambient-aurora {
             position: fixed;
             border-radius: 50%;
             filter: blur(110px);
-            opacity: 0.32;
+            opacity: 0.38;
             z-index: -3;
             pointer-events: none;
-            animation: plasmaFloat 18s ease-in-out infinite alternate;
+            animation: auroraFloat 16s ease-in-out infinite alternate;
         }
 
-        .plasma-1 {
+        .aurora-pink {
+            width: 650px; height: 650px;
+            background: radial-gradient(circle, var(--neon-pink) 0%, transparent 70%);
+            top: -10%; left: -6%;
+        }
+
+        .aurora-gold {
             width: 600px; height: 600px;
-            background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
-            top: -12%; left: -8%;
+            background: radial-gradient(circle, var(--neon-gold) 0%, transparent 70%);
+            top: 40%; left: 30%;
+            animation-delay: -5s;
         }
 
-        .plasma-2 {
+        .aurora-cyan {
             width: 700px; height: 700px;
-            background: radial-gradient(circle, var(--neon-violet) 0%, transparent 70%);
-            bottom: -18%; right: -12%;
-            animation-delay: -6s;
+            background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
+            bottom: -15%; right: -10%;
+            animation-delay: -10s;
         }
 
-        .plasma-3 {
-            width: 550px; height: 550px;
-            background: radial-gradient(circle, var(--neon-emerald) 0%, transparent 70%);
-            top: 40%; left: 38%;
-            animation-delay: -12s;
+        .aurora-purple {
+            width: 580px; height: 580px;
+            background: radial-gradient(circle, var(--neon-purple) 0%, transparent 70%);
+            top: 25%; right: 15%;
+            animation-delay: -15s;
         }
 
-        @keyframes plasmaFloat {
-            0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(150px, -80px) scale(1.35); }
-            100% { transform: translate(-100px, 120px) scale(0.92); }
+        @keyframes auroraFloat {
+            0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            50% { transform: translate(160px, -90px) scale(1.35) rotate(180deg); }
+            100% { transform: translate(-110px, 130px) scale(0.9) rotate(360deg); }
         }
 
-        /* Continuous Moving Holographic Scan Grid */
+        /* Continuous Multicolored Grid Overlay */
         .scan-grid {
             position: fixed;
             top: 0; left: 0;
             width: 200%; height: 200%;
             background-image: 
-                linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
+                linear-gradient(rgba(255, 0, 122, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.07) 1px, transparent 1px);
+            background-size: 55px 55px;
             z-index: -2;
             pointer-events: none;
             transform: perspective(800px) rotateX(68deg) translateY(-120px) translateZ(-250px);
@@ -109,10 +120,10 @@
 
         @keyframes gridFlowContinuous {
             0% { transform: perspective(800px) rotateX(68deg) translateY(0) translateZ(-250px); }
-            100% { transform: perspective(800px) rotateX(68deg) translateY(50px) translateZ(-250px); }
+            100% { transform: perspective(800px) rotateX(68deg) translateY(55px) translateZ(-250px); }
         }
 
-        /* 2. EXECUTIVE BIOLUMINESCENT NAVBAR */
+        /* 2. EXECUTIVE VIBRANT CHROMATIC NAVBAR */
         .navbar {
             position: fixed;
             top: 22px;
@@ -121,27 +132,27 @@
             width: 93%;
             max-width: 1350px;
             z-index: 1000;
-            background: rgba(8, 11, 24, 0.86);
+            background: rgba(10, 14, 30, 0.88);
             backdrop-filter: blur(32px);
             -webkit-backdrop-filter: blur(32px);
-            border: 1px solid var(--border-neon);
+            border: 1px solid rgba(255, 255, 255, 0.18);
             border-radius: 60px;
             padding: 0.95rem 2.6rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9), inset 0 0 25px rgba(0, 240, 255, 0.16);
+            box-shadow: 0 15px 55px rgba(0, 0, 0, 0.95), inset 0 0 25px rgba(255, 0, 122, 0.18);
             transition: all 0.4s ease;
         }
 
         .navbar:hover {
-            border-color: var(--neon-cyan);
-            box-shadow: 0 15px 65px rgba(0, 240, 255, 0.32), inset 0 0 35px rgba(0, 240, 255, 0.25);
+            border-color: var(--neon-pink);
+            box-shadow: 0 15px 65px rgba(255, 0, 122, 0.35), inset 0 0 35px rgba(0, 240, 255, 0.25);
         }
 
         .logo {
             font-family: 'Syne', sans-serif;
-            font-size: 1.7rem;
+            font-size: 1.75rem;
             font-weight: 800;
             color: #fff;
             text-decoration: none;
@@ -152,11 +163,11 @@
         }
 
         .logo span {
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-emerald));
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-gold), var(--neon-cyan));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
-            text-shadow: 0 0 25px rgba(0, 240, 255, 0.6);
+            filter: drop-shadow(0 0 18px rgba(255, 0, 122, 0.6));
         }
 
         .nav-links {
@@ -179,17 +190,17 @@
 
         .nav-links a:hover, .nav-links a.active {
             color: #fff;
-            text-shadow: 0 0 15px var(--neon-cyan);
+            text-shadow: 0 0 18px var(--neon-cyan);
         }
 
         .nav-links a::after {
             content: '';
             position: absolute;
             bottom: -6px; left: 0;
-            width: 0%; height: 2px;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-emerald));
+            width: 0%; height: 3px;
+            background: linear-gradient(90deg, var(--neon-pink), var(--neon-gold), var(--neon-cyan));
             transition: width 0.3s ease;
-            box-shadow: 0 0 14px var(--neon-cyan);
+            box-shadow: 0 0 15px var(--neon-pink);
         }
 
         .nav-links a:hover::after, .nav-links a.active::after {
@@ -197,25 +208,25 @@
         }
 
         .nav-btn {
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-emerald));
-            color: #020308 !important;
-            padding: 0.72rem 1.9rem;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-gold), var(--neon-cyan));
+            color: #03050d !important;
+            padding: 0.74rem 2rem;
             border-radius: 50px;
             font-family: 'Syne', sans-serif;
             font-weight: 800 !important;
-            font-size: 0.94rem !important;
+            font-size: 0.96rem !important;
             letter-spacing: 0.8px !important;
-            box-shadow: 0 0 28px rgba(0, 240, 255, 0.6);
+            box-shadow: 0 0 30px rgba(255, 0, 122, 0.65);
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
         }
 
         .nav-btn:hover {
             transform: scale(1.08) translateY(-3px);
-            box-shadow: 0 0 45px rgba(0, 240, 255, 0.9), 0 0 65px rgba(0, 255, 136, 0.7);
-            color: #020308 !important;
+            box-shadow: 0 0 50px rgba(255, 0, 122, 0.95), 0 0 70px rgba(0, 240, 255, 0.7);
+            color: #03050d !important;
         }
 
-        /* 3. HERO SECTION: 3D QUANTUM SPHERE COMMAND PODIUM */
+        /* 3. HERO SECTION: MULTICOLORED 3D QUANTUM SPHERE PODIUM */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -244,12 +255,12 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-            background: rgba(0, 255, 136, 0.12);
-            border: 1px solid rgba(0, 255, 136, 0.45);
-            padding: 0.62rem 1.8rem;
+            background: rgba(255, 0, 122, 0.14);
+            border: 1px solid rgba(255, 0, 122, 0.55);
+            padding: 0.64rem 1.8rem;
             border-radius: 50px;
             margin-bottom: 2.2rem;
-            box-shadow: 0 0 28px rgba(0, 255, 136, 0.25);
+            box-shadow: 0 0 30px rgba(255, 0, 122, 0.35);
             animation: floatBadge 3.8s ease-in-out infinite;
         }
 
@@ -259,23 +270,23 @@
         }
 
         .pulse-core {
-            width: 11px; height: 11px;
-            background: var(--neon-emerald);
+            width: 12px; height: 12px;
+            background: var(--neon-pink);
             border-radius: 50%;
-            box-shadow: 0 0 18px var(--neon-emerald);
+            box-shadow: 0 0 20px var(--neon-pink);
             animation: pulseCore 0.9s infinite alternate;
         }
 
         @keyframes pulseCore {
-            0% { transform: scale(0.8); box-shadow: 0 0 8px var(--neon-emerald); }
-            100% { transform: scale(1.4); box-shadow: 0 0 28px var(--neon-emerald); }
+            0% { transform: scale(0.85); box-shadow: 0 0 8px var(--neon-pink); }
+            100% { transform: scale(1.45); box-shadow: 0 0 30px var(--neon-pink); }
         }
 
         .status-pill span {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.88rem;
             font-weight: 700;
-            color: var(--neon-emerald);
+            color: var(--neon-pink);
             letter-spacing: 1.5px;
         }
 
@@ -290,16 +301,16 @@
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #00f0ff 0%, #00ff88 50%, #8a2be2 100%);
+            background: linear-gradient(135deg, var(--neon-pink) 0%, var(--neon-gold) 33%, var(--neon-cyan) 66%, var(--neon-emerald) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.4));
+            filter: drop-shadow(0 0 35px rgba(255, 0, 122, 0.45));
             animation: gradientShift 6s ease infinite alternate;
         }
 
         @keyframes gradientShift {
-            0% { filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.4)) hue-rotate(0deg); }
-            100% { filter: drop-shadow(0 0 38px rgba(138, 43, 226, 0.6)) hue-rotate(40deg); }
+            0% { filter: drop-shadow(0 0 35px rgba(255, 0, 122, 0.45)) hue-rotate(0deg); }
+            100% { filter: drop-shadow(0 0 45px rgba(0, 240, 255, 0.65)) hue-rotate(60deg); }
         }
 
         .hero-desc {
@@ -314,7 +325,7 @@
         .hero-desc b {
             color: #fff;
             font-weight: 700;
-            border-bottom: 2px solid var(--neon-cyan);
+            border-bottom: 2px solid var(--neon-pink);
             text-shadow: 0 0 18px rgba(255, 255, 255, 0.4);
         }
 
@@ -341,41 +352,41 @@
         }
 
         .btn-primary-glow {
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));
-            color: #020308;
-            box-shadow: 0 0 38px rgba(0, 240, 255, 0.65), inset 0 0 12px rgba(255, 255, 255, 0.8);
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-gold), var(--neon-cyan));
+            color: #03050d;
+            box-shadow: 0 0 42px rgba(255, 0, 122, 0.65), inset 0 0 12px rgba(255, 255, 255, 0.8);
         }
 
         .btn-primary-glow:hover {
             transform: translateY(-6px) scale(1.05);
-            box-shadow: 0 0 55px rgba(0, 240, 255, 0.95), 0 0 75px rgba(0, 255, 136, 0.7);
-            color: #020308;
+            box-shadow: 0 0 60px rgba(255, 0, 122, 0.95), 0 0 80px rgba(0, 240, 255, 0.7);
+            color: #03050d;
         }
 
         .btn-outline-glass {
-            background: rgba(12, 16, 34, 0.8);
-            color: var(--neon-emerald);
-            border: 2px solid var(--neon-emerald);
-            box-shadow: 0 0 25px rgba(0, 255, 136, 0.25);
+            background: rgba(14, 19, 40, 0.82);
+            color: var(--neon-gold);
+            border: 2px solid var(--neon-gold);
+            box-shadow: 0 0 28px rgba(255, 184, 0, 0.3);
         }
 
         .btn-outline-glass:hover {
-            background: var(--neon-emerald);
-            color: #020308;
+            background: var(--neon-gold);
+            color: #03050d;
             transform: translateY(-6px) scale(1.05);
-            box-shadow: 0 0 50px rgba(0, 255, 136, 0.9);
+            box-shadow: 0 0 55px rgba(255, 184, 0, 0.95);
         }
 
-        /* Hero Right: 3D Rotating Quantum Data Sphere Container */
+        /* Hero Right: Multicolored 3D Rotating Quantum Sphere Container */
         .sphere-container {
             width: 100%;
             height: 520px;
-            background: rgba(12, 16, 34, 0.6);
-            border: 1px solid rgba(0, 240, 255, 0.35);
+            background: rgba(14, 19, 40, 0.65);
+            border: 1px solid rgba(255, 0, 122, 0.4);
             border-radius: 40px;
             backdrop-filter: blur(35px);
             -webkit-backdrop-filter: blur(35px);
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.95), inset 0 0 30px rgba(0, 240, 255, 0.18);
+            box-shadow: 0 30px 75px rgba(0, 0, 0, 0.95), inset 0 0 35px rgba(255, 0, 122, 0.2);
             position: relative;
             display: flex;
             flex-direction: column;
@@ -410,11 +421,11 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.84rem;
             font-weight: 700;
-            color: var(--neon-emerald);
-            background: rgba(0, 255, 136, 0.12);
+            color: var(--neon-pink);
+            background: rgba(255, 0, 122, 0.15);
             padding: 0.4rem 1.1rem;
             border-radius: 50px;
-            border: 1px solid rgba(0, 255, 136, 0.35);
+            border: 1px solid rgba(255, 0, 122, 0.45);
         }
 
         #quantum-sphere {
@@ -432,13 +443,13 @@
             letter-spacing: 1px;
         }
 
-        /* 4. LIVE INFINITE TELEMETRY MARQUEE BAR */
+        /* 4. LIVE MULTICOLORED TELEMETRY MARQUEE BAR */
         .marquee-wrap {
             width: 100%;
             overflow: hidden;
-            background: rgba(12, 16, 34, 0.75);
-            border-top: 1px solid var(--border-neon);
-            border-bottom: 1px solid var(--border-neon);
+            background: rgba(14, 19, 40, 0.8);
+            border-top: 1px solid var(--border-glass);
+            border-bottom: 1px solid var(--border-glass);
             padding: 1.1rem 0;
             margin-bottom: 6.5rem;
             position: relative;
@@ -464,14 +475,14 @@
             letter-spacing: 1px;
         }
 
-        .m-item span { color: var(--neon-cyan); font-weight: 800; }
+        .m-item span { font-weight: 800; }
 
         @keyframes marqueeScroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
 
-        /* 5. SECTIONS COMMON & EXECUTIVE PANELS ARCHITECTURE */
+        /* 5. SECTIONS COMMON & VIBRANT PANELS ARCHITECTURE */
         .section-wrap {
             max-width: 1350px;
             margin: 0 auto;
@@ -489,7 +500,7 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.92rem;
             font-weight: 700;
-            color: var(--neon-emerald);
+            color: var(--neon-pink);
             letter-spacing: 3px;
             text-transform: uppercase;
             display: block;
@@ -511,7 +522,7 @@
             line-height: 1.8;
         }
 
-        /* 6. EXECUTIVE GLASS DATA PANELS SHOWCASE (NEW PARADIGM) */
+        /* 6. VIBRANT MULTICOLORED GLASS DATA PANELS SHOWCASE */
         .panels-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -520,12 +531,11 @@
 
         .data-panel {
             background: var(--bg-glass-panel);
-            border: 1px solid var(--border-neon);
-            border-left: 5px solid var(--neon-cyan);
-            border-radius: 34px;
-            padding: 3.2rem;
-            backdrop-filter: blur(38px);
-            -webkit-backdrop-filter: blur(38px);
+            border: 1px solid var(--border-glass);
+            border-radius: 36px;
+            padding: 3.4rem;
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
             position: relative;
             display: flex;
             flex-direction: column;
@@ -539,23 +549,79 @@
             position: absolute;
             top: 0; left: -150%;
             width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
             transition: left 0.8s ease;
             pointer-events: none;
         }
 
         .data-panel:hover::before { left: 150%; }
 
-        .data-panel:hover {
-            border-color: var(--neon-cyan);
+        /* THEME 1: NEXUS AI -> VIBRANT INDIGO & ELECTRIC PINK */
+        .theme-pink {
+            border-left: 6px solid var(--neon-pink);
+            border-color: rgba(255, 0, 122, 0.5);
+            box-shadow: 0 0 50px rgba(255, 0, 122, 0.25);
+        }
+        .theme-pink:hover {
+            border-color: var(--neon-pink);
             background: var(--bg-glass-hover);
             transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 35px 75px rgba(0, 0, 0, 0.98), 0 0 55px rgba(0, 240, 255, 0.38);
+            box-shadow: 0 35px 80px rgba(0,0,0,0.98), 0 0 70px rgba(255, 0, 122, 0.6);
         }
+        .theme-pink .panel-icon { background: rgba(255, 0, 122, 0.18); border-color: var(--neon-pink); color: var(--neon-pink); box-shadow: 0 0 28px rgba(255, 0, 122, 0.45); }
+        .theme-pink .panel-meta, .theme-pink .t-val, .theme-pink .panel-link { color: var(--neon-pink); }
+        .theme-pink .status-badge { background: rgba(255, 0, 122, 0.16); color: var(--neon-pink); border: 1px solid var(--neon-pink); box-shadow: 0 0 20px rgba(255, 0, 122, 0.4); }
 
-        /* Asymmetric Panel Spans */
-        .panel-flagship { grid-column: span 12; border-left-color: var(--neon-violet); border: 2px solid rgba(138, 43, 226, 0.6); box-shadow: 0 0 50px rgba(138, 43, 226, 0.3); }
-        .panel-flagship:hover { border-color: var(--neon-cyan); box-shadow: 0 35px 85px rgba(0,0,0,0.98), 0 0 65px rgba(138, 43, 226, 0.55), 0 0 45px rgba(0, 240, 255, 0.45); }
+        /* THEME 2: MEDITRUST -> VIBRANT SOLAR GOLD & ORANGE */
+        .theme-gold {
+            border-left: 6px solid var(--neon-gold);
+            border-color: rgba(255, 184, 0, 0.45);
+            box-shadow: 0 0 45px rgba(255, 184, 0, 0.22);
+        }
+        .theme-gold:hover {
+            border-color: var(--neon-gold);
+            background: var(--bg-glass-hover);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 35px 80px rgba(0,0,0,0.98), 0 0 65px rgba(255, 184, 0, 0.6);
+        }
+        .theme-gold .panel-icon { background: rgba(255, 184, 0, 0.18); border-color: var(--neon-gold); color: var(--neon-gold); box-shadow: 0 0 28px rgba(255, 184, 0, 0.45); }
+        .theme-gold .panel-meta, .theme-gold .t-val, .theme-gold .panel-link { color: var(--neon-gold); }
+        .theme-gold .status-badge { background: rgba(255, 184, 0, 0.16); color: var(--neon-gold); border: 1px solid var(--neon-gold); box-shadow: 0 0 20px rgba(255, 184, 0, 0.4); }
+
+        /* THEME 3: MEDISENSE -> VIBRANT CRIMSON RED & ROSE PINK */
+        .theme-crimson {
+            border-left: 6px solid var(--neon-crimson);
+            border-color: rgba(255, 8, 68, 0.45);
+            box-shadow: 0 0 45px rgba(255, 8, 68, 0.22);
+        }
+        .theme-crimson:hover {
+            border-color: var(--neon-crimson);
+            background: var(--bg-glass-hover);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 35px 80px rgba(0,0,0,0.98), 0 0 65px rgba(255, 8, 68, 0.6);
+        }
+        .theme-crimson .panel-icon { background: rgba(255, 8, 68, 0.18); border-color: var(--neon-crimson); color: var(--neon-crimson); box-shadow: 0 0 28px rgba(255, 8, 68, 0.45); }
+        .theme-crimson .panel-meta, .theme-crimson .t-val, .theme-crimson .panel-link { color: var(--neon-crimson); }
+        .theme-crimson .status-badge { background: rgba(255, 8, 68, 0.16); color: var(--neon-crimson); border: 1px solid var(--neon-crimson); box-shadow: 0 0 20px rgba(255, 8, 68, 0.4); }
+
+        /* THEME 4: MMP -> VIBRANT QUANTUM EMERALD & CYAN */
+        .theme-emerald {
+            border-left: 6px solid var(--neon-emerald);
+            border-color: rgba(0, 255, 136, 0.48);
+            box-shadow: 0 0 48px rgba(0, 255, 136, 0.25);
+        }
+        .theme-emerald:hover {
+            border-color: var(--neon-emerald);
+            background: var(--bg-glass-hover);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 35px 80px rgba(0,0,0,0.98), 0 0 70px rgba(0, 255, 136, 0.65);
+        }
+        .theme-emerald .panel-icon { background: rgba(0, 255, 136, 0.18); border-color: var(--neon-emerald); color: var(--neon-emerald); box-shadow: 0 0 28px rgba(0, 255, 136, 0.45); }
+        .theme-emerald .panel-meta, .theme-emerald .t-val, .theme-emerald .panel-link { color: var(--neon-emerald); }
+        .theme-emerald .status-badge { background: rgba(0, 255, 136, 0.16); color: var(--neon-emerald); border: 1px solid var(--neon-emerald); box-shadow: 0 0 20px rgba(0, 255, 136, 0.4); }
+
+        /* Asymmetric Spans */
+        .panel-flagship { grid-column: span 12; }
         .panel-half { grid-column: span 6; }
 
         .panel-top {
@@ -566,26 +632,16 @@
         }
 
         .panel-icon {
-            width: 72px; height: 72px;
-            background: rgba(0, 240, 255, 0.12);
-            border: 1px solid rgba(0, 240, 255, 0.4);
-            border-radius: 22px;
+            width: 74px; height: 74px;
+            border-radius: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            color: var(--neon-cyan);
-            box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+            font-size: 2.1rem;
+            border: 1px solid;
         }
 
-        .panel-flagship .panel-icon {
-            background: rgba(138, 43, 226, 0.22);
-            border-color: var(--neon-violet);
-            color: #d8b4fe;
-            box-shadow: 0 0 30px rgba(138, 43, 226, 0.5);
-        }
-
-        .panel-status {
+        .status-badge {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.82rem;
             font-weight: 700;
@@ -597,46 +653,39 @@
             gap: 8px;
         }
 
-        .status-active { background: rgba(0, 255, 136, 0.15); color: var(--neon-emerald); border: 1px solid var(--neon-emerald); box-shadow: 0 0 20px rgba(0, 255, 136, 0.4); }
-        .status-cloud { background: rgba(0, 240, 255, 0.12); color: var(--neon-cyan); border: 1px solid var(--neon-cyan); box-shadow: 0 0 20px rgba(0, 240, 255, 0.3); }
-
         .panel-meta {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.88rem;
             font-weight: 700;
-            color: var(--neon-emerald);
             letter-spacing: 2px;
             margin-bottom: 0.8rem;
             display: block;
         }
 
-        .panel-flagship .panel-meta { color: #d8b4fe; }
-
         .panel-title {
             font-family: 'Clash Display', 'Syne', sans-serif;
-            font-size: 2.3rem;
+            font-size: 2.4rem;
             font-weight: 800;
             margin-bottom: 1.2rem;
             color: #fff;
             letter-spacing: -1px;
         }
 
-        .panel-flagship .panel-title { font-size: 2.9rem; }
+        .panel-flagship .panel-title { font-size: 3rem; }
 
         .panel-desc {
             color: var(--text-dim);
-            font-size: 1.1rem;
-            line-height: 1.82;
+            font-size: 1.12rem;
+            line-height: 1.84;
             margin-bottom: 2.4rem;
         }
 
-        /* Statistical Telemetry Deck on Panel */
         .panel-telemetry {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.4rem;
             background: rgba(0, 0, 0, 0.55);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 24px;
             padding: 1.4rem;
             margin-bottom: 2.4rem;
@@ -644,13 +693,10 @@
 
         .t-val {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 1.45rem;
+            font-size: 1.48rem;
             font-weight: 800;
-            color: var(--neon-cyan);
             display: block;
         }
-
-        .panel-flagship .t-val { color: #d8b4fe; }
 
         .t-lbl {
             font-family: 'Syne', sans-serif;
@@ -670,8 +716,8 @@
 
         .panel-tags span {
             font-family: 'JetBrains Mono', monospace;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 0.52rem 1.2rem;
             border-radius: 14px;
             font-size: 0.88rem;
@@ -680,13 +726,10 @@
             transition: all 0.3s ease;
         }
 
-        .panel-tags span:hover {
-            border-color: var(--neon-cyan);
-            background: rgba(0, 240, 255, 0.2);
-            color: #fff;
-            transform: translateY(-3px);
-            box-shadow: 0 0 16px rgba(0, 240, 255, 0.5);
-        }
+        .theme-pink .panel-tags span:hover { border-color: var(--neon-pink); background: rgba(255, 0, 122, 0.25); color: #fff; transform: translateY(-3px); box-shadow: 0 0 16px rgba(255, 0, 122, 0.5); }
+        .theme-gold .panel-tags span:hover { border-color: var(--neon-gold); background: rgba(255, 184, 0, 0.25); color: #fff; transform: translateY(-3px); box-shadow: 0 0 16px rgba(255, 184, 0, 0.5); }
+        .theme-crimson .panel-tags span:hover { border-color: var(--neon-crimson); background: rgba(255, 8, 68, 0.25); color: #fff; transform: translateY(-3px); box-shadow: 0 0 16px rgba(255, 8, 68, 0.5); }
+        .theme-emerald .panel-tags span:hover { border-color: var(--neon-emerald); background: rgba(0, 255, 136, 0.25); color: #fff; transform: translateY(-3px); box-shadow: 0 0 16px rgba(0, 255, 136, 0.5); }
 
         .panel-footer {
             padding-top: 1.8rem;
@@ -698,24 +741,21 @@
             align-items: center;
             gap: 12px;
             font-family: 'Syne', sans-serif;
-            font-size: 1.05rem;
+            font-size: 1.06rem;
             font-weight: 800;
-            color: var(--neon-cyan);
             text-decoration: none;
             letter-spacing: 1px;
             text-transform: uppercase;
             transition: all 0.3s ease;
         }
 
-        .panel-flagship .panel-link { color: #d8b4fe; }
-
         .panel-link:hover {
-            color: #fff;
-            text-shadow: 0 0 20px var(--neon-cyan);
+            color: #fff !important;
+            text-shadow: 0 0 20px currentColor;
             transform: translateX(10px);
         }
 
-        /* 7. NEURAL SYNAPSE CONSTELLATION MATRIX */
+        /* 7. VIBRANT MULTICOLORED SYNAPSE STUDIO */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -724,19 +764,31 @@
 
         .synapse-box {
             background: var(--bg-glass-panel);
-            border: 1px solid var(--border-neon);
-            border-radius: 32px;
+            border: 1px solid var(--border-glass);
+            border-radius: 34px;
             padding: 3rem;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
         }
 
-        .synapse-box:hover {
-            transform: translateY(-10px) scale(1.03);
-            border-color: var(--neon-emerald);
-            box-shadow: 0 28px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(0, 255, 136, 0.35);
-        }
+        .box-gold { border-top: 5px solid var(--neon-gold); }
+        .box-gold:hover { border-color: var(--neon-gold); transform: translateY(-10px) scale(1.03); box-shadow: 0 28px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 184, 0, 0.4); }
+        .box-gold .synapse-top i { color: var(--neon-gold); filter: drop-shadow(0 0 16px rgba(255, 184, 0, 0.6)); }
+        .box-gold .synapse-pills span { background: rgba(255, 184, 0, 0.12); border: 1px solid rgba(255, 184, 0, 0.4); color: #fde047; }
+        .box-gold:hover .synapse-pills span { background: rgba(255, 184, 0, 0.28); color: #fff; box-shadow: 0 0 15px rgba(255, 184, 0, 0.5); }
+
+        .box-pink { border-top: 5px solid var(--neon-pink); }
+        .box-pink:hover { border-color: var(--neon-pink); transform: translateY(-10px) scale(1.03); box-shadow: 0 28px 65px rgba(0,0,0,0.95), 0 0 45px rgba(255, 0, 122, 0.4); }
+        .box-pink .synapse-top i { color: var(--neon-pink); filter: drop-shadow(0 0 16px rgba(255, 0, 122, 0.6)); }
+        .box-pink .synapse-pills span { background: rgba(255, 0, 122, 0.12); border: 1px solid rgba(255, 0, 122, 0.4); color: #f472b6; }
+        .box-pink:hover .synapse-pills span { background: rgba(255, 0, 122, 0.28); color: #fff; box-shadow: 0 0 15px rgba(255, 0, 122, 0.5); }
+
+        .box-emerald { border-top: 5px solid var(--neon-emerald); }
+        .box-emerald:hover { border-color: var(--neon-emerald); transform: translateY(-10px) scale(1.03); box-shadow: 0 28px 65px rgba(0,0,0,0.95), 0 0 45px rgba(0, 255, 136, 0.4); }
+        .box-emerald .synapse-top i { color: var(--neon-emerald); filter: drop-shadow(0 0 16px rgba(0, 255, 136, 0.6)); }
+        .box-emerald .synapse-pills span { background: rgba(0, 255, 136, 0.12); border: 1px solid rgba(0, 255, 136, 0.4); color: #6ee7b7; }
+        .box-emerald:hover .synapse-pills span { background: rgba(0, 255, 136, 0.28); color: #fff; box-shadow: 0 0 15px rgba(0, 255, 136, 0.5); }
 
         .synapse-top {
             display: flex;
@@ -745,11 +797,7 @@
             margin-bottom: 1.6rem;
         }
 
-        .synapse-top i {
-            font-size: 2.6rem;
-            color: var(--neon-emerald);
-            filter: drop-shadow(0 0 16px rgba(0, 255, 136, 0.6));
-        }
+        .synapse-top i { font-size: 2.6rem; }
 
         .synapse-top h3 {
             font-family: 'Syne', sans-serif;
@@ -762,7 +810,7 @@
             color: var(--text-dim);
             font-size: 1.02rem;
             margin-bottom: 2rem;
-            line-height: 1.75;
+            line-height: 1.76;
         }
 
         .synapse-pills {
@@ -773,21 +821,11 @@
 
         .synapse-pills span {
             font-family: 'JetBrains Mono', monospace;
-            background: rgba(0, 255, 136, 0.08);
-            border: 1px solid rgba(0, 255, 136, 0.32);
-            color: #6ee7b7;
             padding: 0.52rem 1.15rem;
             border-radius: 50px;
             font-size: 0.88rem;
             font-weight: 700;
             transition: all 0.3s ease;
-        }
-
-        .synapse-box:hover .synapse-pills span {
-            background: rgba(0, 255, 136, 0.22);
-            border-color: var(--neon-emerald);
-            color: #fff;
-            box-shadow: 0 0 14px rgba(0, 255, 136, 0.45);
         }
 
         /* 8. EXPERIENCE TIMELINE */
@@ -796,7 +834,7 @@
             margin: 0 auto;
             position: relative;
             padding-left: 4rem;
-            border-left: 2px dashed rgba(0, 240, 255, 0.45);
+            border-left: 3px dashed var(--neon-cyan);
         }
 
         .time-item {
@@ -808,32 +846,32 @@
 
         .time-dot {
             position: absolute;
-            left: -4.38rem;
+            left: -4.48rem;
             top: 0.3rem;
-            width: 24px; height: 24px;
-            background: var(--neon-cyan);
+            width: 26px; height: 26px;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-gold));
             border-radius: 50%;
             border: 4px solid var(--bg-obsidian);
-            box-shadow: 0 0 25px var(--neon-cyan);
+            box-shadow: 0 0 25px var(--neon-pink);
             animation: dotPulse 2s infinite alternate;
         }
 
         @keyframes dotPulse {
-            0% { transform: scale(1); box-shadow: 0 0 15px var(--neon-cyan); }
-            100% { transform: scale(1.38); box-shadow: 0 0 35px var(--neon-cyan); }
+            0% { transform: scale(1); box-shadow: 0 0 15px var(--neon-pink); }
+            100% { transform: scale(1.38); box-shadow: 0 0 35px var(--neon-gold); }
         }
 
         .time-panel {
             background: var(--bg-glass-panel);
-            border: 1px solid var(--border-neon);
-            border-radius: 30px;
-            padding: 3rem;
+            border: 1px solid var(--border-glass);
+            border-radius: 32px;
+            padding: 3.2rem;
             transition: all 0.3s ease;
         }
 
         .time-panel:hover {
-            border-color: var(--neon-cyan);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 32px rgba(0, 240, 255, 0.3);
+            border-color: var(--neon-gold);
+            box-shadow: 0 22px 55px rgba(0, 0, 0, 0.95), 0 0 38px rgba(255, 184, 0, 0.35);
             transform: translateX(12px);
         }
 
@@ -841,7 +879,7 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.92rem;
             font-weight: 700;
-            color: var(--neon-cyan);
+            color: var(--neon-gold);
             letter-spacing: 2px;
             display: block;
             margin-bottom: 0.6rem;
@@ -849,7 +887,7 @@
 
         .time-role {
             font-family: 'Syne', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.85rem;
             font-weight: 800;
             color: #fff;
             margin-bottom: 0.4rem;
@@ -865,7 +903,7 @@
             gap: 12px;
         }
 
-        .time-org i { color: var(--neon-cyan); }
+        .time-org i { color: var(--neon-pink); }
 
         .time-list {
             list-style-position: inside;
@@ -876,16 +914,16 @@
 
         .time-list li { margin-bottom: 0.8rem; }
 
-        /* 9. CYBER CONTACT COMMAND PORTAL */
+        /* 9. CYBER CONTACT COMMAND DECK */
         .portal-deck {
-            background: linear-gradient(135deg, rgba(12, 16, 34, 0.95) 0%, rgba(4, 6, 14, 0.99) 100%);
-            border: 2px solid var(--neon-emerald);
+            background: linear-gradient(135deg, rgba(14, 19, 40, 0.95) 0%, rgba(6, 8, 18, 0.99) 100%);
+            border: 2px solid var(--neon-pink);
             border-radius: 46px;
             padding: 6rem 3.5rem;
             text-align: center;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 0 75px rgba(0, 255, 136, 0.35);
+            box-shadow: 0 0 80px rgba(255, 0, 122, 0.4);
         }
 
         .portal-head {
@@ -912,8 +950,8 @@
         }
 
         .connect-pill {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 255, 136, 0.45);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 0, 122, 0.45);
             padding: 1.25rem 2.6rem;
             border-radius: 22px;
             color: #fff;
@@ -926,15 +964,15 @@
             align-items: center;
             gap: 14px;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+            box-shadow: 0 0 22px rgba(255, 0, 122, 0.2);
         }
 
         .connect-pill:hover {
-            background: var(--neon-emerald);
-            color: #020308;
-            border-color: var(--neon-emerald);
+            background: var(--neon-pink);
+            color: #03050d;
+            border-color: var(--neon-pink);
             transform: translateY(-6px) scale(1.06);
-            box-shadow: 0 0 50px rgba(0, 255, 136, 0.9);
+            box-shadow: 0 0 55px rgba(255, 0, 122, 0.95);
         }
 
         .connect-pill i { font-size: 1.4rem; }
@@ -960,16 +998,17 @@
     </style>
 </head>
 <body>
-    <!-- Continuous Moving Background & Plasma Nebula Orbs -->
-    <div class="ambient-plasma plasma-1"></div>
-    <div class="ambient-plasma plasma-2"></div>
-    <div class="ambient-plasma plasma-3"></div>
+    <!-- Continuous Moving Multicolored Background & Aurora Orbs -->
+    <div class="ambient-aurora aurora-pink"></div>
+    <div class="ambient-aurora aurora-gold"></div>
+    <div class="ambient-aurora aurora-cyan"></div>
+    <div class="ambient-aurora aurora-purple"></div>
     <canvas id="star-canvas"></canvas>
     <div class="scan-grid"></div>
 
-    <!-- Executive Bioluminescent Navbar -->
+    <!-- Executive Vibrant Chromatic Navbar -->
     <header class="navbar">
-        <a href="#" class="logo"><i class="fa-solid fa-microchip"></i> CHANDRU<span>.AI</span></a>
+        <a href="#" class="logo"><i class="fa-solid fa-microchip" style="color:var(--neon-pink)"></i> CHANDRU<span>.AI</span></a>
         <nav class="nav-links">
             <a href="#about" class="active">Summary</a>
             <a href="#projects">ML Cores</a>
@@ -979,14 +1018,14 @@
         </nav>
     </header>
 
-    <!-- Hero Section: 3D Quantum Sphere Command Podium -->
+    <!-- Hero Section: Multicolored 3D Quantum Sphere Podium -->
     <section class="hero" id="about">
         <div class="hero-hub">
             <!-- Hero Left -->
             <div class="hero-left">
                 <div class="status-pill">
                     <span class="pulse-core"></span>
-                    <span>DATA SCIENTIST & PREDICTIVE AI ARCHITECT // V4.0 STUDIO</span>
+                    <span>DATA SCIENTIST & PREDICTIVE AI ARCHITECT // V5.0 CHROMATIC</span>
                 </div>
                 
                 <h1 class="hero-title">
@@ -1010,11 +1049,11 @@
                 </div>
             </div>
 
-            <!-- Hero Right: Continuous 3D Rotating Quantum Sphere -->
+            <!-- Hero Right: Multicolored 3D Rotating Quantum Sphere -->
             <div class="sphere-container">
                 <div class="sphere-header">
-                    <span class="sphere-label"><i class="fa-solid fa-circle-nodes" style="color:var(--neon-cyan)"></i> 3D QUANTUM DATA SPHERE</span>
-                    <span class="sphere-stats">140 NODES ACTIVE</span>
+                    <span class="sphere-label"><i class="fa-solid fa-circle-nodes" style="color:var(--neon-cyan)"></i> 3D QUANTUM CHROMATIC SPHERE</span>
+                    <span class="sphere-stats">145 NODES ACTIVE</span>
                 </div>
                 <canvas id="quantum-sphere"></canvas>
                 <div class="sphere-footer">// INTERACTIVE: MOVE CURSOR NEAR SPHERE TO ACCELERATE</div>
@@ -1022,38 +1061,38 @@
         </div>
     </section>
 
-    <!-- Live Telemetry Marquee Bar -->
+    <!-- Live Multicolored Telemetry Marquee Bar -->
     <div class="marquee-wrap">
         <div class="marquee-track">
-            <div class="m-item"><i class="fa-solid fa-circle-dot" style="color:#00ff88"></i> <span>NEXUS AI CORE:</span> &lt;14MS INFERENCE LATENCY</div>
-            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:#00f0ff"></i> <span>MEDITRUST OCR:</span> &gt;95% MULTI-ENGINE PRECISION</div>
-            <div class="m-item"><i class="fa-solid fa-dna" style="color:#ff0844"></i> <span>MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED</div>
-            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:#8a2be2"></i> <span>MMP ENSEMBLE SUITE:</span> BATCH CSV PREDICTION PIPELINE</div>
-            <div class="m-item"><i class="fa-solid fa-cloud-check" style="color:#00ff88"></i> <span>CLOUD DEPLOYMENT:</span> RENDER / AIVEN MYSQL ACTIVE</div>
+            <div class="m-item"><i class="fa-solid fa-circle-dot" style="color:#ff007a"></i> <span style="color:#ff007a">NEXUS AI CORE:</span> &lt;14MS INFERENCE LATENCY</div>
+            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:#ffb800"></i> <span style="color:#ffb800">MEDITRUST OCR:</span> &gt;95% MULTI-ENGINE PRECISION</div>
+            <div class="m-item"><i class="fa-solid fa-dna" style="color:#ff0844"></i> <span style="color:#ff0844">MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED</div>
+            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:#00ff88"></i> <span style="color:#00ff88">MMP ENSEMBLE SUITE:</span> BATCH CSV PREDICTION PIPELINE</div>
+            <div class="m-item"><i class="fa-solid fa-cloud-check" style="color:#00f0ff"></i> <span style="color:#00f0ff">CLOUD DEPLOYMENT:</span> RENDER / AIVEN MYSQL ACTIVE</div>
             <!-- Duplicate for seamless loop -->
-            <div class="m-item"><i class="fa-solid fa-circle-dot" style="color:#00ff88"></i> <span>NEXUS AI CORE:</span> &lt;14MS INFERENCE LATENCY</div>
-            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:#00f0ff"></i> <span>MEDITRUST OCR:</span> &gt;95% MULTI-ENGINE PRECISION</div>
-            <div class="m-item"><i class="fa-solid fa-dna" style="color:#ff0844"></i> <span>MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED</div>
-            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:#8a2be2"></i> <span>MMP ENSEMBLE SUITE:</span> BATCH CSV PREDICTION PIPELINE</div>
-            <div class="m-item"><i class="fa-solid fa-cloud-check" style="color:#00ff88"></i> <span>CLOUD DEPLOYMENT:</span> RENDER / AIVEN MYSQL ACTIVE</div>
+            <div class="m-item"><i class="fa-solid fa-circle-dot" style="color:#ff007a"></i> <span style="color:#ff007a">NEXUS AI CORE:</span> &lt;14MS INFERENCE LATENCY</div>
+            <div class="m-item"><i class="fa-solid fa-shield-halved" style="color:#ffb800"></i> <span style="color:#ffb800">MEDITRUST OCR:</span> &gt;95% MULTI-ENGINE PRECISION</div>
+            <div class="m-item"><i class="fa-solid fa-dna" style="color:#ff0844"></i> <span style="color:#ff0844">MEDISENSE CLASSIFIER:</span> 30+ ONCOLOGY FEATURES EVALUATED</div>
+            <div class="m-item"><i class="fa-solid fa-layer-group" style="color:#00ff88"></i> <span style="color:#00ff88">MMP ENSEMBLE SUITE:</span> BATCH CSV PREDICTION PIPELINE</div>
+            <div class="m-item"><i class="fa-solid fa-cloud-check" style="color:#00f0ff"></i> <span style="color:#00f0ff">CLOUD DEPLOYMENT:</span> RENDER / AIVEN MYSQL ACTIVE</div>
         </div>
     </div>
 
-    <!-- Executive Glass Data Panels Showcase -->
+    <!-- Vibrant Multicolored Glass Data Panels Showcase -->
     <section class="section-wrap" id="projects">
         <div class="section-head">
             <span class="section-tag">// 01. PREDICTIVE ARCHITECTURES</span>
-            <h2 class="section-title">Executive Glass <span class="gradient-text">AI Cores</span></h2>
+            <h2 class="section-title">Vibrant Chromatic <span class="gradient-text">AI Cores</span></h2>
             <p class="section-desc">Production-grade enterprise machine learning platforms, autonomous verification pipelines, and high-precision clinical diagnostic suites.</p>
         </div>
 
         <div class="panels-grid">
             
-            <!-- Project 4: NEXUS AI (Flagship Span 12) -->
-            <div class="data-panel panel-flagship" id="card-nexus">
+            <!-- Project 4: NEXUS AI (Flagship Span 12 - Theme Cyber Pink) -->
+            <div class="data-panel panel-flagship theme-pink" id="card-nexus">
                 <div class="panel-top">
                     <div class="panel-icon"><i class="fa-solid fa-brain"></i></div>
-                    <span class="panel-status status-active"><i class="fa-solid fa-circle-dot"></i> ⚡ ACTIVE FLAGSHIP SYSTEM</span>
+                    <span class="status-badge"><i class="fa-solid fa-circle-dot"></i> ⚡ ACTIVE FLAGSHIP SYSTEM</span>
                 </div>
                 
                 <span class="panel-meta">NEURAL EXPERT UNIFIED SYSTEM // PLATFORM V2.4</span>
@@ -1078,12 +1117,12 @@
                 </div>
             </div>
 
-            <!-- Project 1: MediTrust (Half Span 6) -->
-            <div class="data-panel panel-half" id="card-meditrust">
+            <!-- Project 1: MediTrust (Half Span 6 - Theme Solar Gold) -->
+            <div class="data-panel panel-half theme-gold" id="card-meditrust">
                 <div>
                     <div class="panel-top">
                         <div class="panel-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <span class="panel-status status-cloud"><i class="fa-solid fa-cloud"></i> CLOUD DEPLOYED</span>
+                        <span class="status-badge"><i class="fa-solid fa-cloud"></i> CLOUD DEPLOYED</span>
                     </div>
                     
                     <span class="panel-meta">AUTONOMOUS FRAUD VERIFICATION ENGINE</span>
@@ -1103,12 +1142,12 @@
                 </div>
             </div>
 
-            <!-- Project 2: MediSense (Half Span 6) -->
-            <div class="data-panel panel-half" id="card-medisense">
+            <!-- Project 2: MediSense (Half Span 6 - Theme Crimson Red) -->
+            <div class="data-panel panel-half theme-crimson" id="card-medisense">
                 <div>
                     <div class="panel-top">
                         <div class="panel-icon"><i class="fa-solid fa-dna"></i></div>
-                        <span class="panel-status status-cloud"><i class="fa-solid fa-cloud"></i> CLOUD DEPLOYED</span>
+                        <span class="status-badge"><i class="fa-solid fa-cloud"></i> CLOUD DEPLOYED</span>
                     </div>
                     
                     <span class="panel-meta">CLINICAL DIAGNOSTIC & ONCOLOGY SYSTEM</span>
@@ -1128,14 +1167,14 @@
                 </div>
             </div>
 
-            <!-- Project 3: MMP (Span 12) -->
-            <div class="data-panel panel-flagship" id="card-mmp" style="border-left-color: var(--neon-emerald); border-color: rgba(0, 255, 136, 0.45);">
+            <!-- Project 3: MMP (Span 12 - Theme Quantum Emerald) -->
+            <div class="data-panel panel-flagship theme-emerald" id="card-mmp">
                 <div class="panel-top">
-                    <div class="panel-icon" style="background:rgba(0, 255, 136, 0.15); border-color:var(--neon-emerald); color:var(--neon-emerald);"><i class="fa-solid fa-layer-group"></i></div>
-                    <span class="panel-status status-cloud"><i class="fa-solid fa-cloud"></i> 🚀 CLOUD DEPLOYED</span>
+                    <div class="panel-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <span class="status-badge"><i class="fa-solid fa-cloud"></i> 🚀 CLOUD DEPLOYED</span>
                 </div>
                 
-                <span class="panel-meta" style="color:var(--neon-emerald);">MULTI-DOMAIN ENSEMBLE PREDICTION SUITE</span>
+                <span class="panel-meta">MULTI-DOMAIN ENSEMBLE PREDICTION SUITE</span>
                 <h3 class="panel-title">Multiple ML Prediction Engine (MMP)</h3>
                 
                 <p class="panel-desc">
@@ -1153,23 +1192,23 @@
                 </div>
 
                 <div class="panel-footer">
-                    <a href="https://multiple-ml-prediction-2.onrender.com" target="_blank" class="panel-link" style="color:var(--neon-emerald);"><span>OPEN ANALYTICS SUITE</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://multiple-ml-prediction-2.onrender.com" target="_blank" class="panel-link"><span>OPEN ANALYTICS SUITE</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- Neural Synapse Constellation Matrix -->
+    <!-- Vibrant Chromatic Synapse Matrix -->
     <section class="section-wrap" id="skills">
         <div class="section-head">
             <span class="section-tag">// 02. COMPETENCY MATRIX</span>
-            <h2 class="section-title">Data Science <span class="gradient-text">Synapse Studio</span></h2>
+            <h2 class="section-title">Vibrant Data Science <span class="gradient-text">Synapse Studio</span></h2>
             <p class="section-desc">Exploratory data analytics, statistical algorithms, deep neural modeling, and cloud ML infrastructure.</p>
         </div>
 
         <div class="skills-grid">
-            <div class="synapse-box">
+            <div class="synapse-box box-gold">
                 <div class="synapse-top">
                     <i class="fa-solid fa-terminal"></i>
                     <h3>Algorithmic ML Core</h3>
@@ -1180,7 +1219,7 @@
                 </div>
             </div>
 
-            <div class="synapse-box">
+            <div class="synapse-box box-pink">
                 <div class="synapse-top">
                     <i class="fa-solid fa-network-wired"></i>
                     <h3>Neural & Deep AI</h3>
@@ -1191,7 +1230,7 @@
                 </div>
             </div>
 
-            <div class="synapse-box">
+            <div class="synapse-box box-emerald">
                 <div class="synapse-top">
                     <i class="fa-solid fa-database"></i>
                     <h3>Big Data & Cloud</h3>
@@ -1249,26 +1288,26 @@
             <p class="portal-desc">Looking for a high-impact Data Scientist or AI Architect to engineer autonomous verification models and enterprise clinical ML solutions? Let's initiate communication.</p>
             
             <div class="connect-grid">
-                <a href="tel:+918056835870" class="connect-pill"><i class="fa-solid fa-phone" style="color:var(--neon-emerald)"></i> +91 8056835870</a>
-                <a href="mailto:chandrucoffl@gmail.com" class="connect-pill"><i class="fa-solid fa-envelope" style="color:var(--neon-cyan)"></i> chandrucoffl@gmail.com</a>
-                <a href="https://linkedin.com/in/chandruc-offl-7378863a4" target="_blank" class="connect-pill"><i class="fa-brands fa-linkedin" style="color:#38bdf8"></i> LinkedIn Profile</a>
-                <a href="https://github.com/chandrucoffl" target="_blank" class="connect-pill"><i class="fa-brands fa-github" style="color:#fff"></i> GitHub Repos</a>
+                <a href="tel:+918056835870" class="connect-pill"><i class="fa-solid fa-phone" style="color:var(--neon-gold)"></i> +91 8056835870</a>
+                <a href="mailto:chandrucoffl@gmail.com" class="connect-pill"><i class="fa-solid fa-envelope" style="color:var(--neon-pink)"></i> chandrucoffl@gmail.com</a>
+                <a href="https://linkedin.com/in/chandruc-offl-7378863a4" target="_blank" class="connect-pill"><i class="fa-brands fa-linkedin" style="color:var(--neon-cyan)"></i> LinkedIn Profile</a>
+                <a href="https://github.com/chandrucoffl" target="_blank" class="connect-pill"><i class="fa-brands fa-github" style="color:var(--neon-emerald)"></i> GitHub Repos</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2026 CHANDRU C // ARCHITECTED WITH 3D QUANTUM SPHERE & BIOLUMINESCENT WEB TECHNOLOGY.</p>
+        <p>&copy; 2026 CHANDRU C // ARCHITECTED WITH MULTICOLORED CHROMATIC & QUANTUM SPHERE WEB TECHNOLOGY.</p>
     </footer>
 
-    <!-- Continuous Flowing Star Matrix, 3D Quantum Sphere Simulation & Tilt Script -->
+    <!-- Continuous Flowing Chromatic Star Matrix, Multicolored 3D Quantum Sphere Simulation & Tilt Script -->
     <script>
-        // 1. Continuous Flowing Star Matrix Canvas Animation
+        // 1. Continuous Flowing Chromatic Star Matrix Canvas Animation
         const starCanvas = document.getElementById('star-canvas');
         const sCtx = starCanvas.getContext('2d');
         let width, height;
         let stars = [];
-        const starCount = 130;
+        const starCount = 135;
 
         function resizeStars() {
             width = starCanvas.width = window.innerWidth;
@@ -1281,10 +1320,10 @@
             constructor() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * height;
-                this.vx = (Math.random() - 0.5) * 1.5;
-                this.vy = (Math.random() - 0.5) * 1.5;
-                this.radius = Math.random() * 2.2 + 1;
-                const colors = ['#00f0ff', '#00ff88', '#8a2be2', '#2563eb'];
+                this.vx = (Math.random() - 0.5) * 1.6;
+                this.vy = (Math.random() - 0.5) * 1.6;
+                this.radius = Math.random() * 2.3 + 1;
+                const colors = ['#ff007a', '#00f0ff', '#00ff88', '#ffb800', '#8a2be2', '#ff5e00'];
                 this.color = colors[Math.floor(Math.random() * colors.length)];
             }
             update() {
@@ -1329,7 +1368,7 @@
                         sCtx.moveTo(stars[i].x, stars[i].y);
                         sCtx.lineTo(stars[j].x, stars[j].y);
                         const alpha = (1 - dist / 155) * 0.35;
-                        sCtx.strokeStyle = `rgba(0, 240, 255, ${alpha})`;
+                        sCtx.strokeStyle = `rgba(255, 0, 122, ${alpha})`;
                         sCtx.lineWidth = 1;
                         sCtx.stroke();
                     }
@@ -1344,7 +1383,7 @@
                         sCtx.moveTo(stars[i].x, stars[i].y);
                         sCtx.lineTo(mouse.x, mouse.y);
                         const alpha = (1 - dist / 190) * 0.68;
-                        sCtx.strokeStyle = `rgba(0, 255, 136, ${alpha})`;
+                        sCtx.strokeStyle = `rgba(0, 240, 255, ${alpha})`;
                         sCtx.lineWidth = 1.3;
                         sCtx.stroke();
                     }
@@ -1354,12 +1393,12 @@
         }
         animateStars();
 
-        // 2. 3D Rotating Quantum Data Sphere Animation
+        // 2. Multicolored 3D Rotating Quantum Data Sphere Animation
         const sphereCanvas = document.getElementById('quantum-sphere');
         const qCtx = sphereCanvas.getContext('2d');
         let sw, sh;
         let sphereNodes = [];
-        const nodeCount = 140;
+        const nodeCount = 145;
         let angleX = 0.008;
         let angleY = 0.012;
 
@@ -1372,20 +1411,19 @@
 
         class SphereNode {
             constructor() {
-                // Spherical coordinates
                 const theta = Math.random() * Math.PI * 2;
                 const phi = Math.acos((Math.random() * 2) - 1);
                 const radius = 170;
                 this.x = radius * Math.sin(phi) * Math.cos(theta);
                 this.y = radius * Math.sin(phi) * Math.sin(theta);
                 this.z = radius * Math.cos(phi);
+                const colors = ['#ff007a', '#ffb800', '#00f0ff', '#00ff88', '#8a2be2'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
             }
             rotate(ax, ay) {
-                // Rotate around Y axis
                 let cosY = Math.cos(ay), sinY = Math.sin(ay);
                 let x1 = this.x * cosY - this.z * sinY;
                 let z1 = this.z * cosY + this.x * sinY;
-                // Rotate around X axis
                 let cosX = Math.cos(ax), sinX = Math.sin(ax);
                 let y1 = this.y * cosX - z1 * sinX;
                 let z2 = z1 * cosX + this.y * sinX;
@@ -1415,15 +1453,13 @@
                     sphereNodes[i].rotate(angleX, angleY);
                     const p1 = sphereNodes[i].project();
 
-                    // Draw Node
                     qCtx.beginPath();
-                    qCtx.arc(p1.x, p1.y, Math.max(1, p1.scale * 3.2), 0, Math.PI * 2);
-                    qCtx.fillStyle = p1.scale > 0.8 ? '#00f0ff' : '#00ff88';
-                    qCtx.shadowBlur = 10;
-                    qCtx.shadowColor = '#00f0ff';
+                    qCtx.arc(p1.x, p1.y, Math.max(1, p1.scale * 3.4), 0, Math.PI * 2);
+                    qCtx.fillStyle = sphereNodes[i].color;
+                    qCtx.shadowBlur = 12;
+                    qCtx.shadowColor = sphereNodes[i].color;
                     qCtx.fill();
 
-                    // Connect nearby nodes on the sphere surface
                     for (let j = i + 1; j < sphereNodes.length; j++) {
                         const dx = sphereNodes[i].x - sphereNodes[j].x;
                         const dy = sphereNodes[i].y - sphereNodes[j].y;
@@ -1435,7 +1471,7 @@
                             qCtx.beginPath();
                             qCtx.moveTo(p1.x, p1.y);
                             qCtx.lineTo(p2.x, p2.y);
-                            qCtx.strokeStyle = `rgba(0, 240, 255, ${0.45 * p1.scale})`;
+                            qCtx.strokeStyle = `rgba(255, 184, 0, ${0.45 * p1.scale})`;
                             qCtx.lineWidth = 1;
                             qCtx.stroke();
                         }
