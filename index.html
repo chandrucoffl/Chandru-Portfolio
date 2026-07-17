@@ -1418,12 +1418,13 @@
             `;
         }
 
-        // 2. Ultra-Fast Zero-Lag 60FPS Ambient Particle Canvas (O(N) Fast Loop)
+        // 2. Ultra-Fast 60FPS Interactive Cursor Neural Synapse Matrix ("Neurons Moving with Cursor")
         const canvas = document.getElementById('ambient-canvas');
         const ctx = canvas.getContext('2d');
         let w, h;
-        let particles = [];
-        const particleCount = 45; // Super light, zero CPU load!
+        let neurons = [];
+        const neuronCount = 65; // Optimal neuron density for crystal-clear visuals + zero lag!
+        let mouse = { x: -1000, y: -1000, radiusSq: 190 * 190 };
 
         function resize() {
             w = canvas.width = window.innerWidth;
@@ -1432,61 +1433,136 @@
         window.addEventListener('resize', resize, { passive: true });
         resize();
 
-        class Particle {
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        }, { passive: true });
+
+        window.addEventListener('mouseleave', () => {
+            mouse.x = -1000;
+            mouse.y = -1000;
+        }, { passive: true });
+
+        class Neuron {
             constructor() {
                 this.x = Math.random() * w;
                 this.y = Math.random() * h;
-                this.vx = (Math.random() - 0.5) * 1.1;
-                this.vy = (Math.random() - 0.5) * 1.1;
-                this.r = Math.random() * 2 + 1;
-                const colors = ['#00f0ff', '#ff0055', '#ffd700', '#00ff88'];
+                this.baseVx = (Math.random() - 0.5) * 1.2;
+                this.baseVy = (Math.random() - 0.5) * 1.2;
+                this.vx = this.baseVx;
+                this.vy = this.baseVy;
+                this.r = Math.random() * 2.4 + 1.6;
+                const colors = ['#00f0ff', '#ff0055', '#ffd700', '#00ff88', '#a855f7'];
                 this.color = colors[Math.floor(Math.random() * colors.length)];
+                this.pulsePhase = Math.random() * Math.PI * 2;
             }
+
             update() {
+                // 1. Elastic Cursor Neural Magnetism & Nudge (Neurons moving & dancing around cursor!)
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                
+                if (Math.abs(dx) < 190 && Math.abs(dy) < 190) {
+                    const distSq = dx * dx + dy * dy;
+                    if (distSq < mouse.radiusSq && distSq > 400) {
+                        // Gentle elastic pull/swirl towards cursor (like active brain synapses connecting!)
+                        const force = (1 - distSq / mouse.radiusSq) * 0.035;
+                        this.vx += dx * force * 0.15;
+                        this.vy += dy * force * 0.15;
+                    }
+                }
+
+                // Smooth velocity damping returning to natural drift
+                this.vx = this.vx * 0.96 + this.baseVx * 0.04;
+                this.vy = this.vy * 0.96 + this.baseVy * 0.04;
+
                 this.x += this.vx;
                 this.y += this.vy;
-                if (this.x < 0 || this.x > w) this.vx = -this.vx;
-                if (this.y < 0 || this.y > h) this.vy = -this.vy;
+
+                // Screen boundaries bounce
+                if (this.x < 0 || this.x > w) { this.vx = -this.vx; this.baseVx = -this.baseVx; }
+                if (this.y < 0 || this.y > h) { this.vy = -this.vy; this.baseVy = -this.baseVy; }
+
+                this.pulsePhase += 0.05;
             }
+
             draw() {
+                const currentRadius = this.r + Math.sin(this.pulsePhase) * 0.6;
                 ctx.beginPath();
-                ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+                ctx.arc(this.x, this.y, Math.max(1, currentRadius), 0, Math.PI * 2);
                 ctx.fillStyle = this.color;
+                ctx.shadowColor = this.color;
+                ctx.shadowBlur = 10;
                 ctx.fill();
+                ctx.shadowBlur = 0; // Reset shadow for ultra-fast performance
             }
         }
 
-        for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
+        for (let i = 0; i < neuronCount; i++) {
+            neurons.push(new Neuron());
         }
 
-        function animate() {
+        function animateNeurons() {
             ctx.clearRect(0, 0, w, h);
-            const maxDistSq = 130 * 130;
+            const maxNodeDistSq = 135 * 135;
 
-            for (let i = 0; i < particles.length; i++) {
-                particles[i].update();
-                particles[i].draw();
+            for (let i = 0; i < neurons.length; i++) {
+                neurons[i].update();
+                neurons[i].draw();
 
-                for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    if (dx > 130 || dx < -130) continue;
-                    const dy = particles[i].y - particles[j].y;
-                    if (dy > 130 || dy < -130) continue;
+                // Inter-Neuron Synapse Connections
+                for (let j = i + 1; j < neurons.length; j++) {
+                    const dx = neurons[i].x - neurons[j].x;
+                    if (dx > 135 || dx < -135) continue;
+                    const dy = neurons[i].y - neurons[j].y;
+                    if (dy > 135 || dy < -135) continue;
 
-                    if (dx * dx + dy * dy < maxDistSq) {
+                    const distSq = dx * dx + dy * dy;
+                    if (distSq < maxNodeDistSq) {
+                        const alpha = (1 - distSq / maxNodeDistSq) * 0.25;
                         ctx.beginPath();
-                        ctx.moveTo(particles[i].x, particles[i].y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = 'rgba(0, 240, 255, 0.2)';
+                        ctx.moveTo(neurons[i].x, neurons[i].y);
+                        ctx.lineTo(neurons[j].x, neurons[j].y);
+                        ctx.strokeStyle = `rgba(0, 240, 255, ${alpha})`;
                         ctx.lineWidth = 1;
                         ctx.stroke();
                     }
                 }
+
+                // 2. Cursor to Neuron Active Firing Axons (Synaptic Action Potentials)
+                if (mouse.x > 0 && mouse.y > 0) {
+                    const dx = mouse.x - neurons[i].x;
+                    if (dx > 190 || dx < -190) continue;
+                    const dy = mouse.y - neurons[i].y;
+                    if (dy > 190 || dy < -190) continue;
+
+                    const distSq = dx * dx + dy * dy;
+                    if (distSq < mouse.radiusSq) {
+                        const alpha = (1 - distSq / mouse.radiusSq) * 0.65;
+                        
+                        // Draw glowing synapse connection line to cursor
+                        ctx.beginPath();
+                        ctx.moveTo(neurons[i].x, neurons[i].y);
+                        ctx.lineTo(mouse.x, mouse.y);
+                        ctx.strokeStyle = `rgba(255, 0, 85, ${alpha})`;
+                        ctx.lineWidth = 1.3;
+                        ctx.stroke();
+
+                        // Draw moving action potential (glowing signal dot traveling to cursor)
+                        const signalProgress = (Date.now() % 1000) / 1000;
+                        const sigX = neurons[i].x + (mouse.x - neurons[i].x) * signalProgress;
+                        const sigY = neurons[i].y + (mouse.y - neurons[i].y) * signalProgress;
+                        
+                        ctx.beginPath();
+                        ctx.arc(sigX, sigY, 2.2, 0, Math.PI * 2);
+                        ctx.fillStyle = '#00f0ff';
+                        ctx.fill();
+                    }
+                }
             }
-            requestAnimationFrame(animate);
+            requestAnimationFrame(animateNeurons);
         }
-        animate();
+        animateNeurons();
 
         // 3. Navbar Active State
         let scrollTimer = null;
